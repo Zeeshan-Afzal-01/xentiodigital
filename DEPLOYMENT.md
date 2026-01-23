@@ -68,6 +68,26 @@ Or push to Git if the project is connected.
 
 Vercel: **Project → Settings → Domains** → Add your domain. DNS is usually automatic.
 
+### 6. Troubleshooting: Blog not showing (index is enabled)
+
+If Firestore indexes are **Enabled** but blogs still don’t show on `/blog`:
+
+1. **Check Firebase Admin env on Vercel**  
+   Call **`/api/debug-blog`** on your deployed site (e.g. `https://yoursite.vercel.app/api/debug-blog`).  
+   - `hasFirebaseAdminEnv: false` → set `FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY` in Vercel → Settings → Environment Variables, then **redeploy**.  
+   - `firestoreReachable: false` or `error` → fix `FIREBASE_PRIVATE_KEY` (use `\n` for newlines) and service account Firestore permissions.
+
+2. **Check blog documents in Firestore**  
+   Each blog must have:  
+   - `locale` (e.g. `"en"`) — must match the URL, e.g. `/en/blog`;  
+   - `published: true`;  
+   - `updatedAt` (Firestore timestamp).  
+
+3. **Redeploy** after changing env vars; wait 1–2 minutes for cache to refresh.
+
+4. **Vercel / server logs**  
+   If env is missing or the query returns 0, you’ll see `[Blog]` warnings in the function logs.
+
 ---
 
 ## Option B — Firebase Hosting + Cloud Run (need gcloud, no Docker on your PC)

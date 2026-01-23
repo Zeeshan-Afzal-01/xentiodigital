@@ -74,7 +74,9 @@ async function _getBlogBySlug(slug: string, locale: string): Promise<Blog | null
  * These do NOT put Firebase SDK in the client bundle.
  */
 export const getAllBlogs = (locale: string) =>
-  unstable_cache(() => _getAllBlogs(locale), ['blogs', 'all', locale], { revalidate: 60 })()
+  unstable_cache(() => _getAllBlogs(locale), ['blogs', 'all', locale], {
+    revalidate: process.env.NODE_ENV === 'development' ? 0 : 60,
+  })()
 
 export const getBlogBySlug = (slug: string, locale: string) =>
   unstable_cache(() => _getBlogBySlug(slug, locale), ['blogs', 'bySlug', locale, slug], { revalidate: 60 })()

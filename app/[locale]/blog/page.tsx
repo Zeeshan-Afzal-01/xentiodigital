@@ -16,8 +16,21 @@ export const revalidate = 60
 export const dynamic = 'force-dynamic'
 
 async function BlogContent({ locale }: { locale: string }) {
-  const blogs = hasFirebaseAdminEnv() ? await getAllBlogs(locale) : []
+  const hasEnv = hasFirebaseAdminEnv()
+  if (!hasEnv) {
+    console.warn(
+      '[Blog] Firebase Admin env missing. Set FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY on Vercel → Settings → Environment Variables, then redeploy. See /api/debug-blog'
+    )
+  }
+  const blogs = hasEnv ? await getAllBlogs(locale) : []
   const published = blogs.filter((b) => b.published)
+  if (hasEnv && blogs.length === 0) {
+    console.warn(
+      '[Blog] getAllBlogs returned 0 for locale:',
+      locale,
+      '— check: blog docs have locale, published: true, updatedAt. See /api/debug-blog'
+    )
+  }
   return <BlogListContent posts={published} />
 }
 

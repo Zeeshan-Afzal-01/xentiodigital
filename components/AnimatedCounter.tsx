@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useInView } from 'framer-motion'
 
 interface AnimatedCounterProps {
   value: string
@@ -10,6 +10,10 @@ interface AnimatedCounterProps {
   duration?: number
 }
 
+/**
+ * Count-up when in view. Uses plain span (no motion) to avoid Framer
+ * animations during scroll into By The Numbers.
+ */
 export default function AnimatedCounter({
   value,
   suffix = '',
@@ -35,11 +39,10 @@ export default function AnimatedCounter({
     const animate = () => {
       const elapsed = Date.now() - startTime
       const progress = Math.min(elapsed / duration, 1)
-      
-      // Easing function (ease-out)
+
       const easeOut = 1 - Math.pow(1 - progress, 3)
       const currentValue = Math.floor(startValue + (numericValue - startValue) * easeOut)
-      
+
       setCount(currentValue)
 
       if (progress < 1) {
@@ -52,20 +55,15 @@ export default function AnimatedCounter({
     animate()
   }, [isInView, value, duration])
 
-  const displayValue = value.includes('+') 
+  const displayValue = value.includes('+')
     ? `${count}${suffix}+`
     : value.includes('%')
-    ? `${count}${suffix}%`
-    : `${prefix}${count}${suffix}`
+      ? `${count}${suffix}%`
+      : `${prefix}${count}${suffix}`
 
   return (
-    <motion.span 
-      ref={ref} 
-      className="inline-block"
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-    >
+    <span ref={ref} className="inline-block">
       {displayValue}
-    </motion.span>
+    </span>
   )
 }
