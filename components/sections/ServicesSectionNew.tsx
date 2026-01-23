@@ -8,30 +8,9 @@ export default async function ServicesSectionNew({ locale }: { locale: string })
 
   return (
     <section className="section-padding relative overflow-hidden py-24 md:py-32">
-      {/* PERF: CSS-only animated background (no JS / Framer loops) */}
-      <div className="absolute inset-0 services-section-animated-bg" aria-hidden="true" />
+      {/* PERF: Static gradient only — no bg animation, no floating shapes (avoids scroll lag) */}
+      <div className="absolute inset-0 services-section-bg-static" aria-hidden="true" />
       <div className="absolute inset-0 services-section-radial" aria-hidden="true" />
-
-      {/* Floating shapes are always in DOM; CSS animates them (non-blocking) */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="floating-shape absolute"
-            style={{ 
-              backgroundColor: i % 2 === 0 
-                ? 'rgba(109, 40, 217, 0.12)' 
-                : 'rgba(8, 145, 178, 0.12)',
-              left: `${10 + i * 25}%`,
-              top: `${20 + i * 15}%`,
-              width: `${200 + i * 100}px`,
-              height: `${200 + i * 100}px`,
-              animationDuration: `${18 + i * 5}s`,
-              animationDelay: `${i * 2}s`,
-            }}
-          />
-        ))}
-      </div>
 
       {/* Grid Pattern Overlay - Dark Mode Only */}
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] hidden dark:block">

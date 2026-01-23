@@ -136,12 +136,18 @@ body {
   will-change: background-position;
 }
 
-/* Landing Services section: CSS-only background motion (no JS) */
+/* Landing Services section: static bg only — no animation (avoids scroll lag) */
 .services-section-animated-bg {
   background-image: var(--section-gradient);
   background-size: 200% 200%;
   animation: bg-pan-slow 25s linear infinite;
   will-change: background-position;
+}
+
+.services-section-bg-static {
+  background-image: var(--section-gradient);
+  background-size: 100% 100%;
+  background-position: center;
 }
 
 .services-section-radial {
@@ -469,6 +475,23 @@ body {
     0 8px 32px 0 rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset,
     0 0 60px rgba(124, 58, 237, 0.1);
+}
+
+/* Services cards: no backdrop-filter — avoids scroll lag in Our Services section */
+.service-card-surface {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-lg);
+}
+.light .service-card-surface {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.dark .service-card-surface {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 }
 
 /* ============================================
