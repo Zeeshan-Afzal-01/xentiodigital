@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build
+.next
+out
+build
+
+# Env (set at deploy time)
+.env*
+!.env.example
+
+# Git and IDE
+.git
+.gitignore
+*.md
+.vscode
+.idea
+
+# Misc
+.DS_Store
+*.pem
+coverage
+*.log
+.eslintrc*
+.dockerignore

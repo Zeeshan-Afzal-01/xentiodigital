@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "portfolio": "Portfolio",
+    "testimonials": "Referenzen",
+    "team": "Team",
+    "careers": "Karriere",
+    "contact": "Kontakt",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Transformieren Sie Ihre Digitale Präsenz",
+    "subtitle": "Wir liefern innovative digitale Lösungen, die Wachstum fördern, Kunden binden und Ihre Marke in der digitalen Landschaft stärken.",
+    "cta": "Loslegen",
+    "ctaSecondary": "Unsere Arbeit Ansehen"
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Umfassende digitale Dienstleistungen, um Ihr Unternehmen online erfolgreich zu machen"
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "legal": "Rechtliches",
+    "follow": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten"
+  }
+}

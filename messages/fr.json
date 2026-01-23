@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Témoignages",
+    "team": "Équipe",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Transformez Votre Présence Numérique",
+    "subtitle": "Nous proposons des solutions numériques de pointe qui stimulent la croissance, engagent les clients et élèvent votre marque dans le paysage numérique.",
+    "cta": "Commencer",
+    "ctaSecondary": "Voir Nos Réalisations"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Services numériques complets pour aider votre entreprise à prospérer en ligne"
+  },
+  "footer": {
+    "company": "Entreprise",
+    "services": "Services",
+    "legal": "Légal",
+    "follow": "Suivez-nous",
+    "rights": "Tous droits réservés"
+  }
+}

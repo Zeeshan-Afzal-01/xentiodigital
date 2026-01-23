@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Public blog reads, admin-only writes
+    match /blogs/{slug} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Admin allowlist (create these docs manually in Firebase console)
+    // Doc ID should be the Firebase Auth UID.
+    match /admins/{uid} {
+      allow read: if isAdmin() && request.auth.uid == uid;
+      allow write: if false;
+    }
+  }
+}
+

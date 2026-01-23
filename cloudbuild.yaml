@@ -1,0 +1,47 @@
+# Cloud Build: build Next.js image with NEXT_PUBLIC_* and deploy to Cloud Run.
+# Usage:
+#   gcloud builds submit --config=cloudbuild.yaml \
+#     --substitutions=_NEXT_PUBLIC_FIREBASE_API_KEY="key",_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="domain",_NEXT_PUBLIC_FIREBASE_PROJECT_ID="pid",_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="bucket",_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="sid",_NEXT_PUBLIC_FIREBASE_APP_ID="aid"
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_API_KEY=${_NEXT_PUBLIC_FIREBASE_API_KEY}'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_PROJECT_ID=${_NEXT_PUBLIC_FIREBASE_PROJECT_ID}'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET}'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID}'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_FIREBASE_APP_ID=${_NEXT_PUBLIC_FIREBASE_APP_ID}'
+      - '-t'
+      - 'gcr.io/${PROJECT_ID}/nextjs-server'
+      - '.'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'nextjs-server'
+      - '--image'
+      - 'gcr.io/${PROJECT_ID}/nextjs-server'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '3000'
+images:
+  - 'gcr.io/${PROJECT_ID}/nextjs-server'
+substitutions:
+  _NEXT_PUBLIC_FIREBASE_API_KEY: ''
+  _NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ''
+  _NEXT_PUBLIC_FIREBASE_PROJECT_ID: ''
+  _NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ''
+  _NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ''
+  _NEXT_PUBLIC_FIREBASE_APP_ID: ''

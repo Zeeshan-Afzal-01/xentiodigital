@@ -1,0 +1,414 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "team": "Team",
+    "careers": "Careers",
+    "contact": "Contact",
+    "blog": "Blog",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Transform Your Digital Presence",
+    "subtitle": "We deliver cutting-edge digital solutions that drive growth, engage customers, and elevate your brand in the digital landscape.",
+    "cta": "Get Started",
+    "ctaSecondary": "View Our Work"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions tailored to your business needs",
+    "learnMore": "Learn More",
+    "viewServices": "View Services",
+    "hideServices": "Hide Services",
+    "servicesIncluded": "Services Included",
+    "getQuote": "Get a Quote",
+    "categories": {
+      "digitalTransformation": {
+        "name": "Digital Transformation",
+        "description": "Transform your business with cutting-edge digital solutions that drive innovation and growth."
+      },
+      "ecommerceSolutions": {
+        "name": "E-Commerce Solutions",
+        "description": "Complete eCommerce platforms and marketplace integrations to maximize your online sales."
+      },
+      "digitalMarketing": {
+        "name": "Digital Marketing",
+        "description": "Data-driven marketing strategies that increase visibility, engagement, and conversions."
+      },
+      "customerCare": {
+        "name": "Customer Care Solutions",
+        "description": "Professional customer support solutions that enhance satisfaction and loyalty."
+      },
+      "businessConsulting": {
+        "name": "Business Consulting",
+        "description": "Strategic consulting to help you grow, scale, and optimize your business operations."
+      }
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "legal": "Legal",
+    "follow": "Follow Us",
+    "rights": "All rights reserved"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Let's discuss how we can help you achieve your digital goals. Get in touch today for a free consultation.",
+    "button": "Schedule a Consultation"
+  },
+  "stats": {
+    "title": "By The Numbers",
+    "subtitle": "Real results from real partnerships",
+    "projects": "Projects Completed",
+    "satisfaction": "Client Satisfaction",
+    "team": "Expert Team Members",
+    "experience": "Years Experience"
+  },
+  "features": {
+    "title": "Why Choose Xentio Digital?",
+    "subtitle": "We combine technical expertise with creative innovation to deliver solutions that exceed expectations",
+    "expertTeam": {
+      "title": "Expert Team",
+      "description": "Our team of experienced developers, designers, and marketers bring years of industry expertise to every project.",
+      "stat": "50+",
+      "statLabel": "Experts"
+    },
+    "provenResults": {
+      "title": "Proven Results",
+      "description": "We've helped hundreds of businesses achieve their digital goals with measurable results and ROI.",
+      "stat": "500+",
+      "statLabel": "Projects"
+    },
+    "modernTech": {
+      "title": "Modern Technology",
+      "description": "We use the latest technologies and best practices to ensure your digital solutions are future-proof and scalable.",
+      "stat": "100%",
+      "statLabel": "Cutting-Edge"
+    },
+    "dedicatedSupport": {
+      "title": "Dedicated Support",
+      "description": "From initial consultation to ongoing maintenance, we provide comprehensive support throughout your journey.",
+      "stat": "24/7",
+      "statLabel": "Support"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed"
+  },
+  "about": {
+    "heroTitle": "About Xentio Digital",
+    "heroSubtitle": "We're a team of passionate digital experts dedicated to helping businesses succeed online",
+    "missionTitle": "Our Mission",
+    "mission1": "To empower businesses of all sizes with cutting-edge digital solutions that drive growth, enhance customer experiences, and create lasting value. We believe that every business deserves access to world-class digital services, regardless of their size or industry.",
+    "mission2": "Our mission is to bridge the gap between complex technology and business success, making digital transformation accessible, understandable, and achievable for everyone.",
+    "visionTitle": "Our Vision",
+    "vision1": "To become the most trusted digital services partner globally, recognized for our innovation, reliability, and unwavering commitment to client success. We envision a future where every business can leverage digital technology to its full potential.",
+    "vision2": "Through continuous innovation, exceptional service delivery, and strategic partnerships, we aim to shape the future of digital business solutions and set new industry standards.",
+    "storyTitle": "Our Story",
+    "story1": "Xentio Digital was founded in 2015 with a simple yet powerful vision: to make enterprise-grade digital solutions accessible to businesses of all sizes. What started as a small team of passionate developers and designers has grown into a full-service digital agency serving clients across multiple industries.",
+    "story2": "Over the years, we've completed hundreds of successful projects, from small business websites to complex enterprise applications. Our commitment to quality, innovation, and client satisfaction has earned us a reputation as a trusted partner in digital transformation.",
+    "story3": "Today, we continue to evolve, staying at the forefront of technology trends while maintaining our core values of integrity, excellence, and partnership. We're not just service providers—we're your digital growth partners.",
+    "valuesTitle": "Our Core Values",
+    "valuesSubtitle": "The principles that guide everything we do",
+    "innovation": {
+      "title": "Innovation",
+      "description": "We stay ahead of the curve by embracing new technologies and creative solutions."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "We strive for perfection in every project, ensuring the highest quality deliverables."
+    },
+    "integrity": {
+      "title": "Integrity",
+      "description": "We build trust through transparency, honesty, and ethical business practices."
+    },
+    "partnership": {
+      "title": "Partnership",
+      "description": "We view every client relationship as a long-term partnership, not just a transaction."
+    },
+    "whyChooseTitle": "Why Choose Xentio Digital?",
+    "projectsCompleted": "Projects Completed",
+    "projectsCompletedDesc": "Successfully delivered projects across various industries",
+    "clientSatisfaction": "Client Satisfaction",
+    "clientSatisfactionDesc": "Our clients consistently rate us highly for quality and service",
+    "expertTeamMembers": "Expert Team Members",
+    "expertTeamMembersDesc": "Dedicated professionals with diverse expertise"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's discuss how we can help transform your digital presence",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "officeHours": "Office Hours",
+    "officeHoursMonFri": "Monday - Friday: 9:00 AM - 6:00 PM",
+    "officeHoursSat": "Saturday: 10:00 AM - 4:00 PM",
+    "officeHoursSun": "Sunday: Closed",
+    "address": "Address",
+    "addressLine1": "123 Digital Street",
+    "addressLine2": "Tech City, TC 12345",
+    "addressLine3": "United States",
+    "sendMessage": "Send Us a Message"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Explore our successful projects and see how we've helped businesses achieve their digital goals",
+    "readyTitle": "Ready to Start Your Project?",
+    "readySubtitle": "Let's discuss how we can help you achieve similar results.",
+    "getStarted": "Get Started",
+    "results": "Results:",
+    "projects": {
+      "retailpro": {
+        "title": "E-Commerce Platform for RetailPro",
+        "description": "A comprehensive eCommerce solution with custom inventory management, payment integration, and analytics dashboard.",
+        "results": "300% increase in online sales, 50% reduction in cart abandonment",
+        "category": "eCommerce"
+      },
+      "fitness": {
+        "title": "Mobile App for Fitness Tracker",
+        "description": "Cross-platform mobile application with real-time tracking, social features, and personalized workout plans.",
+        "results": "100K+ downloads, 4.8-star rating, 40% user retention rate",
+        "category": "Mobile Apps"
+      },
+      "corporate": {
+        "title": "Corporate Website Redesign",
+        "description": "Complete website redesign with modern UI/UX, improved performance, and SEO optimization.",
+        "results": "250% increase in organic traffic, 60% improvement in page load speed",
+        "category": "Web Development"
+      },
+      "crm": {
+        "title": "Custom CRM System",
+        "description": "Enterprise CRM solution with lead management, sales pipeline, and reporting features.",
+        "results": "35% increase in sales productivity, 50% reduction in manual data entry",
+        "category": "Custom Software"
+      },
+      "restaurant": {
+        "title": "Restaurant Ordering Platform",
+        "description": "Online ordering system with menu management, payment processing, and delivery tracking.",
+        "results": "200% increase in online orders, 90% customer satisfaction rate",
+        "category": "Web Development"
+      },
+      "healthcare": {
+        "title": "Healthcare Management App",
+        "description": "HIPAA-compliant mobile app for patient management, appointment scheduling, and telemedicine.",
+        "results": "Streamlined operations, improved patient satisfaction, 30% time savings",
+        "category": "Mobile Apps"
+      }
+    }
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "subtitle": "Talented professionals dedicated to delivering exceptional digital solutions",
+    "joinTitle": "Want to Join Our Team?",
+    "joinSubtitle": "We're always looking for talented individuals to join our growing team.",
+    "viewPositions": "View Open Positions",
+    "members": {
+      "john": {
+        "name": "John Smith",
+        "role": "CEO & Founder",
+        "bio": "With over 15 years of experience in digital services, John leads our team with a vision for innovation and client success."
+      },
+      "sarah": {
+        "name": "Sarah Williams",
+        "role": "Head of Development",
+        "bio": "Sarah brings expertise in modern web technologies and leads our development team in creating cutting-edge solutions."
+      },
+      "michael": {
+        "name": "Michael Brown",
+        "role": "Lead Designer",
+        "bio": "Michael is passionate about creating beautiful, user-centered designs that solve real business problems."
+      },
+      "emily": {
+        "name": "Emily Davis",
+        "role": "Marketing Director",
+        "bio": "Emily specializes in SEO and digital marketing strategies that drive measurable results for our clients."
+      },
+      "david": {
+        "name": "David Martinez",
+        "role": "Mobile App Lead",
+        "bio": "David is an expert in mobile app development, creating native and cross-platform solutions for iOS and Android."
+      },
+      "jessica": {
+        "name": "Jessica Taylor",
+        "role": "Project Manager",
+        "bio": "Jessica ensures smooth project delivery, keeping clients informed and projects on track from start to finish."
+      }
+    }
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "Build your career with us and help shape the future of digital services",
+    "whyTitle": "Why Work With Us?",
+    "growth": {
+      "title": "Growth Opportunities",
+      "description": "Continuous learning and career development"
+    },
+    "flexible": {
+      "title": "Flexible Work",
+      "description": "Remote and hybrid work options"
+    },
+    "culture": {
+      "title": "Great Culture",
+      "description": "Collaborative and supportive team environment"
+    },
+    "openPositions": "Open Positions",
+    "requirements": "Requirements:",
+    "applyNow": "Apply Now",
+    "noPositionTitle": "Don't See a Position That Fits?",
+    "noPositionSubtitle": "We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.",
+    "sendResume": "Send Your Resume",
+    "positions": {
+      "developer": {
+        "title": "Senior Full-Stack Developer",
+        "department": "Development",
+        "location": "Remote / Hybrid",
+        "type": "Full-time",
+        "description": "We are looking for an experienced full-stack developer to join our development team. You will work on exciting projects using modern technologies like React, Next.js, Node.js, and more.",
+        "requirements": [
+          "5+ years of experience in full-stack development",
+          "Strong knowledge of React, Next.js, and Node.js",
+          "Experience with databases (PostgreSQL, MongoDB)",
+          "Familiarity with cloud platforms (AWS, Vercel)",
+          "Excellent problem-solving and communication skills"
+        ]
+      },
+      "designer": {
+        "title": "UX/UI Designer",
+        "department": "Design",
+        "location": "Remote / Hybrid",
+        "type": "Full-time",
+        "description": "Join our design team to create beautiful, user-centered interfaces. You will work closely with clients and developers to bring designs to life.",
+        "requirements": [
+          "3+ years of UX/UI design experience",
+          "Proficiency in Figma, Adobe XD, or similar tools",
+          "Strong portfolio demonstrating user-centered design",
+          "Understanding of responsive design principles",
+          "Excellent collaboration and presentation skills"
+        ]
+      },
+      "marketing": {
+        "title": "Digital Marketing Specialist",
+        "department": "Marketing",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "Help our clients grow their online presence through SEO, content marketing, and digital advertising strategies.",
+        "requirements": [
+          "3+ years of digital marketing experience",
+          "Strong SEO and SEM knowledge",
+          "Experience with Google Analytics and marketing tools",
+          "Content creation and copywriting skills",
+          "Data-driven approach to marketing"
+        ]
+      },
+      "mobile": {
+        "title": "Mobile App Developer",
+        "department": "Development",
+        "location": "Remote / Hybrid",
+        "type": "Full-time",
+        "description": "Develop native and cross-platform mobile applications for iOS and Android. Work on exciting projects that reach millions of users.",
+        "requirements": [
+          "4+ years of mobile app development experience",
+          "Proficiency in React Native, Swift, or Kotlin",
+          "Experience with app store submission and deployment",
+          "Understanding of mobile UI/UX best practices",
+          "Strong debugging and problem-solving skills"
+        ]
+      }
+    }
+  },
+  "testimonialsPage": {
+    "title": "Client Testimonials",
+    "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed",
+    "joinTitle": "Join Our Success Stories",
+    "joinSubtitle": "Let's work together to achieve similar results for your business.",
+    "getStarted": "Get Started",
+    "testimonials": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO",
+        "company": "TechStart Inc.",
+        "content": "Xentio Digital transformed our online presence. Their web development team delivered exactly what we needed, and our traffic has increased by 300%. The attention to detail and commitment to our success was outstanding."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "Founder",
+        "company": "RetailPro",
+        "content": "The eCommerce solution they built for us is outstanding. Sales have doubled since launch, and the platform is incredibly user-friendly. Their team was professional, responsive, and truly understood our business needs."
+      },
+      "emily": {
+        "name": "Emily Rodriguez",
+        "role": "Marketing Director",
+        "company": "Growth Labs",
+        "content": "Their SEO and digital marketing services have been game-changing. We've seen a significant increase in qualified leads and brand awareness. The reporting and transparency throughout the process was excellent."
+      },
+      "david": {
+        "name": "David Thompson",
+        "role": "Operations Manager",
+        "company": "HealthCare Plus",
+        "content": "The custom software solution they developed has streamlined our operations significantly. The team took time to understand our processes and created a solution that perfectly fits our workflow."
+      },
+      "lisa": {
+        "name": "Lisa Anderson",
+        "role": "Product Manager",
+        "company": "FitnessFirst",
+        "content": "Working with Xentio Digital on our mobile app was a fantastic experience. They delivered on time, within budget, and the app has exceeded our expectations. User feedback has been overwhelmingly positive."
+      },
+      "james": {
+        "name": "James Wilson",
+        "role": "CTO",
+        "company": "FinanceCorp",
+        "content": "Their UX/UI design work transformed our customer experience. The new interface is intuitive, beautiful, and has significantly improved our conversion rates. Highly recommend their design services."
+      }
+    }
+  },
+  "contactForm": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+1 (234) 567-890",
+    "serviceInterest": "Service Interest",
+    "selectService": "Select a service",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Thank you! We'll get back to you soon.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "services": {
+      "webDevelopment": "Web Development",
+      "mobileApps": "Mobile Apps",
+      "seo": "SEO & Digital Marketing",
+      "ecommerce": "eCommerce Solutions",
+      "uxui": "UX/UI Design",
+      "customSoftware": "Desktop & Custom Software",
+      "other": "Other"
+    }
+  },
+  "blog": {
+    "title": "Insights & Resources",
+    "subtitle": "Industry insights, guides, and updates to help you grow your business",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "published": "Published",
+    "by": "By",
+    "categories": "Categories",
+    "tags": "Tags",
+    "share": "Share",
+    "relatedPosts": "Related Articles",
+    "relatedPostsSubtitle": "Continue reading with these related posts",
+    "noPosts": "No articles found",
+    "noPostsSubtitle": "Try adjusting your filters or search query",
+    "articlesFound": "articles found",
+    "articleFound": "article found",
+    "all": "All",
+    "searchPlaceholder": "Search articles...",
+    "tableOfContents": "Table of Contents"
+  }
+}
