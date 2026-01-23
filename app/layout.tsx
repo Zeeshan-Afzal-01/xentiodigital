@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { defaultLocale } from '@/i18n/request'
 import { inter, cairo } from '@/lib/fonts'
+import GlobalInitialLoader from '@/app/GlobalInitialLoader'
 import './globals.css'
 
 // Root layout - must have <html> and <body> tags
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontFamily: 'var(--font-inter), system-ui, sans-serif',
         }}
       >
+        <GlobalInitialLoader />
         {children}
       </body>
     </html>
