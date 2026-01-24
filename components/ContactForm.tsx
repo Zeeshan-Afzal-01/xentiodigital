@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import { isRTL } from '@/lib/translation'
+import { Icon } from '@/components/icons'
 
 export default function ContactForm() {
   const t = useTranslations('contactForm')
@@ -34,18 +35,25 @@ export default function ContactForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       })
-    }, 1000)
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean }
+
+      if (res.ok && data.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -132,25 +140,38 @@ export default function ContactForm() {
           <label htmlFor="service" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
             {t('serviceInterest')} *
           </label>
-          <select
-            id="service"
-            name="service"
-            required
-            value={formData.service}
-            onChange={handleChange}
-            className="w-full ps-4 pe-4 py-3 bg-surface border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
-            style={{
-              borderColor: 'var(--border-default)',
-              color: 'var(--text-primary)',
-            }}
-          >
-            <option value="">{t('selectService')}</option>
-            {services.map((service) => (
-              <option key={service} value={service}>
-                {service}
+          <div className="relative">
+            <select
+              id="service"
+              name="service"
+              required
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full ps-4 pe-10 py-3 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start appearance-none cursor-pointer hover:border-[var(--border-strong)]"
+              style={{
+                borderColor: 'var(--border-default)',
+                color: 'var(--text-primary)',
+                backgroundColor: 'var(--bg-surface)',
+              }}
+            >
+              <option value="" style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}>
+                {t('selectService')}
               </option>
-            ))}
-          </select>
+              {services.map((service) => (
+                <option
+                  key={service}
+                  value={service}
+                  style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}
+                >
+                  {service}
+                </option>
+              ))}
+            </select>
+            <Icon
+              name="ChevronDown"
+              className="pointer-events-none absolute top-1/2 -translate-y-1/2 end-3 w-5 h-5 text-[var(--text-primary)] opacity-70"
+            />
+          </div>
         </div>
       </div>
       <div className="mb-6 min-w-0">

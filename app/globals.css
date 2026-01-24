@@ -1208,6 +1208,16 @@ select {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Select & option — theme-aware (avoids white background in dropdown) */
+select {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+select option {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
 /* Min width 0 for flex children */
 .min-w-0 {
   min-width: 0;
