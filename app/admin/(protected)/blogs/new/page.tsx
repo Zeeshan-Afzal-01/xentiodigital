@@ -190,17 +190,6 @@ export default function NewBlogPage() {
               <option>AI & Automation</option>
             </select>
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Status</label>
-            <select
-              value={form.status}
-              onChange={(e) => setForm((p) => ({ ...p, status: e.target.value as any }))}
-              className="w-full px-4 py-2 border rounded-lg dark:bg-gray-700"
-            >
-              <option value="draft">Draft</option>
-              <option value="published">Published</option>
-            </select>
-          </div>
           <div className="md:col-span-2">
             <label className="block text-sm font-medium mb-2">Cover Image</label>
             <CoverImageUpload

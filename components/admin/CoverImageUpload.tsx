@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import { toast } from 'react-hot-toast'
 
 type Props = {
@@ -59,11 +60,15 @@ export default function CoverImageUpload({ value, onChange, disabled }: Props) {
       </div>
       {value ? (
         <div className="flex items-start gap-3">
-          <img
-            src={value}
-            alt="Cover preview"
-            className="h-20 w-32 object-cover rounded border border-gray-200 dark:border-gray-600"
-          />
+          <div className="relative h-20 w-32 shrink-0 overflow-hidden rounded border border-gray-200 dark:border-gray-600">
+            <Image
+              src={value}
+              alt="Cover preview"
+              fill
+              className="object-cover"
+              sizes="128px"
+            />
+          </div>
           <button
             type="button"
             onClick={() => onChange('')}
