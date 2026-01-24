@@ -8,9 +8,6 @@ const nextConfig = {
   images: {
     domains: ['localhost', 'api.mapbox.com', 'res.cloudinary.com'],
   },
-  experimental: {
-    optimizePackageImports: ['framer-motion', 'gsap'],
-  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   // Enable standalone output for Firebase deployment
   output: 'standalone',

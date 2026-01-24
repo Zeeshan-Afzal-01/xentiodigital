@@ -210,9 +210,10 @@ export default function Navbar() {
           {isOpen && (
             <motion.div
               {...getSlideAnimation(locale, 20)}
-              className="lg:hidden py-4 border-t overflow-hidden"
+              className="lg:hidden py-4 border-t overflow-x-hidden overflow-y-auto max-h-[calc(100dvh-5rem)] overscroll-y-contain"
               style={{
                 borderColor: 'var(--border-default)',
+                WebkitOverflowScrolling: 'touch',
               }}
             >
               {navLinks.slice(0, 2).map((link) => (
