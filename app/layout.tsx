@@ -1,8 +1,13 @@
+import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { defaultLocale } from '@/i18n/request'
 import { inter, cairo } from '@/lib/fonts'
 import GlobalInitialLoader from '@/app/GlobalInitialLoader'
 import './globals.css'
+
+export const metadata: Metadata = {
+  icons: { icon: '/favicon.png' },
+}
 
 // Root layout - must have <html> and <body> tags
 // Locale-specific attributes are set by the [locale] layout via client-side script
