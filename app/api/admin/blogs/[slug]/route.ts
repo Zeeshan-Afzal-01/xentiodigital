@@ -53,6 +53,38 @@ export async function GET(
   }
 }
 
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  const adminSession = await requireAdmin(request)
+  if (!adminSession) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+  const { slug } = await params
+
+  try {
+    const raw = await request.json()
+    const { published } = raw as { published?: boolean }
+    if (typeof published !== 'boolean') {
+      return NextResponse.json({ error: 'Body must include { published: boolean }' }, { status: 400 })
+    }
+
+    getFirebaseAdminApp()
+    const db = getAdminDb()
+    const ref = db.collection('blogs').doc(slug)
+    const snap = await ref.get()
+    if (!snap.exists) return NextResponse.json({ error: 'Blog not found' }, { status: 404 })
+
+    await ref.update({
+      published,
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    })
+    return NextResponse.json({ success: true, published })
+  } catch (error: any) {
+    return NextResponse.json({ error: error?.message || 'Failed to update' }, { status: 500 })
+  }
+}
+
 export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ slug: string }> }

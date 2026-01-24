@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 import { BlogInputSchema } from '@/lib/admin-schemas'
 import { useLoading } from '@/components/providers/LoadingProvider'
 import Loader from '@/components/Loader'
+import CoverImageUpload from '@/components/admin/CoverImageUpload'
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false })
 
@@ -245,12 +246,12 @@ export default function EditBlogPage() {
               <option value="published">Published</option>
             </select>
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Cover Image URL</label>
-            <input
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium mb-2">Cover Image</label>
+            <CoverImageUpload
               value={form.coverImage}
-              onChange={(e) => setForm((p) => ({ ...p, coverImage: e.target.value }))}
-              className="w-full px-4 py-2 border rounded-lg dark:bg-gray-700"
+              onChange={(v) => setForm((p) => ({ ...p, coverImage: v }))}
+              disabled={saving}
             />
           </div>
         </div>

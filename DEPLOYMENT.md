@@ -52,6 +52,12 @@ In Vercel: **Project → Settings → Environment Variables**, add:
 - `FIREBASE_CLIENT_EMAIL`
 - `FIREBASE_PRIVATE_KEY` (one line, with `\n` for newlines in the key)
 
+**Server (Cloudinary, for blog cover uploads):**
+
+- `CLOUDINARY_CLOUD_NAME` (from [Cloudinary Dashboard](https://console.cloudinary.com) → Account)
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+
 Add any others your app needs (e.g. `NEXTAUTH_SECRET`, `NEXTAUTH_URL` = your Vercel URL).
 
 ### 4. Redeploy

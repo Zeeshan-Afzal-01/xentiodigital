@@ -28,6 +28,7 @@ export default function AdminBlogsPage() {
 
   const [deleteSlug, setDeleteSlug] = useState<string | null>(null)
   const [deleting, setDeleting] = useState(false)
+  const [publishingSlug, setPublishingSlug] = useState<string | null>(null)
 
   const queryKey = useMemo(() => `${status}::${q.trim().toLowerCase()}`, [status, q])
 
@@ -40,12 +41,15 @@ export default function AdminBlogsPage() {
       params.set('status', status)
       if (q.trim()) params.set('q', q.trim())
       const res = await fetch(`/api/admin/blogs?${params.toString()}`)
-      if (!res.ok) throw new Error('Failed to load blogs')
-      const data = (await res.json()) as { items: BlogListItem[]; nextCursor: string | null }
-      setItems(data.items)
-      setNextCursor(data.nextCursor)
-    } catch {
-      toast.error('Failed to load blogs')
+      const data = (await res.json().catch(() => ({}))) as { items?: BlogListItem[]; nextCursor?: string | null; error?: string }
+      if (!res.ok) {
+        const msg = res.status === 401 ? 'Please log in again.' : (data?.error || 'Failed to load blogs')
+        throw new Error(msg)
+      }
+      setItems(data.items ?? [])
+      setNextCursor(data.nextCursor ?? null)
+    } catch (e: any) {
+      toast.error(e?.message || 'Failed to load blogs')
     } finally {
       setLoading(false)
       setGlobalLoading(false)
@@ -61,12 +65,12 @@ export default function AdminBlogsPage() {
       params.set('status', status)
       params.set('cursor', nextCursor)
       const res = await fetch(`/api/admin/blogs?${params.toString()}`)
-      if (!res.ok) throw new Error('Failed to load more')
-      const data = (await res.json()) as { items: BlogListItem[]; nextCursor: string | null }
-      setItems((prev) => [...prev, ...data.items])
-      setNextCursor(data.nextCursor)
-    } catch {
-      toast.error('Failed to load more blogs')
+      const data = (await res.json().catch(() => ({}))) as { items?: BlogListItem[]; nextCursor?: string | null; error?: string }
+      if (!res.ok) throw new Error(data?.error || 'Failed to load more')
+      setItems((prev) => [...prev, ...(data.items ?? [])])
+      setNextCursor(data.nextCursor ?? null)
+    } catch (e: any) {
+      toast.error(e?.message || 'Failed to load more')
     } finally {
       setLoadingMore(false)
     }
@@ -79,6 +83,29 @@ export default function AdminBlogsPage() {
     return () => clearTimeout(t)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [queryKey])
+
+  async function handlePublish(slug: string) {
+    setPublishingSlug(slug)
+    setGlobalLoading(true, 'Publishing blog...')
+    try {
+      const res = await fetch(`/api/admin/blogs/${slug}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ published: true }),
+      })
+      if (!res.ok) {
+        const msg = (await res.json().catch(() => null)) as any
+        throw new Error(msg?.error || 'Failed to publish')
+      }
+      toast.success('Blog published')
+      setItems((prev) => prev.map((b) => (b.slug === slug ? { ...b, status: 'published' as const } : b)))
+    } catch (e: any) {
+      toast.error(e?.message || 'Failed to publish blog')
+    } finally {
+      setPublishingSlug(null)
+      setGlobalLoading(false)
+    }
+  }
 
   async function handleDelete(slug: string) {
     setDeleting(true)
@@ -185,6 +212,15 @@ export default function AdminBlogsPage() {
                   {blog.updatedAt ? new Date(blog.updatedAt).toLocaleDateString() : '—'}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                  {blog.status === 'draft' && (
+                    <button
+                      onClick={() => handlePublish(blog.slug)}
+                      disabled={publishingSlug === blog.slug}
+                      className="text-green-600 hover:text-green-900 mr-4 disabled:opacity-60"
+                    >
+                      {publishingSlug === blog.slug ? 'Publishing…' : 'Publish'}
+                    </button>
+                  )}
                   <Link
                     href={`/admin/blogs/edit/${blog.slug}`}
                     className="text-primary-600 hover:text-primary-900 mr-4"

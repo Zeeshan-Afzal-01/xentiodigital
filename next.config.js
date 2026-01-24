@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'api.mapbox.com'],
+    domains: ['localhost', 'api.mapbox.com', 'res.cloudinary.com'],
   },
   experimental: {
     optimizePackageImports: ['framer-motion', 'gsap'],

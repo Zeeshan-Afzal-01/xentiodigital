@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast'
 import dynamic from 'next/dynamic'
 import { BlogInputSchema } from '@/lib/admin-schemas'
 import { useLoading } from '@/components/providers/LoadingProvider'
+import CoverImageUpload from '@/components/admin/CoverImageUpload'
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false })
 
@@ -21,6 +22,7 @@ export default function NewBlogPage() {
   const router = useRouter()
   const { setLoading: setGlobalLoading } = useLoading()
   const [loading, setLoading] = useState(false)
+  const [submitAction, setSubmitAction] = useState<'publish' | 'draft' | null>(null)
   const [form, setForm] = useState({
     title: '',
     slug: '',
@@ -32,7 +34,6 @@ export default function NewBlogPage() {
     seoTitle: '',
     seoDescription: '',
     locale: 'en',
-    status: 'draft' as 'draft' | 'published',
     authorName: 'Xentio Digital Team',
     authorRole: 'Digital Services Experts',
     authorBio: 'Xentio Digital editorial team.',
@@ -59,7 +60,6 @@ export default function NewBlogPage() {
       seoTitle: form.seoTitle || form.title,
       seoDescription: form.seoDescription || form.excerpt,
       locale: form.locale,
-      published: form.status === 'published',
       author: {
         name: form.authorName,
         role: form.authorRole,
@@ -71,10 +71,13 @@ export default function NewBlogPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    const btn = (e.nativeEvent as SubmitEvent).submitter
+    const asDraft = btn?.getAttribute('data-as-draft') === 'true'
+    setSubmitAction(asDraft ? 'draft' : 'publish')
     setLoading(true)
-    setGlobalLoading(true, 'Saving blog to database...')
+    setGlobalLoading(true, asDraft ? 'Saving draft...' : 'Publishing blog...')
     try {
-      const parsed = BlogInputSchema.parse(payload)
+      const parsed = BlogInputSchema.parse({ ...payload, published: !asDraft })
       const res = await fetch('/api/admin/blogs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -84,12 +87,13 @@ export default function NewBlogPage() {
         const msg = (await res.json().catch(() => null)) as any
         throw new Error(msg?.error || 'Failed to create blog')
       }
-      toast.success('Blog created')
+      toast.success(asDraft ? 'Draft saved' : 'Blog published')
       router.push('/admin/blogs')
     } catch (err: any) {
       toast.error(err?.message || 'Failed to create blog')
     } finally {
       setLoading(false)
+      setSubmitAction(null)
       setGlobalLoading(false)
     }
   }
@@ -197,13 +201,12 @@ export default function NewBlogPage() {
               <option value="published">Published</option>
             </select>
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Cover Image URL</label>
-            <input
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium mb-2">Cover Image</label>
+            <CoverImageUpload
               value={form.coverImage}
-              onChange={(e) => setForm((p) => ({ ...p, coverImage: e.target.value }))}
-              className="w-full px-4 py-2 border rounded-lg dark:bg-gray-700"
-              placeholder="/images/blog/your-image.jpg"
+              onChange={(v) => setForm((p) => ({ ...p, coverImage: v }))}
+              disabled={loading}
             />
           </div>
         </div>
@@ -265,9 +268,22 @@ export default function NewBlogPage() {
           </div>
         </div>
 
-        <div className="flex gap-4">
-          <button type="submit" disabled={loading} className="btn-primary disabled:opacity-60">
-            {loading ? 'Saving…' : 'Save Blog'}
+        <div className="flex flex-wrap gap-4">
+          <button
+            type="submit"
+            data-as-draft="false"
+            disabled={loading}
+            className="btn-primary disabled:opacity-60"
+          >
+            {loading && submitAction === 'publish' ? 'Publishing…' : 'Publish Blog'}
+          </button>
+          <button
+            type="submit"
+            data-as-draft="true"
+            disabled={loading}
+            className="btn-secondary disabled:opacity-60"
+          >
+            {loading && submitAction === 'draft' ? 'Saving…' : 'Save as Draft'}
           </button>
           <button type="button" onClick={() => router.back()} className="btn-secondary">
             Cancel

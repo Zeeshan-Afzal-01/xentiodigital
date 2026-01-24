@@ -75,7 +75,7 @@ async function _getBlogBySlug(slug: string, locale: string): Promise<Blog | null
  */
 export const getAllBlogs = (locale: string) =>
   unstable_cache(() => _getAllBlogs(locale), ['blogs', 'all', locale], {
-    revalidate: process.env.NODE_ENV === 'development' ? 0 : 60,
+    revalidate: process.env.NODE_ENV === 'development' ? 1 : 60,
   })()
 
 export const getBlogBySlug = (slug: string, locale: string) =>
