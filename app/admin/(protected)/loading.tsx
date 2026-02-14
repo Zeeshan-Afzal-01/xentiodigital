@@ -1,6 +1,6 @@
-import LoadingFallback from '@/components/LoadingFallback'
+import AdminSkeleton from '@/components/AdminSkeleton'
 
 export default function Loading() {
-  return <LoadingFallback message="Loading admin dashboard..." />
+  return <AdminSkeleton />
 }
 

@@ -1,12 +1,8 @@
-import LoadingFallback from '@/components/LoadingFallback'
+import RootLoadingSkeleton from '@/components/RootLoadingSkeleton'
 
 /**
- * Shown during root-level route loading (first segment: [locale], admin, etc.)
+ * Root-level route loading — skeleton while [locale] loads
  */
 export default function Loading() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <LoadingFallback message="Loading..." />
-    </div>
-  )
+  return <RootLoadingSkeleton />
 }

@@ -9,13 +9,21 @@
     "careers": "Careers",
     "contact": "Contact",
     "blog": "Blog",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "menu": "Menu",
+    "requestAQuote": "Request a Quote"
   },
   "hero": {
-    "title": "Transform Your Digital Presence",
-    "subtitle": "We deliver cutting-edge digital solutions that drive growth, engage customers, and elevate your brand in the digital landscape.",
-    "cta": "Get Started",
-    "ctaSecondary": "View Our Work"
+    "heading": "Premium Web Design Agency",
+    "mainTitleLine1": "We Grow Brands",
+    "mainTitleLine2": "Online",
+    "mainTitle": "We Grow Brands Online",
+    "subtitle": "Custom Websites, Branding & Digital Marketing",
+    "cta": "Request a Quote",
+    "ctaSecondary": "View Our Work",
+    "designRushReviews": "5 Star DesignRush Reviews",
+    "bestAgency2024": "Best Digital Agency of 2024",
+    "forbes": "Forbes"
   },
   "services": {
     "title": "Our Services",
@@ -68,6 +76,9 @@
     "team": "Expert Team Members",
     "experience": "Years Experience"
   },
+  "who": {
+    "headline": "Bold ideas. Strategic execution. Lasting impact. We turn vision into reality—keeping our industry leading partners ahead of the curve."
+  },
   "features": {
     "title": "Why Choose Xentio Digital?",
     "subtitle": "We combine technical expertise with creative innovation to deliver solutions that exceed expectations",
@@ -95,6 +106,60 @@
       "stat": "24/7",
       "statLabel": "Support"
     }
+  },
+  "process": {
+    "title": "Website Design Process",
+    "sub": "Take a peek behind the curtain and explore the custom web design process our team follows. We build custom sites for brands of all sizes that deliver measurable results.",
+    "subLink": "measurable results",
+    "steps": [
+      {
+        "title": "Web Strategy",
+        "intro": "We use in-depth research and analysis as key pillars to build a step-by-step plan that expands your digital presence and drives online growth.",
+        "listTitle": "In this phase, we:",
+        "items": ["Identify your target audiences", "Analyze user pain-points & define your UVPs", "Define key performance indicators (KPIs)", "Create a roadmap to growing your brand online"]
+      },
+      {
+        "title": "Planning & Information Architecture",
+        "intro": "We utilize proven techniques to map your content, meet user intentions and create an engaging user experience. By outlining your site's structure, we ensure seamless user journeys to key conversion points.",
+        "introBold": "we ensure seamless user journeys to key conversion points",
+        "listTitle": "Here's how our team does it:",
+        "items": ["We develop a base-level user flow & sitemap", "We utilize wireframing to create a seamless conversion funnel", "We add on-brand, consistent messaging to your structure"]
+      },
+      {
+        "title": "Creative Design",
+        "intro": "This stage is where you will see your site come to life. Our award-winning designers implement your unique branding elements to add your identity to your custom web design.",
+        "introBold": "award-winning designers",
+        "listTitle": "With just 50 milliseconds to make a good first impression, your website needs to stand out. To achieve this, we:",
+        "items": ["Thoughtfully place design features to guide the user journey", "Utilize interactive videos & animations", "Create custom, branded illustrations", "Ensure accessibility & search engine optimization"]
+      },
+      {
+        "title": "Responsive Development",
+        "intro": "A responsive website is fast, accessible and easy to navigate. It automatically scales to various screen sizes and devices, driving user experience and climbing search engine rankings.",
+        "listTitle": "To ensure your website reaches and satisfies every user, we:",
+        "introBold": "reaches and satisfies every user",
+        "items": ["Gather touchpoint & user-channel insights", "Transform your wireframes into a flexible UI", "Test across devices before approval & launch"]
+      },
+      {
+        "title": "Quality Assurance (QA)",
+        "intro": "We pride ourselves on delivering measurable results and professional outcomes. By following a strict quality assurance (QA) protocol, we guarantee a high-quality digital experience for your brand.",
+        "introBold": "we pride ourselves on delivering measurable results and professional outcomes",
+        "listTitle": "To achieve this, we:",
+        "items": ["Actively involve our clients throughout every project", "Meticulously test all designs to catch errors", "Use tried-and-tested tools to secure before launch"]
+      },
+      {
+        "title": "Launch & Optimization",
+        "intro": "Our end-to-end website design services cover both launch and post-launch support. We meticulously monitor, test and optimize your website elements to ensure every part of your site is functioning optimally.",
+        "listTitle": "Our design specialists make this happen by:",
+        "items": ["Following a strict protocol for every website launch", "Offering post-launch maintenance & optimization", "Creating & implementing a digital marketing plan to drive awareness across touchpoints"]
+      }
+    ]
+  },
+  "partners": {
+    "pre": "What We Offer",
+    "title": "Digital Solutions That Drive Growth",
+    "sub": "From web development to e-commerce and digital marketing, we deliver end-to-end solutions tailored to your business.",
+    "subBold": "we deliver end-to-end solutions tailored to your business",
+    "cta": "Explore All Services"
   },
   "testimonials": {
     "title": "What Our Clients Say",

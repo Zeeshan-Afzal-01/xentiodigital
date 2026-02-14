@@ -8,13 +8,22 @@
     "team": "Équipe",
     "careers": "Carrières",
     "contact": "Contact",
-    "blog": "Blog"
+    "blog": "Blog",
+    "getStarted": "Commencer",
+    "menu": "Menu",
+    "requestAQuote": "Demander un devis"
   },
   "hero": {
-    "title": "Transformez Votre Présence Numérique",
-    "subtitle": "Nous proposons des solutions numériques de pointe qui stimulent la croissance, engagent les clients et élèvent votre marque dans le paysage numérique.",
-    "cta": "Commencer",
-    "ctaSecondary": "Voir Nos Réalisations"
+    "heading": "Agence de création web premium",
+    "mainTitleLine1": "Nous faisons grandir les marques",
+    "mainTitleLine2": "en ligne",
+    "mainTitle": "Nous faisons grandir les marques en ligne",
+    "subtitle": "Sites sur mesure, branding et marketing digital",
+    "cta": "Demander un devis",
+    "ctaSecondary": "Voir Nos Réalisations",
+    "designRushReviews": "Avis 5 étoiles DesignRush",
+    "bestAgency2024": "Meilleure agence digitale 2024",
+    "forbes": "Forbes"
   },
   "services": {
     "title": "Nos Services",

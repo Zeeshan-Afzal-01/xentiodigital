@@ -1,12 +1,8 @@
-import LoadingFallback from '@/components/LoadingFallback'
+import PageSkeleton from '@/components/PageSkeleton'
 
 /**
- * Shown during [locale] route loading (home, about, services, blog, etc.)
+ * [locale] route loading — content skeleton (Navbar/Footer from layout)
  */
 export default function Loading() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <LoadingFallback message="Loading..." />
-    </div>
-  )
+  return <PageSkeleton />
 }

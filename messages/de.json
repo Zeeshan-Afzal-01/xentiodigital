@@ -8,13 +8,22 @@
     "team": "Team",
     "careers": "Karriere",
     "contact": "Kontakt",
-    "blog": "Blog"
+    "blog": "Blog",
+    "getStarted": "Loslegen",
+    "menu": "Menü",
+    "requestAQuote": "Anfrage senden"
   },
   "hero": {
-    "title": "Transformieren Sie Ihre Digitale Präsenz",
-    "subtitle": "Wir liefern innovative digitale Lösungen, die Wachstum fördern, Kunden binden und Ihre Marke in der digitalen Landschaft stärken.",
-    "cta": "Loslegen",
-    "ctaSecondary": "Unsere Arbeit Ansehen"
+    "heading": "Premium Webdesign-Agentur",
+    "mainTitleLine1": "Wir lassen Marken",
+    "mainTitleLine2": "online wachsen",
+    "mainTitle": "Wir lassen Marken online wachsen",
+    "subtitle": "Individuelle Websites, Branding & Digital Marketing",
+    "cta": "Anfrage senden",
+    "ctaSecondary": "Unsere Arbeit Ansehen",
+    "designRushReviews": "5 Sterne DesignRush Bewertungen",
+    "bestAgency2024": "Beste Digitalagentur 2024",
+    "forbes": "Forbes"
   },
   "services": {
     "title": "Unsere Dienstleistungen",

@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useState, useCallback, ReactNode } from 'react'
-import Loader from '@/components/Loader'
 
 interface LoadingContextType {
   setLoading: (loading: boolean, message?: string) => void
@@ -31,7 +30,6 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
   return (
     <LoadingContext.Provider value={{ setLoading, isLoading, loadingMessage }}>
       {children}
-      {isLoading && <Loader message={loadingMessage} />}
     </LoadingContext.Provider>
   )
 }

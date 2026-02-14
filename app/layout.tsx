@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { defaultLocale } from '@/i18n/request'
 import { inter, cairo } from '@/lib/fonts'
-import GlobalInitialLoader from '@/app/GlobalInitialLoader'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontFamily: 'var(--font-inter), system-ui, sans-serif',
         }}
       >
-        <GlobalInitialLoader />
         {children}
       </body>
     </html>

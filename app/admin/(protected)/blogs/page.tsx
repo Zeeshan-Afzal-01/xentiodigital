@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { toast } from 'react-hot-toast'
 import ConfirmModal from '@/components/admin/ConfirmModal'
 import { useLoading } from '@/components/providers/LoadingProvider'
-import Loader from '@/components/Loader'
 
 type BlogListItem = {
   slug: string
@@ -128,7 +127,7 @@ export default function AdminBlogsPage() {
   }
 
   if (loading) {
-    return <Loader message="Loading blogs from database..." fullScreen={false} />
+    return null
   }
 
   return (

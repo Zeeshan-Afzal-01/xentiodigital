@@ -6,7 +6,6 @@ import { toast } from 'react-hot-toast'
 import dynamic from 'next/dynamic'
 import { BlogInputSchema } from '@/lib/admin-schemas'
 import { useLoading } from '@/components/providers/LoadingProvider'
-import Loader from '@/components/Loader'
 import CoverImageUpload from '@/components/admin/CoverImageUpload'
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false })
@@ -136,7 +135,7 @@ export default function EditBlogPage() {
     }
   }
 
-  if (loading) return <Loader message="Loading blog from database..." fullScreen={false} />
+  if (loading) return null
 
   return (
     <div className="space-y-6">

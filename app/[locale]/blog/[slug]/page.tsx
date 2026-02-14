@@ -4,8 +4,8 @@ import { Suspense } from 'react'
 import { generateSEOMetadata, generateStructuredData } from '@/lib/seo'
 import { getAllBlogs, getBlogBySlug } from '@/lib/blog-service'
 import BlogPostPageContent from './BlogPostPageContent'
+import BlogPostSkeleton from '@/components/BlogPostSkeleton'
 import { hasFirebaseAdminEnv } from '@/lib/firebase-admin'
-import LoadingFallback from '@/components/LoadingFallback'
 
 interface PageProps {
   params: Promise<{
@@ -151,7 +151,7 @@ async function BlogPostContent({ locale, slug }: { locale: string; slug: string 
 export default async function BlogPostPage({ params }: PageProps) {
   const { locale, slug } = await params
   return (
-    <Suspense fallback={<LoadingFallback message="Loading blog post from database..." />}>
+    <Suspense fallback={<BlogPostSkeleton />}>
       <BlogPostContent locale={locale} slug={slug} />
     </Suspense>
   )

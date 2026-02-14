@@ -2,7 +2,6 @@ import { Suspense } from 'react'
 import Link from 'next/link'
 import { requireAdminOrRedirect } from '@/lib/admin-server-auth'
 import { getFirebaseAdminApp, getAdminDb } from '@/lib/firebase-admin'
-import LoadingFallback from '@/components/LoadingFallback'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -73,7 +72,7 @@ async function DashboardStats() {
 export default async function AdminDashboardPage() {
   await requireAdminOrRedirect()
   return (
-    <Suspense fallback={<LoadingFallback message="Loading dashboard statistics from database..." />}>
+    <Suspense fallback={null}>
       <DashboardStats />
     </Suspense>
   )

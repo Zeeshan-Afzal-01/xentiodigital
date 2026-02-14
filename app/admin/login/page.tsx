@@ -5,8 +5,6 @@ import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 import { toast } from 'react-hot-toast'
 import { getCurrentAdmin, signIn } from '@/lib/admin-auth'
-import Loader from '@/components/Loader'
-
 function LoginForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -43,10 +41,6 @@ function LoginForm() {
     } finally {
       setLoading(false)
     }
-  }
-
-  if (loading) {
-    return <Loader message="Authenticating..." />
   }
 
   return (
@@ -89,7 +83,7 @@ function LoginForm() {
 
 export default function AdminLogin() {
   return (
-    <Suspense fallback={<Loader message="Loading login page..." />}>
+    <Suspense fallback={null}>
       <LoginForm />
     </Suspense>
   )

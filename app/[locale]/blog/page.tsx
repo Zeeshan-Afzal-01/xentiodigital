@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { generateSEOMetadata } from '@/lib/seo'
 import BlogListContent from './BlogListContent'
+import BlogListSkeleton from '@/components/BlogListSkeleton'
 import { getAllBlogs } from '@/lib/blog-service'
 import { hasFirebaseAdminEnv } from '@/lib/firebase-admin'
-import LoadingFallback from '@/components/LoadingFallback'
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Blog - Insights & Resources | Xentio Digital',
@@ -41,7 +41,7 @@ export default async function BlogPage({
 }) {
   const { locale } = await params
   return (
-    <Suspense fallback={<LoadingFallback message="Loading blog posts from database..." />}>
+    <Suspense fallback={<BlogListSkeleton />}>
       <BlogContent locale={locale} />
     </Suspense>
   )

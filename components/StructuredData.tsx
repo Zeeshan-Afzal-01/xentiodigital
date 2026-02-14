@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface StructuredDataProps {
   data: object
@@ -8,25 +8,40 @@ interface StructuredDataProps {
 }
 
 export default function StructuredData({ data, id }: StructuredDataProps) {
+  const scriptRef = useRef<HTMLScriptElement | null>(null)
+
   useEffect(() => {
-    // Remove existing script if it exists
+    if (typeof document === 'undefined' || !document.head) return
+
     const existingScript = document.getElementById(id)
-    if (existingScript) {
-      existingScript.remove()
+    if (existingScript && existingScript.parentNode) {
+      try {
+        existingScript.parentNode.removeChild(existingScript)
+      } catch {
+        existingScript.remove()
+      }
     }
 
-    // Create and append new script
     const script = document.createElement('script')
     script.id = id
     script.type = 'application/ld+json'
     script.text = JSON.stringify(data)
+    scriptRef.current = script
     document.head.appendChild(script)
 
-    // Cleanup function
     return () => {
-      const scriptToRemove = document.getElementById(id)
-      if (scriptToRemove) {
-        scriptToRemove.remove()
+      const toRemove = scriptRef.current || document.getElementById(id)
+      if (toRemove && toRemove.parentNode) {
+        try {
+          toRemove.parentNode.removeChild(toRemove)
+        } catch {
+          try {
+            toRemove.remove()
+          } catch {
+            // ignore
+          }
+        }
+        scriptRef.current = null
       }
     }
   }, [data, id])
