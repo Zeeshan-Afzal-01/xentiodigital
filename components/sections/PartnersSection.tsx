@@ -68,7 +68,7 @@ const ctaVariants = {
 function ServiceSlide({ name, slug, locale }: { name: string; slug: string; locale: string }) {
   return (
     <Link
-      href={`/${locale}/services#${slug}`}
+      href={`/${locale}/services/${slug}`}
       className="m-slide client-item partners-client-item partners-service-item"
     >
       <div className="partners-service-name">{name}</div>

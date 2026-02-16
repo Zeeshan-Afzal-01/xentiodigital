@@ -11,7 +11,11 @@
     "blog": "Blog",
     "getStarted": "Get Started",
     "menu": "Menu",
-    "requestAQuote": "Request a Quote"
+    "requestAQuote": "Request a Quote",
+    "letsTalk": "Let's Talk",
+    "workingWorldwide": "Working Worldwide",
+    "discussProject": "Discuss a project",
+    "phone": "Phone"
   },
   "hero": {
     "heading": "Premium Web Design Agency",
@@ -154,6 +158,22 @@
       }
     ]
   },
+  "professionalServices": {
+    "title": "Why Choose A",
+    "titleHighlight": "XentioDigital",
+    "titleSuffix": " Agency?",
+    "imageAlt": "XentioDigital agency",
+    "items": [
+      { "title": "Have A Clear Web Strategy", "description": "Before your site goes live, you need a real plan. As a full-service web design agency, we research your industry, see what competitors are doing and define your target market. Then, we develop a strategy that matches your business goals." },
+      { "title": "Build A Strong Online Presence", "description": "High bounce rates mean something's wrong. Maybe the site and navigation are confusing, so visitors can't find what they need or perhaps the content loads slowly. As a full-service web design agency, we build sites that are easy to navigate and look good while users explore them. When the experience is smooth, visitors stay longer and are more likely to convert." },
+      { "title": "Boost Conversion Rates With User-Centric Design", "description": "Good design makes people take action. We are a web design agency that builds sites around what users do and not just what looks good. The layout of your site, its flow, the visuals we use and the position of buttons are all important for turning your visitors into customers." },
+      { "title": "Increase User Engagement", "description": "Your website is often the first impression potential customers get and having a well-designed site helps you establish credibility in your field. As an award-winning web design agency, we've worked with companies at different stages, some starting from scratch, others rebuilding what they had and helped them develop an online presence that earns trust and attracts the right customers." },
+      { "title": "Create A Custom eCommerce Design For Better Performance", "description": "Online stores need to look good enough that people want to buy and work smoothly enough that they complete the checkout process. Our award-winning designers build stores that do both. The design of your site matters as it directly affects how much you sell." },
+      { "title": "Optimize For Search Engines", "description": "Good search engine optimization helps Google find and rank your site. We are a web design agency that takes care of the optimization so you show up in search results when potential customers are looking for what you sell. It's simple; better rankings bring in more traffic without having to pay for ads." },
+      { "title": "Improve Your Load Times & Retain More Visitors", "description": "Slow websites lose customers. If your site takes too long to load, visitors bounce back and go somewhere else. We work on speeding your site by compressing images, streamlining code, eliminating potential server issues and fixing bugs. The faster your site runs, the better your chances of increasing your conversion rates." },
+      { "title": "Receive Ongoing Support & Maintenance", "description": "Your site needs regular updates and security monitoring. We provide ongoing support to keep everything running smoothly. That way, your site stays secure and up-to-date at all times." }
+    ]
+  },
   "partners": {
     "pre": "What We Offer",
     "title": "Digital Solutions That Drive Growth",
@@ -164,6 +184,22 @@
   "testimonials": {
     "title": "What Our Clients Say",
     "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed"
+  },
+  "clientTestimonials": {
+    "title": "What our clients LOVE about our work",
+    "viewReviews": "View client reviews",
+    "items": [
+      { "name": "Ted Eleftheriou, PGA", "position": "Vice President at National Golf Foundation", "quote": "Their insightful brand strategy provided an unexpected bonus, delivering not only a stunning new logo, but also comprehensive brand management strategies and guidelines.", "quoteBold": "brand management strategies and guidelines" },
+      { "name": "Ivana Kljajic-Peric", "position": "Software Tester at Smart Software Solutions Company", "quote": "Xentio Digital helped us increase traffic by over 200% and attract more qualified traffic and leads.", "quoteBold": "increase traffic by over 200% and attract more qualified traffic and leads" },
+      { "name": "Holly Rohleder", "position": "VP of Marketing at PromptCare", "quote": "The team wowed us from start to finish when building our website to launch in conjunction with our rebrand project.", "quoteBold": "wowed us from start to finish" },
+      { "name": "Stephen Dresner", "position": "Marketing Director at BeniGro", "quote": "The team was great. Their overall quality of work is second to none.", "quoteBold": "second to none" },
+      { "name": "Nora Collins", "position": "Marketing Director at Buddha Brands", "quote": "Xentio Digital has put forward top-notch work, from website design concepts to the implementation of our new eCommerce site.", "quoteBold": "forward top-notch work" },
+      { "name": "Eyal Azoulay", "position": "Co-founder and CEO at Rollink Inc", "quote": "We hired Xentio Digital as an A-to-Z solution for our brand launch. They offer high end professional planning and executions.", "quoteBold": "A-to-Z solution" },
+      { "name": "Anesa Basic", "position": "Director of Marketing at Amida Technology Solutions", "quote": "Xentio Digital was the right agency for our website redesign project. We highly recommend Xentio Digital.", "quoteBold": "highly recommend Xentio Digital" },
+      { "name": "Brian Whitney", "position": "CRO at TRAY", "quote": "The team was the clear winner of our selection process and they've been an absolute dream to work with throughout the entire process.", "quoteBold": "clear winner" },
+      { "name": "Connie Wong", "position": "Director of Marketing at GrowPath", "quote": "The team was great to work with and super efficient and professional in delivering a quality website!", "quoteBold": "super efficient and professional" },
+      { "name": "Karly Mintz", "position": "Marketing/Communication Coordinator at Matrix New World Engineering", "quote": "Xentio Digital provided an amazing experience from start to finish. The custom solution they built is perfect for our needs and easy to use.", "quoteBold": "amazing experience from start to finish" }
+    ]
   },
   "about": {
     "heroTitle": "About Xentio Digital",
@@ -218,6 +254,7 @@
     "addressLine1": "123 Digital Street",
     "addressLine2": "Tech City, TC 12345",
     "addressLine3": "United States",
+    "phoneNumber": "(123) 456-7890",
     "sendMessage": "Send Us a Message"
   },
   "portfolio": {

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "dev": "next dev",
     "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev",
     "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true});require('fs').rmSync('node_modules/.cache',{recursive:true,force:true})\"",
@@ -45,6 +46,7 @@
     "zod": "^4.3.5"
   },
   "devDependencies": {
+    "patch-package": "^8.0.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/gsap": "^3.0.0",
     "@types/mapbox-gl": "^3.0.0",
