@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 /**
  * Computes horizontal scroll progress (0–100) and active index from a scrollable element.
  * Uses requestAnimationFrame to throttle updates. Guards setState to avoid updates after unmount (prevents removeChild errors).
+ * Active index uses round() so gesture/swipe correctly shows the slide that is in view after snap.
  */
 export function useHorizontalProgress(
   scrollerRef: React.RefObject<HTMLDivElement | null>,
@@ -13,6 +14,7 @@ export function useHorizontalProgress(
   const rafId = useRef<number | null>(null)
   const ticking = useRef(false)
   const mounted = useRef(true)
+  const scrollEndTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const update = useCallback(() => {
     if (!mounted.current) return
@@ -27,8 +29,9 @@ export function useHorizontalProgress(
     }
     const pct = (scrollLeft / maxScroll) * 100
     setProgress(pct)
+    // Use round so the active slide updates correctly when user swipes (e.g. slide 2 shows after R→L gesture)
     const index = Math.min(
-      Math.floor((scrollLeft / maxScroll) * itemCount),
+      Math.max(0, Math.round((scrollLeft / maxScroll) * (itemCount - 1))),
       itemCount - 1
     )
     setActiveIndex(index)
@@ -45,6 +48,12 @@ export function useHorizontalProgress(
       update()
       ticking.current = false
     })
+    // After gesture ends, scroll may snap; run update again so activeIndex matches snapped position
+    if (scrollEndTimer.current) clearTimeout(scrollEndTimer.current)
+    scrollEndTimer.current = setTimeout(() => {
+      scrollEndTimer.current = null
+      update()
+    }, 150)
   }, [update])
 
   useEffect(() => {
@@ -53,11 +62,21 @@ export function useHorizontalProgress(
     if (!el) return () => { mounted.current = false }
     update()
     el.addEventListener('scroll', onScroll, { passive: true })
+    if ('onscrollend' in window) {
+      el.addEventListener('scrollend', update as EventListener, { passive: true })
+    }
     const resizeObserver = new ResizeObserver(onScroll)
     resizeObserver.observe(el)
     return () => {
       mounted.current = false
       el.removeEventListener('scroll', onScroll)
+      if ('onscrollend' in window) {
+        el.removeEventListener('scrollend', update as EventListener)
+      }
+      if (scrollEndTimer.current) {
+        clearTimeout(scrollEndTimer.current)
+        scrollEndTimer.current = null
+      }
       resizeObserver.disconnect()
       if (rafId.current != null) {
         cancelAnimationFrame(rafId.current)
