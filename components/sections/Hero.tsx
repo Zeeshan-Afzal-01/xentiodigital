@@ -25,24 +25,25 @@ export default function Hero() {
         <div className="container">
           <div className="c-heading -h1">
             <div className="c-heading__pre">
-              <motion.h1
+              <motion.span
+                className="hero-pre-label"
                 initial={fadeUp.initial}
                 animate={fadeUp.animate}
                 transition={fadeUp.transition}
               >
-                {t('heading')}
-              </motion.h1>
+                {t('preHeading')}
+              </motion.span>
             </div>
-            <div className="c-heading__title">
-              <motion.p
-                className="text-shadow-white"
+            <h1 className="c-heading__title">
+              <motion.span
+                className="text-shadow-white block"
                 initial={fadeUp.initial}
                 animate={fadeUp.animate}
                 transition={{ ...fadeUp.transition, delay: 0.06 }}
               >
-                {t('mainTitleLine1')} {t('mainTitleLine2')}
-              </motion.p>
-            </div>
+                {t('heading')}
+              </motion.span>
+            </h1>
             <div className="c-heading__sub">
               <motion.span
                 initial={fadeUp.initial}
