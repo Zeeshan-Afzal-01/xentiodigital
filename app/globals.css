@@ -894,14 +894,17 @@ body {
    Hero: m-banner__content, hero__cert (DigitalSilk) — uses HEADING module
    ============================================ */
 .home-hero.m-banner {
-  --pretitle-font-size: 2.6rem;
+  --pretitle-font-size: 2rem;
   --pretitle-font-weight: 700;
-  --pretitle-letter-spacing: 0.12em;
+  --pretitle-letter-spacing: 0.1em;
   --h1-margin-bottom: 0.5em;
   --titles-color: #fff;
   --pretitle-color: #fff;
   --subtitle-color: rgba(255, 255, 255, 0.95);
-  --hero-main-title-size: clamp(2.5rem, 6vw, 4.5rem);
+  --hero-main-title-size: clamp(2rem, 5vw, 3.5rem);
+  --subtitle-font-size-mobile: clamp(1.4rem, 5vw, 2rem);
+  --hero-sub-font-size: 0.9375rem;
+  --hero-sub-font-size-lg: 1.0625rem;
   --hero-sub-font-weight: 400;
 }
 
@@ -950,8 +953,8 @@ body {
   letter-spacing: var(--pretitle-letter-spacing, 0.12em);
 }
 
-.c-heading.-h1 .c-heading__pre h1 {
-  font-size: 20px;
+.home-hero .c-heading.-h1 .c-heading__pre h1 {
+  font-size: 1.125rem;
   font-weight: var(--pretitle-font-weight, 700);
   letter-spacing: var(--pretitle-letter-spacing, 0.12em);
   color: inherit;
@@ -978,7 +981,7 @@ body {
 
 
 .c-heading.-h1 .c-heading__sub {
-  font-size: var(--subtitle-font-size-mobile, 1rem);
+  font-size: var(--subtitle-font-size-mobile, var(--hero-sub-font-size, 0.9375rem));
   font-weight: var(--hero-sub-font-weight, 400);
   color: inherit;
   margin-top: 0.5rem;
@@ -989,9 +992,14 @@ body {
 
 @media (min-width: 1024px) {
   .c-heading.-h1 .c-heading__sub {
-    
+    font-size: var(--hero-sub-font-size-lg, 1.0625rem);
     font-weight: var(--hero-sub-font-weight, 400);
   }
+}
+
+.home-hero .c-btn.-slideover {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8125rem;
 }
 
 .c-btn.-slideover {
@@ -3079,4 +3087,152 @@ select option {
     font-size: 1.90rem;
     line-height: 1.75rem;
   }
+}
+
+/* ============================================
+   THEME-ABLE SECTIONS — Light/Dark toggle (homepage only)
+   Navbar toggle controls these 5 sections. Rest of site unaffected.
+   ============================================ */
+
+.theme-sections-root {
+  /* Smooth transitions when theme changes */
+  --theme-transition: 0.4s ease;
+}
+
+/* --- 1. What/Who (ia-what-who) --- */
+.theme-sections-root[data-theme='light'] .ia-what-who {
+  background: #ffffff;
+  color: #111111;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+.theme-sections-root[data-theme='light'] .ia-who__headline .ia-word__in {
+  background: linear-gradient(135deg, #1a1a2e 0%, #334155 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-sections-root[data-theme='light'] .ia-who__service-item,
+.theme-sections-root[data-theme='light'] .ia-who__service-heading,
+.theme-sections-root[data-theme='light'] .ia-who__service-features {
+  color: #1a1a2e !important;
+}
+
+.theme-sections-root[data-theme='light'] .ia-who__service-item:hover .ia-who__service-features {
+  color: rgba(26, 26, 46, 0.8) !important;
+}
+
+.theme-sections-root[data-theme='light'] .ia-who-bg-glow::before,
+.theme-sections-root[data-theme='light'] .ia-who-bg-glow::after {
+  opacity: 0.12;
+}
+
+.theme-sections-root[data-theme='light'] .ia-who__service-img,
+.theme-sections-root[data-theme='light'] .case-service-control,
+.theme-sections-root[data-theme='light'] .slick-prev,
+.theme-sections-root[data-theme='light'] .slick-next {
+  color: #1a1a2e;
+  border-color: rgba(26, 26, 46, 0.2);
+}
+
+/* --- 2. Partners (m-partners) --- */
+.theme-sections-root[data-theme='light'] .m-partners {
+  background-color: #f8fafc;
+  color: #111111;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-pre,
+.theme-sections-root[data-theme='light'] .m-partners .partners-title-futuristic {
+  color: #1a1a2e;
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-title-futuristic {
+  background: linear-gradient(135deg, #1a1a2e 0%, #6366f1 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-service-name {
+  color: #334155;
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-service-item:hover .partners-service-name {
+  color: #1a1a2e;
+}
+
+.theme-sections-root[data-theme='light'] .partners-bg-glow::before,
+.theme-sections-root[data-theme='light'] .partners-bg-glow::after {
+  opacity: 0.2;
+}
+
+/* --- 3. Our Process (themeable-process) --- */
+.theme-sections-root[data-theme='light'] .themeable-process {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+/* Hide gradient backgrounds in light mode */
+.theme-sections-root[data-theme='light'] .themeable-process .process-bg {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--theme-transition);
+}
+
+/* --- 4. Professional Services — theme handled in ProfessionalServicesSection.module.scss --- */
+
+/* --- 5. Client Testimonials (themeable-testimonials) --- */
+.theme-sections-root[data-theme='light'] .themeable-testimonials {
+  background-color: #f8fafc !important;
+  color: #111111 !important;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .sectionHeading {
+  color: #0891b2;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .quote,
+.theme-sections-root[data-theme='light'] .themeable-testimonials .name,
+.theme-sections-root[data-theme='light'] .themeable-testimonials .position {
+  color: #1a1a2e !important;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .clientRow .name {
+  color: rgba(26, 26, 46, 0.6) !important;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .clientRow .position {
+  color: rgba(26, 26, 46, 0.45) !important;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .clientRow:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .designRushWidget {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .designRushWidget .drCount,
+.theme-sections-root[data-theme='light'] .themeable-testimonials .designRushWidget .drOn,
+.theme-sections-root[data-theme='light'] .themeable-testimonials .designRushWidget .drScore {
+  color: #1a1a2e !important;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .viewReviewsBtn {
+  color: #0891b2;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .logoWrap img {
+  filter: none;
+}
+
+.theme-sections-root[data-theme='light'] .themeable-testimonials .bgGlowLeft,
+.theme-sections-root[data-theme='light'] .themeable-testimonials .bgGlowRight {
+  opacity: 0.15;
 }

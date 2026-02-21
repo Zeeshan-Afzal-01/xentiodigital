@@ -112,7 +112,7 @@ export default function PartnersSection() {
   return (
     <motion.section
       ref={sectionRef}
-      className="m-partners colors-inverted section-padding"
+      className="m-partners colors-inverted themeable-section section-padding"
       aria-labelledby="partners-title"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}

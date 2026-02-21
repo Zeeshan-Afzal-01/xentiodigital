@@ -59,13 +59,27 @@ export default function CTASection() {
             {t('description')}
           </p>
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block"
+            className="flex flex-wrap items-center justify-center gap-4"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Link href={`/${locale}/contact`} className="btn-primary text-lg px-12 py-6 glow-purple">
-              {t('button')}
-            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+              <Link href={`/${locale}/contact`} className="btn-primary text-lg px-12 py-6 glow-purple">
+                {t('button')}
+              </Link>
+            </motion.div>
+            {t('buttonSecondary') && (
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+                <Link
+                  href={`/${locale}/contact`}
+                  className="btn-secondary text-lg px-12 py-6 inline-block"
+                >
+                  {t('buttonSecondary')}
+                </Link>
+              </motion.div>
+            )}
           </motion.div>
         </motion.div>
       </div>

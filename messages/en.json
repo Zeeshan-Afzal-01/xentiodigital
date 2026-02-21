@@ -18,20 +18,28 @@
     "phone": "Phone"
   },
   "hero": {
-    "heading": "Premium Web Design Agency",
-    "mainTitleLine1": "We Grow Brands",
-    "mainTitleLine2": "Online",
-    "mainTitle": "We Grow Brands Online",
-    "subtitle": "Custom Websites, Branding & Digital Marketing",
-    "cta": "Request a Quote",
-    "ctaSecondary": "View Our Work",
+    "heading": "We Turn Online Presence into Real Business Growth",
+    "mainTitleLine1": "We Turn Online Presence",
+    "mainTitleLine2": "into Real Business Growth",
+    "mainTitle": "We Turn Online Presence into Real Business Growth",
+    "subtitle": "At Xentio Digital, we create data-driven digital marketing strategies that increase traffic, generate leads, and boost revenue for businesses worldwide.",
+    "cta": "Book Your Free Strategy Call",
+    "ctaSecondary": "See Our Work",
+    "trustLine": "5+ Years of SEO & Digital Marketing Expertise | International Clients | Performance-Focused Solutions",
     "designRushReviews": "5 Star DesignRush Reviews",
     "bestAgency2024": "Best Digital Agency of 2024",
     "forbes": "Forbes"
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive solutions tailored to your business needs",
+    "title": "Our Services Deliver Real Results",
+    "subtitle": "We focus on strategies that produce measurable growth. From improving your search rankings to managing high-converting ad campaigns, we handle it all.",
+    "ctaButton": "Request a Free SEO Audit",
+    "homepageServices": [
+      {"name": "SEO (Search Engine Optimization)", "description": "Increase your website's visibility and drive organic traffic that converts into paying customers."},
+      {"name": "Google & Meta Ads", "description": "Run data-driven campaigns that generate high-quality leads and measurable ROI."},
+      {"name": "Social Media Management", "description": "Build a strong social presence and engage your audience across platforms."},
+      {"name": "Website Development", "description": "Create fast, conversion-focused websites designed to turn visitors into customers."}
+    ],
     "learnMore": "Learn More",
     "viewServices": "View Services",
     "hideServices": "Hide Services",
@@ -68,9 +76,10 @@
     "rights": "All rights reserved"
   },
   "cta": {
-    "title": "Ready to Transform Your Business?",
-    "description": "Let's discuss how we can help you achieve your digital goals. Get in touch today for a free consultation.",
-    "button": "Schedule a Consultation"
+    "title": "Ready to Grow Your Business Online?",
+    "description": "Get a personalized strategy to increase traffic, leads, and sales. Let's make your digital marketing work for you.",
+    "button": "Book Your Free Consultation",
+    "buttonSecondary": "Get Your Free SEO Audit"
   },
   "stats": {
     "title": "By The Numbers",
@@ -112,66 +121,66 @@
     }
   },
   "process": {
-    "title": "Website Design Process",
-    "sub": "Take a peek behind the curtain and explore the custom web design process our team follows. We build custom sites for brands of all sizes that deliver measurable results.",
-    "subLink": "measurable results",
+    "title": "How We Work",
+    "sub": "Our proven 4-step process drives real growth for your business. We analyze, plan, execute, and optimize to maximize your ROI.",
+    "subLink": "maximize your ROI",
     "steps": [
       {
-        "title": "Web Strategy",
-        "intro": "We use in-depth research and analysis as key pillars to build a step-by-step plan that expands your digital presence and drives online growth.",
+        "title": "Audit & Strategy",
+        "intro": "We analyze your website, competitors, and market to find growth opportunities.",
         "listTitle": "In this phase, we:",
-        "items": ["Identify your target audiences", "Analyze user pain-points & define your UVPs", "Define key performance indicators (KPIs)", "Create a roadmap to growing your brand online"]
+        "items": ["Conduct comprehensive website and SEO audits", "Analyze competitor strategies", "Identify market opportunities", "Define clear growth objectives"]
       },
       {
-        "title": "Planning & Information Architecture",
-        "intro": "We utilize proven techniques to map your content, meet user intentions and create an engaging user experience. By outlining your site's structure, we ensure seamless user journeys to key conversion points.",
-        "introBold": "we ensure seamless user journeys to key conversion points",
-        "listTitle": "Here's how our team does it:",
-        "items": ["We develop a base-level user flow & sitemap", "We utilize wireframing to create a seamless conversion funnel", "We add on-brand, consistent messaging to your structure"]
+        "title": "Planning & Goal Setting",
+        "intro": "We create a custom growth plan aligned with your business goals.",
+        "listTitle": "We deliver:",
+        "items": ["Custom strategy roadmap", "KPIs and success metrics", "Timeline and milestones", "Budget allocation plan"]
       },
       {
-        "title": "Creative Design",
-        "intro": "This stage is where you will see your site come to life. Our award-winning designers implement your unique branding elements to add your identity to your custom web design.",
-        "introBold": "award-winning designers",
-        "listTitle": "With just 50 milliseconds to make a good first impression, your website needs to stand out. To achieve this, we:",
-        "items": ["Thoughtfully place design features to guide the user journey", "Utilize interactive videos & animations", "Create custom, branded illustrations", "Ensure accessibility & search engine optimization"]
+        "title": "Execution",
+        "intro": "We implement SEO, ads, social media, and website optimization strategies.",
+        "listTitle": "We execute:",
+        "items": ["SEO optimization and content strategy", "Paid advertising campaigns", "Social media management", "Website performance improvements"]
       },
       {
-        "title": "Responsive Development",
-        "intro": "A responsive website is fast, accessible and easy to navigate. It automatically scales to various screen sizes and devices, driving user experience and climbing search engine rankings.",
-        "listTitle": "To ensure your website reaches and satisfies every user, we:",
-        "introBold": "reaches and satisfies every user",
-        "items": ["Gather touchpoint & user-channel insights", "Transform your wireframes into a flexible UI", "Test across devices before approval & launch"]
-      },
-      {
-        "title": "Quality Assurance (QA)",
-        "intro": "We pride ourselves on delivering measurable results and professional outcomes. By following a strict quality assurance (QA) protocol, we guarantee a high-quality digital experience for your brand.",
-        "introBold": "we pride ourselves on delivering measurable results and professional outcomes",
-        "listTitle": "To achieve this, we:",
-        "items": ["Actively involve our clients throughout every project", "Meticulously test all designs to catch errors", "Use tried-and-tested tools to secure before launch"]
-      },
-      {
-        "title": "Launch & Optimization",
-        "intro": "Our end-to-end website design services cover both launch and post-launch support. We meticulously monitor, test and optimize your website elements to ensure every part of your site is functioning optimally.",
-        "listTitle": "Our design specialists make this happen by:",
-        "items": ["Following a strict protocol for every website launch", "Offering post-launch maintenance & optimization", "Creating & implementing a digital marketing plan to drive awareness across touchpoints"]
+        "title": "Optimization & Reporting",
+        "intro": "We track performance and continuously improve results to maximize ROI.",
+        "listTitle": "We provide:",
+        "items": ["Regular performance reports", "Data-driven optimizations", "A/B testing and refinements", "Ongoing support and strategy adjustments"]
       }
     ]
   },
   "professionalServices": {
-    "title": "Why Choose A",
-    "titleHighlight": "XentioDigital",
-    "titleSuffix": " Agency?",
+    "title": "Why Businesses Trust Us",
+    "titleHighlight": "",
+    "titleSuffix": "",
     "imageAlt": "XentioDigital agency",
     "items": [
-      { "title": "Have A Clear Web Strategy", "description": "Before your site goes live, you need a real plan. As a full-service web design agency, we research your industry, see what competitors are doing and define your target market. Then, we develop a strategy that matches your business goals." },
-      { "title": "Build A Strong Online Presence", "description": "High bounce rates mean something's wrong. Maybe the site and navigation are confusing, so visitors can't find what they need or perhaps the content loads slowly. As a full-service web design agency, we build sites that are easy to navigate and look good while users explore them. When the experience is smooth, visitors stay longer and are more likely to convert." },
-      { "title": "Boost Conversion Rates With User-Centric Design", "description": "Good design makes people take action. We are a web design agency that builds sites around what users do and not just what looks good. The layout of your site, its flow, the visuals we use and the position of buttons are all important for turning your visitors into customers." },
-      { "title": "Increase User Engagement", "description": "Your website is often the first impression potential customers get and having a well-designed site helps you establish credibility in your field. As an award-winning web design agency, we've worked with companies at different stages, some starting from scratch, others rebuilding what they had and helped them develop an online presence that earns trust and attracts the right customers." },
-      { "title": "Create A Custom eCommerce Design For Better Performance", "description": "Online stores need to look good enough that people want to buy and work smoothly enough that they complete the checkout process. Our award-winning designers build stores that do both. The design of your site matters as it directly affects how much you sell." },
-      { "title": "Optimize For Search Engines", "description": "Good search engine optimization helps Google find and rank your site. We are a web design agency that takes care of the optimization so you show up in search results when potential customers are looking for what you sell. It's simple; better rankings bring in more traffic without having to pay for ads." },
-      { "title": "Improve Your Load Times & Retain More Visitors", "description": "Slow websites lose customers. If your site takes too long to load, visitors bounce back and go somewhere else. We work on speeding your site by compressing images, streamlining code, eliminating potential server issues and fixing bugs. The faster your site runs, the better your chances of increasing your conversion rates." },
-      { "title": "Receive Ongoing Support & Maintenance", "description": "Your site needs regular updates and security monitoring. We provide ongoing support to keep everything running smoothly. That way, your site stays secure and up-to-date at all times." }
+      { "title": "Proven 5+ Years of Experience", "description": "Track record of delivering measurable results for businesses worldwide." },
+      { "title": "Data-Driven & Transparent Reporting", "description": "Clear insights and regular reporting so you always know how your campaigns perform." },
+      { "title": "Focused on Long-Term Growth, Not Quick Fixes", "description": "Sustainable strategies that build lasting value for your business." },
+      { "title": "Direct Communication With No Middle Layers", "description": "Work directly with our experts—no account managers or gatekeepers." },
+      { "title": "Dedicated Support to Maximize Your ROI", "description": "We're committed to helping you get the best return on your marketing investment." },
+      { "title": "International Clients & Performance-Focused", "description": "Trusted by businesses across borders with a focus on real results." }
+    ]
+  },
+  "caseStudies": {
+    "title": "Real Growth. Real Impact.",
+    "ctaButton": "View Full Case Studies",
+    "items": [
+      {
+        "title": "Ecommerce Vape Brand",
+        "metrics": ["+180% Organic Traffic in 6 Months", "Top 10 Google Rankings for High-Intent Keywords"]
+      },
+      {
+        "title": "UAE Service Provider",
+        "metrics": ["+95% Increase in Qualified Leads", "Improved Local SEO Rankings in 3 Months"]
+      },
+      {
+        "title": "WordPress Website Redesign Client",
+        "metrics": ["Conversion Rate Increased by 42%", "Faster Website, Lower Bounce Rate"]
+      }
     ]
   },
   "partners": {
@@ -186,19 +195,12 @@
     "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed"
   },
   "clientTestimonials": {
-    "title": "What our clients LOVE about our work",
+    "title": "What Our Clients Say",
     "viewReviews": "View client reviews",
     "items": [
-      { "name": "Ted Eleftheriou, PGA", "position": "Vice President at National Golf Foundation", "quote": "Their insightful brand strategy provided an unexpected bonus, delivering not only a stunning new logo, but also comprehensive brand management strategies and guidelines.", "quoteBold": "brand management strategies and guidelines" },
-      { "name": "Ivana Kljajic-Peric", "position": "Software Tester at Smart Software Solutions Company", "quote": "Xentio Digital helped us increase traffic by over 200% and attract more qualified traffic and leads.", "quoteBold": "increase traffic by over 200% and attract more qualified traffic and leads" },
-      { "name": "Holly Rohleder", "position": "VP of Marketing at PromptCare", "quote": "The team wowed us from start to finish when building our website to launch in conjunction with our rebrand project.", "quoteBold": "wowed us from start to finish" },
-      { "name": "Stephen Dresner", "position": "Marketing Director at BeniGro", "quote": "The team was great. Their overall quality of work is second to none.", "quoteBold": "second to none" },
-      { "name": "Nora Collins", "position": "Marketing Director at Buddha Brands", "quote": "Xentio Digital has put forward top-notch work, from website design concepts to the implementation of our new eCommerce site.", "quoteBold": "forward top-notch work" },
-      { "name": "Eyal Azoulay", "position": "Co-founder and CEO at Rollink Inc", "quote": "We hired Xentio Digital as an A-to-Z solution for our brand launch. They offer high end professional planning and executions.", "quoteBold": "A-to-Z solution" },
-      { "name": "Anesa Basic", "position": "Director of Marketing at Amida Technology Solutions", "quote": "Xentio Digital was the right agency for our website redesign project. We highly recommend Xentio Digital.", "quoteBold": "highly recommend Xentio Digital" },
-      { "name": "Brian Whitney", "position": "CRO at TRAY", "quote": "The team was the clear winner of our selection process and they've been an absolute dream to work with throughout the entire process.", "quoteBold": "clear winner" },
-      { "name": "Connie Wong", "position": "Director of Marketing at GrowPath", "quote": "The team was great to work with and super efficient and professional in delivering a quality website!", "quoteBold": "super efficient and professional" },
-      { "name": "Karly Mintz", "position": "Marketing/Communication Coordinator at Matrix New World Engineering", "quote": "Xentio Digital provided an amazing experience from start to finish. The custom solution they built is perfect for our needs and easy to use.", "quoteBold": "amazing experience from start to finish" }
+      { "name": "Client Name", "position": "UAE", "quote": "Xentio Digital helped us triple our organic traffic in just 6 months. Their SEO expertise is unmatched.", "quoteBold": "triple our organic traffic in just 6 months" },
+      { "name": "Client Name", "position": "UK", "quote": "Our ad campaigns finally started converting, and ROI is amazing. Highly recommend Xentio Digital.", "quoteBold": "ROI is amazing" },
+      { "name": "Client Name", "position": "Pakistan", "quote": "Professional, responsive, and results-driven. Our website now converts visitors like never before.", "quoteBold": "converts visitors like never before" }
     ]
   },
   "about": {

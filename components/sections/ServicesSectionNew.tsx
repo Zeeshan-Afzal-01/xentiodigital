@@ -51,10 +51,10 @@ export default async function ServicesSectionNew({ locale }: { locale: string })
         {/* Enhanced CTA Section */}
         <div className="text-center">
           <Link 
-            href={`/${locale}/services`} 
+            href={`/${locale}/contact`} 
             className="btn-secondary text-lg px-12 py-6 relative overflow-hidden group inline-block transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
           >
-            <span className="relative z-10">{t('viewServices')}</span>
+            <span className="relative z-10">{t('ctaButton')}</span>
             <span
               className="absolute inset-0 bg-gradient-to-r from-primary-500/20 via-secondary-500/20 to-accent-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               aria-hidden="true"

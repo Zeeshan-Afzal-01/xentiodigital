@@ -82,7 +82,7 @@ export default function WhatWhoSection() {
   return (
     <motion.section
       ref={sectionRef}
-      className="ia-what-who section-padding relative z-10 overflow-hidden"
+      className="ia-what-who themeable-section section-padding relative z-10 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isSectionInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.6 }}

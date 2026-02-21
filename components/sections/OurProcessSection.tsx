@@ -112,14 +112,14 @@ export default function OurProcessSection() {
   return (
     <motion.section
       ref={sectionRef}
-      className={styles.section}
+      className={`${styles.section} themeable-section themeable-process`}
       aria-labelledby="process-title"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.4 }}
     >
-      <div className={styles.bgLeft} aria-hidden />
-      <div className={styles.bgRight} aria-hidden />
+      <div className={`${styles.bgLeft} process-bg`} aria-hidden />
+      <div className={`${styles.bgRight} process-bg`} aria-hidden />
 
       <div className={styles.headingWrap}>
         <motion.h2

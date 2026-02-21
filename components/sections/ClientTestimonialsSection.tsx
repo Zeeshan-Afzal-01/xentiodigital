@@ -57,7 +57,7 @@ export default function ClientTestimonialsSection() {
   return (
     <motion.section
       ref={sectionRef}
-      className={styles.section}
+      className={`${styles.section} themeable-section themeable-testimonials`}
       aria-label="Client testimonials"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}

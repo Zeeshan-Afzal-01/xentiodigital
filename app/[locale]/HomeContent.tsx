@@ -3,22 +3,27 @@ import WhatWhoSection from '@/components/sections/WhatWhoSection'
 import PartnersSection from '@/components/sections/PartnersSection'
 import OurProcessSection from '@/components/sections/OurProcessSection'
 import ProfessionalServicesSection from '@/components/sections/ProfessionalServicesSection'
-import ServicesSection from '@/components/sections/ServicesSectionNew'
+import HomeServicesSection from '@/components/sections/HomeServicesSection'
+import CaseStudiesSection from '@/components/sections/CaseStudiesSection'
 import ClientTestimonialsSection from '@/components/sections/ClientTestimonialsSection'
 import CTASection from '@/components/sections/CTASection'
 import ParticleBackground from '@/components/ParticleBackground'
+import ThemeSectionsWrapper from '@/components/ThemeSectionsWrapper'
 
 export default function HomeContent({ locale }: { locale: string }) {
   return (
     <div className="relative">
       <ParticleBackground />
       <Hero />
-      <WhatWhoSection />
-      <PartnersSection />
-      <OurProcessSection />
-      <ProfessionalServicesSection />
-      <ServicesSection locale={locale} />
-      <ClientTestimonialsSection />
+      <ThemeSectionsWrapper>
+        <WhatWhoSection />
+        <PartnersSection />
+        <OurProcessSection />
+        <ProfessionalServicesSection />
+        <ClientTestimonialsSection />
+      </ThemeSectionsWrapper>
+      <HomeServicesSection locale={locale} />
+      <CaseStudiesSection />
       <CTASection />
     </div>
   )

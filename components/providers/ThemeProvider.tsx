@@ -8,10 +8,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="dark"
       enableSystem={false}
       // PERF: avoid CSS transition jank when theme class toggles
-      disableTransitionOnChange={true}
+      disableTransitionOnChange={false}
     >
       <ThemeByRoute />
       {children}

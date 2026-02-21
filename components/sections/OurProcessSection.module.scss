@@ -402,3 +402,69 @@
     transition: none;
   }
 }
+
+/* ============================================
+   Light mode overrides (via theme-sections-root[data-theme='light'])
+   Dark mode: original styles above apply unchanged
+   ============================================ */
+:global(.theme-sections-root[data-theme='light']) {
+  .section {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .title {
+    background: none !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000;
+  }
+
+  .subcopy,
+  .bodyText,
+  .bodyText p,
+  .bodyText strong,
+  .listTitle,
+  .listItem,
+  .slideTitle {
+    color: #000000 !important;
+  }
+
+  .subcopyLink {
+    color: #0066cc;
+  }
+
+  .subcopyLink:hover {
+    color: #0052a3;
+  }
+
+  .slide {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  }
+
+  .slideActive {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12);
+  }
+
+  .counter {
+    color: rgba(0, 0, 0, 0.05);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .imgWrap {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+  }
+
+  .media::after {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .slideActive .media::after {
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+}

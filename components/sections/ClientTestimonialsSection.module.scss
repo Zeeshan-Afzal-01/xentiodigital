@@ -523,3 +523,42 @@
     transition: none;
   }
 }
+
+/* Light mode: black text | Dark mode: white text (base styles) */
+:global(.theme-sections-root[data-theme='light']) {
+  .section {
+    color: #000000;
+  }
+
+  .quote,
+  .name,
+  .position,
+  .clientRow .name,
+  .clientRow .position,
+  .clientRowActive .name,
+  .clientRowActive .position,
+  .drCount,
+  .drOn,
+  .drScore,
+  .drIcon {
+    color: #000000 !important;
+  }
+
+  .clientRow .name {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .clientRow .position {
+    color: rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .quote strong,
+  .quote b {
+    color: #0891b2;
+  }
+
+  .designRushWidget {
+    background: transparent;
+    border: 1px solid rgb(0, 0, 0);
+  }
+}

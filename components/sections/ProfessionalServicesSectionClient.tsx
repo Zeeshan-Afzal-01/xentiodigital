@@ -69,7 +69,7 @@ export default function ProfessionalServicesSectionClient({
   return (
     <section
       ref={sectionRef}
-      className={styles.section}
+      className={`${styles.section} themeable-section themeable-professional-services`}
       aria-labelledby="professional-services-heading"
     >
       <div className={styles.container}>
@@ -85,19 +85,20 @@ export default function ProfessionalServicesSectionClient({
         >
           <h2 id="professional-services-heading" className={styles.headingTitle}>
             <motion.span variants={fadeUp} custom={0}>
-              {title}{' '}
+              {title}
+              {titleHighlight ? ' ' : ''}
             </motion.span>
-            <motion.span
-              className={styles.headingHighlight}
-              variants={fadeUp}
-              custom={1}
-            >
-              {titleHighlight}
-            </motion.span>
-            <motion.span variants={fadeUp} custom={2}>
-              {' '}
-              {titleSuffix}
-            </motion.span>
+            {titleHighlight ? (
+              <motion.span className={styles.headingHighlight} variants={fadeUp} custom={1}>
+                {titleHighlight}
+              </motion.span>
+            ) : null}
+            {titleSuffix ? (
+              <motion.span variants={fadeUp} custom={2}>
+                {' '}
+                {titleSuffix}
+              </motion.span>
+            ) : null}
           </h2>
           <motion.div
             className={styles.imageWrap}

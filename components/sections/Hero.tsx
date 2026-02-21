@@ -11,9 +11,6 @@ const fadeUp = {
   transition: { duration: 0.55, ease: [0.22, 0.61, 0.36, 1] },
 }
 
-const DESIGNRUSH_LOGO = 'https://www.digitalsilk.com/wp-content/uploads/2022/08/industry-left-logo-left-side.png'
-const FORBES_LOGO = 'https://www.digitalsilk.com/wp-content/uploads/2025/04/Forbes_logo.svg'
-
 export default function Hero() {
   const t = useTranslations('hero')
   const locale = useLocale()
@@ -61,8 +58,9 @@ export default function Hero() {
             initial={fadeUp.initial}
             animate={fadeUp.animate}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
+            className="flex flex-wrap gap-4 mt-6"
           >
-            <Link href={`/${locale}/contact`} className="c-btn -slideover" style={{ marginTop: '1.5rem' }}>
+            <Link href={`/${locale}/contact`} className="c-btn -slideover">
               <span>
                 <span>{t('cta')}</span>
                 <span className="c-btn__ico">
@@ -72,53 +70,22 @@ export default function Hero() {
                 </span>
               </span>
             </Link>
+            <Link
+              href={`/${locale}/portfolio`}
+              className="c-btn -primary-v1 -opacity inline-flex items-center justify-center rounded-sm border border-white bg-white/10 px-5 py-2.5 text-xs md:text-sm font-medium uppercase tracking-[0.1em] text-white hover:bg-white hover:text-[#1e1b4b] transition-colors"
+            >
+              {t('ctaSecondary')}
+            </Link>
           </motion.div>
 
-          <div className="row hero__cert-list -all-devices">
-            <motion.div
-              className="hero__cert"
-              initial={fadeUp.initial}
-              animate={fadeUp.animate}
-              transition={{ ...fadeUp.transition, delay: 0.28 }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={DESIGNRUSH_LOGO}
-                alt="DesignRush"
-                width={39}
-                height={54}
-                decoding="async"
-                loading="lazy"
-              />
-              <div className="hero__cert-cont">
-                <p>{t('designRushReviews')}</p>
-                <span className="flex gap-0.5" aria-hidden>
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg key={i} className="w-5 h-5 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </span>
-              </div>
-            </motion.div>
-            <motion.div
-              className="hero__cert"
-              initial={fadeUp.initial}
-              animate={fadeUp.animate}
-              transition={{ ...fadeUp.transition, delay: 0.28 }}
-            >
-              <p>{t('bestAgency2024')}</p>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={FORBES_LOGO}
-                alt="Forbes"
-                width={112}
-                height={30}
-                decoding="async"
-                loading="lazy"
-              />
-            </motion.div>
-          </div>
+          <motion.p
+            className="hero__trust-line text-xs md:text-sm text-white/85 mt-6 max-w-2xl leading-relaxed"
+            initial={fadeUp.initial}
+            animate={fadeUp.animate}
+            transition={{ ...fadeUp.transition, delay: 0.28 }}
+          >
+            {t('trustLine')}
+          </motion.p>
         </div>
       </div>
     </section>

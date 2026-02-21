@@ -1,24 +1,9 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import { useTheme } from 'next-themes'
-import { useEffect } from 'react'
-
 /**
- * Home screen → default light.
- * Other pages → default dark.
- * Syncs theme with route on navigation.
+ * Theme is controlled by the Navbar toggle and persisted via next-themes (localStorage).
+ * We no longer override theme by route so the user's preference is respected everywhere.
  */
 export function ThemeByRoute() {
-  const pathname = usePathname()
-  const { setTheme } = useTheme()
-
-  useEffect(() => {
-    const segments = pathname?.split('/').filter(Boolean) ?? []
-    // Home: only locale segment (e.g. /en, /fr) or empty path
-    const isHome = segments.length <= 1
-    setTheme(isHome ? 'light' : 'dark')
-  }, [pathname, setTheme])
-
   return null
 }
