@@ -143,6 +143,17 @@
     margin: 2.5rem 0;
     height: 4px;
   }
+
+  @media (max-width: 767px) {
+    margin: 1.5rem 0;
+    height: 5px;
+    border-radius: 4px;
+    min-height: 5px;
+
+    &::after {
+      border-radius: 4px;
+    }
+  }
 }
 
 @keyframes barFlow {
@@ -214,51 +225,21 @@
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.4s ease, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
-  animation: cardBreath 4s ease-in-out infinite;
+  background: transparent;
+  border: 2px solid rgba(99, 102, 241, 0.35);
+  box-shadow: none;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
 
   &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    padding: 1px;
-    background: linear-gradient(135deg, transparent 0%, rgba(99, 102, 241, 0.15) 50%, transparent 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
+    display: none;
   }
 
   &:hover {
-    box-shadow: 0 16px 48px rgba(99, 102, 241, 0.12);
-    background: rgba(99, 102, 241, 0.02);
-    animation: none;
-  }
-
-  &:hover::before {
-    opacity: 1;
+    border-color: rgba(99, 102, 241, 0.55);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2);
   }
 }
 
-@keyframes cardBreath {
-  0%,
-  100% {
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.04);
-  }
-  50% {
-    box-shadow: 0 8px 28px rgba(99, 102, 241, 0.08);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .blockCol {
-    animation: none;
-  }
-}
 
 // Large number (01, 02, …) — futuristic glow + subtle pulse
 .number {
@@ -330,9 +311,10 @@
    Theme: Light & Dark (via theme-sections-root[data-theme])
    ============================================ */
 
+/* Light theme: match m-partners (themeable-section) background */
 :global(.theme-sections-root[data-theme='light']) {
   .section {
-    background-color: #ffffff !important;
+    background-color: #f8fafc !important;
     color: #111111;
   }
 
@@ -367,20 +349,17 @@
   }
 
   .blockCol {
-    background: #ffffff !important;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    animation: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background: transparent !important;
+    border: 2px solid #94a3b8;
+    box-shadow: none;
 
     &::before {
       display: none;
     }
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      background: #ffffff !important;
-      border-color: #d1d5db;
+      border-color: #64748b;
+      box-shadow: none;
     }
   }
 
@@ -394,10 +373,12 @@
   }
 }
 
+/* Dark theme: match m-partners (colors-inverted themeable-section) background and gradient */
 :global(.theme-sections-root[data-theme='dark']) {
   .section {
-    background: linear-gradient(180deg, #0e0e0e 0%, #1a1a1a 100%) !important;
-    color: #f5f5f5;
+    background-color: #0b0618 !important;
+    background-image: linear-gradient(180deg, #0b0618 0%, #0f0a1f 50%, #0b0618 100%);
+    color: #fff;
   }
 
   .headingTitle {
@@ -425,14 +406,12 @@
   }
 
   .blockCol {
-    background: #141414 !important;
-    border: 1px solid #262626;
-    border-radius: 12px;
+    background: transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.25);
 
     &:hover {
-      background: #1a1a1a !important;
-      border-color: #404040;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: none;
     }
   }
 }

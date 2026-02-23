@@ -12,6 +12,7 @@
   color: #fff;
   padding-top: 4.5rem;
   padding-bottom: 4rem;
+  padding-left: 4.5vh;
   width: 100%;
   box-sizing: border-box;
 
@@ -167,6 +168,12 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+
+  @media (max-width: 767px) {
+    touch-action: pan-y pan-x;
+  }
 
   @media (min-width: 768px) {
     padding-left: 2rem;

@@ -205,15 +205,6 @@ export default function ProfessionalServicesSectionClient({
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className={styles.separator}
-          aria-hidden
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          variants={lineDraw}
-          style={{ transformOrigin: 'left' }}
-        />
       </div>
     </section>
   )

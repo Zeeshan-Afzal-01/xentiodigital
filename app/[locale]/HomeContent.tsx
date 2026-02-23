@@ -18,8 +18,9 @@ export default function HomeContent({ locale }: { locale: string }) {
       <ThemeSectionsWrapper>
         <WhatWhoSection />
         <PartnersSection />
-        <OurProcessSection />
+        
         <ProfessionalServicesSection />
+        <OurProcessSection />
         <ClientTestimonialsSection />
       </ThemeSectionsWrapper>
       <HomeServicesSection locale={locale} />

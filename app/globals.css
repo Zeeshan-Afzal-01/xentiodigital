@@ -165,7 +165,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-bg_wrap-cols {
-    left: 50%;
+    left: -50%;
     transform: translateX(-50%) rotate(15deg);
     width: 170%;
   }
