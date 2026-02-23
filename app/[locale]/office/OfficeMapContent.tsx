@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
+import { useLocale, useTranslations } from 'next-intl'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { Icon } from '@/components/icons'
@@ -16,6 +17,8 @@ export default function OfficeMapContent() {
   const marker = useRef<mapboxgl.Marker | null>(null)
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const locale = useLocale()
+  const t = useTranslations('office')
 
   useEffect(() => {
     setMounted(true)
@@ -89,15 +92,15 @@ export default function OfficeMapContent() {
       .setLngLat(officeCoords)
       .addTo(map.current)
 
-    // Add popup
+    // Add popup (translated)
     const popup = new mapboxgl.Popup({ offset: 25, closeOnClick: false })
       .setLngLat(officeCoords)
       .setHTML(`
         <div class="p-4">
-          <h3 class="font-bold text-lg mb-2">Xentio Digital</h3>
-          <p class="text-sm text-muted-enhanced">123 Digital Street</p>
-          <p class="text-sm text-muted-enhanced">Tech City, TC 12345</p>
-          <p class="text-sm text-muted-enhanced">United States</p>
+          <h3 class="font-bold text-lg mb-2">${t('companyName')}</h3>
+          <p class="text-sm text-muted-enhanced">${t('addressLine1')}</p>
+          <p class="text-sm text-muted-enhanced">${t('addressLine2')}</p>
+          <p class="text-sm text-muted-enhanced">${t('country')}</p>
         </div>
       `)
       .addTo(map.current)
@@ -105,7 +108,7 @@ export default function OfficeMapContent() {
     return () => {
       map.current?.remove()
     }
-  }, [mounted, theme])
+  }, [mounted, theme, locale, t])
 
   return (
     <>
@@ -118,7 +121,7 @@ export default function OfficeMapContent() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            <span className="gradient-text">Visit Our Office</span>
+            <span className="gradient-text">{t('title')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -126,7 +129,7 @@ export default function OfficeMapContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto"
           >
-            Come visit us or get directions to our office
+            {t('subtitle')}
           </motion.p>
         </div>
       </div>
@@ -160,31 +163,31 @@ export default function OfficeMapContent() {
               className="space-y-6"
             >
               <div className="glass-premium rounded-3xl p-8 border border-black/10 dark:border-white/10">
-                <h2 className="text-2xl font-bold text-high-contrast mb-6">Office Information</h2>
+                <h2 className="text-2xl font-bold text-high-contrast mb-6">{t('officeInformation')}</h2>
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold text-high-contrast mb-2 flex items-center">
-                      <Icon name="Pin" className="mr-3 w-5 h-5" strokeWidth={2} /> Address
+                      <Icon name="Pin" className="mr-3 w-5 h-5" strokeWidth={2} /> {t('address')}
                     </h3>
                     <p className="text-muted-enhanced">
-                      123 Digital Street<br />
-                      Tech City, TC 12345<br />
-                      United States
+                      {t('addressLine1')}<br />
+                      {t('addressLine2')}<br />
+                      {t('country')}
                     </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-high-contrast mb-2 flex items-center">
-                      <Icon name="Clock" className="mr-3 w-5 h-5" strokeWidth={2} /> Office Hours
+                      <Icon name="Clock" className="mr-3 w-5 h-5" strokeWidth={2} /> {t('officeHours')}
                     </h3>
                     <p className="text-muted-enhanced">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
-                      Sunday: Closed
+                      {t('hoursWeekday')}<br />
+                      {t('hoursSaturday')}<br />
+                      {t('hoursSunday')}
                     </p>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-high-contrast mb-2 flex items-center">
-                      <Icon name="Phone" className="mr-3 w-5 h-5" strokeWidth={2} /> Contact
+                      <Icon name="Phone" className="mr-3 w-5 h-5" strokeWidth={2} /> {t('contact')}
                     </h3>
                     <p className="text-muted-enhanced">
                       <a href="tel:+1234567890" className="hover:text-primary-400 transition-colors">
@@ -207,14 +210,14 @@ export default function OfficeMapContent() {
                 whileTap={{ scale: 0.98 }}
                 className="glass-premium rounded-3xl p-6 border border-black/10 dark:border-white/10 text-center"
               >
-                <h3 className="text-lg font-semibold text-high-contrast mb-4">Get Directions</h3>
+                <h3 className="text-lg font-semibold text-high-contrast mb-4">{t('getDirections')}</h3>
                 <a
                   href="https://maps.google.com/?q=123+Digital+Street+Tech+City"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full"
                 >
-                  Open in Google Maps
+                  {t('openInGoogleMaps')}
                 </a>
               </motion.div>
             </motion.div>

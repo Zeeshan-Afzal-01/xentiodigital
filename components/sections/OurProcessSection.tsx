@@ -102,6 +102,8 @@ export default function OurProcessSection() {
     items: string[]
   }> | undefined
   const steps = Array.isArray(rawSteps) && rawSteps.length >= 6 ? rawSteps : FALLBACK_STEPS
+  const stepAlts = t.raw('stepAlts') as string[] | undefined
+  const imageAlts = Array.isArray(stepAlts) && stepAlts.length >= 6 ? stepAlts : PROCESS_IMAGES.map((p) => p.alt)
 
   const { progress, activeIndex } = useHorizontalProgress(scrollerRef, steps.length)
 
@@ -178,7 +180,7 @@ export default function OurProcessSection() {
                   <div className={styles.imgWrap}>
                     <Image
                       src={PROCESS_IMAGES[index]?.src ?? PROCESS_IMAGES[0].src}
-                      alt={PROCESS_IMAGES[index]?.alt ?? step.title}
+                      alt={imageAlts[index] ?? step.title}
                       width={210}
                       height={149}
                       priority={index < 2}

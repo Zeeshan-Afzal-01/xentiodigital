@@ -2,25 +2,61 @@
 
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import { SubService } from '@/lib/services-data'
 import { Icon, IconName } from '@/components/icons'
 
+/** Convert slug like 'app-development' to camelCase 'appDevelopment' */
+function slugToCamel(slug: string): string {
+  return slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+}
+
 interface ServicePageTemplateProps {
   service: SubService & { categoryId: string; categoryName: string }
+}
+
+interface TranslatedPageContent {
+  title?: string
+  subtitle?: string
+  intro?: string
+  features?: string[]
+  benefits?: Array<{ title: string; description: string }>
+  process?: Array<{ step: number; title: string; description: string }>
 }
 
 export default function ServicePageTemplate({ service }: ServicePageTemplateProps) {
   const locale = useLocale()
   const t = useTranslations('services')
+  const tPages = useTranslations('servicePages')
+  const slugCamel = useMemo(() => slugToCamel(service.slug), [service.slug])
+  const pageContent = useMemo(() => {
+    try {
+      const raw = tPages.raw(slugCamel) as TranslatedPageContent | undefined
+      return raw && typeof raw === 'object' ? raw : null
+    } catch {
+      return null
+    }
+  }, [tPages, slugCamel])
+
+  const title = pageContent?.title ?? service.name
+  const subtitle = pageContent?.subtitle ?? service.description
+  const intro = pageContent?.intro ?? service.intro
+  const features = pageContent?.features ?? service.features ?? []
+  const benefitsList = pageContent?.benefits ?? service.benefits ?? []
+  const processSteps = pageContent?.process ?? service.process ?? []
+  const benefitsWithIcons = benefitsList.map((b, i) => ({
+    ...b,
+    icon: Array.isArray(service.benefits) && service.benefits[i]?.icon ? service.benefits[i].icon : 'Star',
+  }))
 
   return (
     <>
       {/* Hero Section */}
       <Hero
-        title={service.name}
-        subtitle={service.description}
+        title={title}
+        subtitle={subtitle}
         ctaText={t('getQuote') || 'Get a Quote'}
         ctaLink={`/${locale}/contact`}
         secondaryCtaText={t('learnMore') || 'Learn More'}
@@ -28,7 +64,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
       />
 
       {/* Intro Section */}
-      {service.intro && (
+      {intro && (
         <section className="section-padding relative">
           <div className="container-custom">
             <motion.div
@@ -38,7 +74,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
               className="max-w-4xl mx-auto text-center"
             >
               <p className="text-xl md:text-2xl text-muted-enhanced leading-relaxed">
-                {service.intro}
+                {intro}
               </p>
             </motion.div>
           </div>
@@ -46,7 +82,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
       )}
 
       {/* Features Section */}
-      {service.features && service.features.length > 0 && (
+      {features.length > 0 && (
         <section className="section-padding bg-surface relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-900/5 to-transparent" />
           <div className="container-custom relative z-10">
@@ -57,15 +93,15 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-high-contrast mb-4">
-                <span className="gradient-text">What We Offer</span>
+                <span className="gradient-text">{t('whatWeOffer')}</span>
               </h2>
               <p className="text-xl text-muted-enhanced max-w-3xl mx-auto">
-                Comprehensive solutions tailored to your needs
+                {t('whatWeOfferSub')}
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {service.features.map((feature, index) => (
+              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -89,7 +125,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
       )}
 
       {/* Benefits Section */}
-      {service.benefits && service.benefits.length > 0 && (
+      {benefitsWithIcons.length > 0 && (
         <section className="section-padding relative">
           <div className="container-custom">
             <motion.div
@@ -99,15 +135,15 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-high-contrast mb-4">
-                <span className="gradient-text">Why Choose {service.name}?</span>
+                <span className="gradient-text">{t('whyChooseTitle')}</span>
               </h2>
               <p className="text-xl text-muted-enhanced max-w-3xl mx-auto">
-                Discover the benefits of working with us
+                {t('discoverBenefits')}
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {service.benefits.map((benefit, index) => (
+              {benefitsWithIcons.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -140,7 +176,7 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
       )}
 
       {/* Process Section */}
-      {service.process && service.process.length > 0 && (
+      {processSteps.length > 0 && (
         <section className="section-padding bg-surface relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary-900/5 to-transparent" />
           <div className="container-custom relative z-10">
@@ -151,16 +187,16 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-high-contrast mb-4">
-                <span className="gradient-text">Our Process</span>
+                <span className="gradient-text">{t('ourProcess')}</span>
               </h2>
               <p className="text-xl text-muted-enhanced max-w-3xl mx-auto">
-                A proven approach to delivering results
+                {t('ourProcessSub')}
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
               <div className="space-y-8">
-                {service.process.map((step, index) => (
+                {processSteps.map((step, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -30 }}
@@ -239,10 +275,10 @@ export default function ServicePageTemplate({ service }: ServicePageTemplateProp
               }}
               className="text-4xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent"
             >
-              Ready to Get Started?
+              {t('ctaReadyTitle')}
             </motion.h2>
             <p className="text-xl md:text-2xl mb-12 text-muted-enhanced max-w-3xl mx-auto leading-relaxed">
-              Let&apos;s discuss how we can help you achieve your goals with {service.name}.
+              {t('ctaReadySub')}
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

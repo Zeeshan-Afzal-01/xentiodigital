@@ -11,29 +11,973 @@
     "blog": "Blog",
     "getStarted": "Commencer",
     "menu": "Menu",
-    "requestAQuote": "Demander un devis"
+    "requestAQuote": "Demander un devis",
+    "letsTalk": "Parlons-en",
+    "workingWorldwide": "Présents dans le monde",
+    "discussProject": "Discuter d'un projet",
+    "phone": "Téléphone"
   },
   "hero": {
-    "heading": "Agence de création web premium",
-    "mainTitleLine1": "Nous faisons grandir les marques",
-    "mainTitleLine2": "en ligne",
-    "mainTitle": "Nous faisons grandir les marques en ligne",
-    "subtitle": "Sites sur mesure, branding et marketing digital",
-    "cta": "Demander un devis",
-    "ctaSecondary": "Voir Nos Réalisations",
+    "preHeading": "Agence de marketing digital",
+    "heading": "Nous transformons la présence en ligne en croissance réelle",
+    "mainTitleLine1": "Nous transformons la présence en ligne",
+    "mainTitleLine2": "en croissance réelle",
+    "mainTitle": "Nous transformons la présence en ligne en croissance réelle",
+    "subtitle": "Chez Xentio Digital, nous créons des stratégies de marketing digital pilotées par les données pour augmenter le trafic, générer des leads et booster le chiffre d'affaires des entreprises dans le monde.",
+    "cta": "Réserver votre appel stratégique gratuit",
+    "ctaSecondary": "Voir nos réalisations",
+    "trustLine": "5+ ans d'expertise SEO & marketing digital | Clients internationaux | Solutions orientées résultats",
     "designRushReviews": "Avis 5 étoiles DesignRush",
     "bestAgency2024": "Meilleure agence digitale 2024",
     "forbes": "Forbes"
   },
   "services": {
-    "title": "Nos Services",
-    "subtitle": "Services numériques complets pour aider votre entreprise à prospérer en ligne"
+    "title": "Nos services livrent des résultats concrets",
+    "pageTitle": "Nos services",
+    "pageSubtitle": "Des solutions digitales complètes adaptées à vos besoins.",
+    "subtitle": "Nous nous concentrons sur les stratégies qui génèrent une croissance mesurable. Du référencement aux campagnes publicitaires à forte conversion, nous gérons tout.",
+    "ctaButton": "Demander un audit SEO gratuit",
+    "homepageServices": [
+      {"name": "SEO (Optimisation pour les moteurs de recherche)", "description": "Augmentez la visibilité de votre site et générez du trafic organique qui se transforme en clients."},
+      {"name": "Google & Meta Ads", "description": "Campagnes pilotées par les données pour des leads qualifiés et un ROI mesurable."},
+      {"name": "Gestion des réseaux sociaux", "description": "Une présence sociale forte et un engagement de votre audience sur toutes les plateformes."},
+      {"name": "Développement web", "description": "Des sites rapides et orientés conversion pour transformer les visiteurs en clients."}
+    ],
+    "learnMore": "En savoir plus",
+    "viewServices": "Voir les services",
+    "hideServices": "Masquer les services",
+    "servicesIncluded": "Services inclus",
+    "getQuote": "Demander un devis",
+    "whatWeOffer": "Ce que nous offrons",
+    "whatWeOfferSub": "Solutions complètes adaptées à vos besoins",
+    "whyChooseTitle": "Pourquoi nous ?",
+    "discoverBenefits": "Découvrez les avantages de travailler avec nous",
+    "ourProcess": "Notre processus",
+    "ourProcessSub": "Une approche éprouvée pour des résultats mesurables",
+    "ctaReadyTitle": "Prêt à commencer ?",
+    "ctaReadySub": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs.",
+    "webDevelopmentPage": {
+      "title": "Webentwicklungs-Leistungen",
+      "subtitle": "Stärken Sie Ihre Online-Präsenz mit maßgeschneiderten Websites und Webanwendungen – performant, skalierbar und nutzerorientiert.",
+      "intro": "Unsere Webentwicklung umfasst einfache Unternehmenswebsites bis hin zu komplexen Webanwendungen. Wir setzen moderne Technologien und Best Practices ein, damit Ihre Website schnell, sicher und benutzerfreundlich ist.",
+      "features": [
+        "Responsives Design – Mobile-First für eine optimale Darstellung auf allen Geräten",
+        "Moderne Technologien – React, Next.js, Node.js und weitere zukunftssichere Frameworks",
+        "Performance-Optimierung – Schnelle Ladezeiten und bestes Nutzererlebnis",
+        "SEO-freundlich – Best Practices für bessere Sichtbarkeit in Suchmaschinen",
+        "Sicher & skalierbar – Unternehmensgerechte Sicherheit und Architektur, die mitwächst",
+        "Content-Management – Einfaches CMS zur Pflege Ihrer Website-Inhalte"
+      ],
+      "benefits": [
+        { "title": "Stärkere Online-Präsenz", "description": "Eine professionelle Website etabliert Ihre Marke und macht Sie rund um die Uhr für potenzielle Kunden erreichbar." },
+        { "title": "Besseres Nutzererlebnis", "description": "Intuitive Navigation und schnelle Ladezeiten halten Besucher dabei und senken die Absprungrate." },
+        { "title": "Höhere Conversion-Raten", "description": "Optimiertes Design und klare Nutzerführung lenken Besucher zu Aktionen – ob Kauf oder Kontakt." },
+        { "title": "Wettbewerbsvorteil", "description": "Heben Sie sich mit einer modernen, professionellen Website ab, die Ihre Markenqualität widerspiegelt." }
+      ]
+    },
+    "categories": {
+      "digitalTransformation": {
+        "name": "Digitale Transformation",
+        "description": "Transformieren Sie Ihr Unternehmen mit zukunftsweisenden digitalen Lösungen für Innovation und Wachstum."
+      },
+      "ecommerceSolutions": {
+        "name": "E-Commerce-Lösungen",
+        "description": "Komplette E-Commerce-Plattformen und Marktplatz-Integrationen zur Maximierung Ihres Online-Verkaufs."
+      },
+      "digitalMarketing": {
+        "name": "Digital Marketing",
+        "description": "Datengetriebene Marketingstrategien für mehr Sichtbarkeit, Engagement und Konversionen."
+      },
+      "customerCare": {
+        "name": "Kundenbetreuungslösungen",
+        "description": "Professionelle Kundenunterstützung für mehr Zufriedenheit und Loyalität."
+      },
+      "businessConsulting": {
+        "name": "Unternehmensberatung",
+        "description": "Strategische Beratung für Wachstum, Skalierung und Optimierung Ihrer Geschäftsprozesse."
+      }
+    }
   },
   "footer": {
     "company": "Entreprise",
     "services": "Services",
-    "legal": "Légal",
+    "legal": "Mentions légales",
     "follow": "Suivez-nous",
-    "rights": "Tous droits réservés"
+    "rights": "Tous droits réservés",
+    "tagline": "Leader des services digitaux – nous aidons les entreprises à transformer leur présence digitale.",
+    "aboutUs": "À propos",
+    "portfolio": "Portfolio",
+    "testimonials": "Témoignages",
+    "team": "Équipe",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "privacyPolicy": "Confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "webDevelopment": "Développement web",
+    "mobileApps": "Applications mobiles",
+    "seoMarketing": "SEO & Marketing",
+    "ecommerce": "E-Commerce",
+    "uxUiDesign": "UX/UI Design",
+    "customSoftware": "Logiciel sur mesure",
+    "getQuote": "Demander un devis"
+  },
+  "cta": {
+    "title": "Prêt à développer votre entreprise en ligne ?",
+    "description": "Obtenez une stratégie personnalisée pour plus de trafic, de leads et de ventes. Faites travailler votre marketing digital pour vous.",
+    "button": "Réserver une consultation gratuite",
+    "buttonSecondary": "Obtenir votre audit SEO gratuit"
+  },
+  "stats": {
+    "title": "En chiffres",
+    "subtitle": "Des résultats réels issus de partenariats réels",
+    "projects": "Projets réalisés",
+    "satisfaction": "Satisfaction client",
+    "team": "Experts dans l'équipe",
+    "experience": "Années d'expérience"
+  },
+  "who": {
+    "headline": "Des idées audacieuses. Une exécution stratégique. Un impact durable. Nous transformons la vision en réalité et maintenons nos partenaires à la pointe."
+  },
+  "features": {
+    "title": "Pourquoi Xentio Digital ?",
+    "subtitle": "Nous allions expertise technique et innovation créative pour livrer des solutions qui dépassent les attentes.",
+    "expertTeam": {
+      "title": "Équipe d'experts",
+      "description": "Développeurs, designers et marketeurs expérimentés avec des années d'expertise sur chaque projet.",
+      "stat": "50+",
+      "statLabel": "Experts"
+    },
+    "provenResults": {
+      "title": "Résultats prouvés",
+      "description": "Nous avons aidé des centaines d'entreprises à atteindre leurs objectifs digitaux avec des résultats et un ROI mesurables.",
+      "stat": "500+",
+      "statLabel": "Projets"
+    },
+    "modernTech": {
+      "title": "Technologie moderne",
+      "description": "Nous utilisons les dernières technologies et bonnes pratiques pour des solutions durables et évolutives.",
+      "stat": "100%",
+      "statLabel": "À la pointe"
+    },
+    "dedicatedSupport": {
+      "title": "Support dédié",
+      "description": "De la première consultation à la maintenance continue – un accompagnement tout au long de votre projet.",
+      "stat": "24/7",
+      "statLabel": "Support"
+    }
+  },
+  "process": {
+    "title": "Comment nous travaillons",
+    "sub": "Notre processus en 4 étapes éprouvé génère une croissance réelle. Nous analysons, planifions, exécutons et optimisons pour un ROI maximal.",
+    "subLink": "ROI maximal",
+    "stepAlts": [
+      "Stratégie web et recherche",
+      "Planification et architecture de l'information",
+      "Design créatif",
+      "Développement responsive",
+      "Assurance qualité",
+      "Lancement et optimisation"
+    ],
+    "steps": [
+      {
+        "title": "Webstrategie",
+        "intro": "Wir nutzen fundierte Recherche und Analyse als Grundlage für einen Schritt-für-Schritt-Plan, der Ihre digitale Präsenz erweitert und Online-Wachstum fördert.",
+        "listTitle": "In dieser Phase:",
+        "items": ["Zielgruppen identifizieren", "Nutzer-Pain-Points analysieren & UVPs definieren", "KPI definieren", "Roadmap für Ihr Markenwachstum online erstellen"]
+      },
+      {
+        "title": "Planung & Informationsarchitektur",
+        "intro": "Wir nutzen bewährte Methoden, um Ihre Inhalte zu strukturieren, Nutzerabsichten zu erfüllen und ein ansprechendes Nutzererlebnis zu schaffen. Mit der Struktur Ihrer Website sichern wir nahtlose User Journeys zu zentralen Conversion-Punkten.",
+        "introBold": "nahtlose User Journeys zu zentralen Conversion-Punkten",
+        "listTitle": "So gehen wir vor:",
+        "items": ["User Flow & Sitemap auf Basis-Ebene entwickeln", "Wireframes für einen nahtlosen Conversion-Funnel erstellen", "On-Brand, konsistente Botschaften in Ihre Struktur einbinden"]
+      },
+      {
+        "title": "Kreatives Design",
+        "intro": "In dieser Phase erwacht Ihre Website zum Leben. Unsere preisgekrönten Designer setzen Ihre einzigartigen Markenelemente in ein maßgeschneidertes Webdesign um.",
+        "introBold": "preisgekrönten Designer",
+        "listTitle": "In nur 50 Millisekunden entsteht ein erster Eindruck – Ihre Website muss herausstechen. Dafür:",
+        "items": ["Design-Elemente gezielt platzieren für die User Journey", "Interaktive Videos & Animationen einsetzen", "Individuelle Illustrationen erstellen", "Barrierefreiheit & Suchmaschinenoptimierung sicherstellen"]
+      },
+      {
+        "title": "Responsive Entwicklung",
+        "intro": "Eine responsive Website ist schnell, zugänglich und leicht zu bedienen. Sie skaliert automatisch auf verschiedene Bildschirmgrößen und Geräte.",
+        "listTitle": "Damit Ihre Website jeden Nutzer erreicht und überzeugt:",
+        "introBold": "jeden Nutzer erreicht und überzeugt",
+        "items": ["Touchpoint- und Kanal-Insights sammeln", "Wireframes in eine flexible UI umsetzen", "Vor Freigabe & Launch geräteübergreifend testen"]
+      },
+      {
+        "title": "Qualitätssicherung (QA)",
+        "intro": "Wir legen Wert auf messbare Ergebnisse und professionelle Qualität. Mit einem klaren QA-Prozess garantieren wir ein hochwertiges digitales Erlebnis für Ihre Marke.",
+        "introBold": "messbare Ergebnisse und professionelle Qualität",
+        "listTitle": "Dafür:",
+        "items": ["Kunden in jedes Projekt einbinden", "Alle Designs gründlich testen", "Bewährte Tools für einen sicheren Launch nutzen"]
+      },
+      {
+        "title": "Launch & Optimierung",
+        "intro": "Unsere Website-Design-Leistungen umfassen Launch und Support danach. Wir überwachen, testen und optimieren kontinuierlich, damit Ihre Website optimal läuft.",
+        "listTitle": "Unsere Design-Spezialisten sorgen dafür durch:",
+        "items": ["Strikte Launch-Protokolle", "Wartung & Optimierung nach dem Launch", "Umsetzung eines Digital-Marketing-Plans für mehr Sichtbarkeit"]
+      }
+    ]
+  },
+  "professionalServices": {
+    "title": "Pourquoi les entreprises nous font confiance",
+    "titleHighlight": "",
+    "titleSuffix": "",
+    "imageAlt": "Agence Xentio Digital",
+    "items": [
+      { "title": "Plus de 5 ans d'expérience prouvée", "description": "Bilan de résultats mesurables pour les entreprises du monde entier." },
+      { "title": "Reporting piloté par les données et transparent", "description": "Des indicateurs clairs et des rapports réguliers pour suivre vos campagnes." },
+      { "title": "Croissance durable, pas de solutions de fortune", "description": "Stratégies durables qui créent de la valeur à long terme." },
+      { "title": "Communication directe sans intermédiaires", "description": "Travaillez directement avec nos experts – pas de account managers." },
+      { "title": "Support dédié pour maximiser votre ROI", "description": "Nous nous engageons à vous offrir le meilleur retour sur investissement marketing." },
+      { "title": "Clients internationaux et orientés performance", "description": "La confiance d'entreprises partout dans le monde, avec un focus sur les résultats." }
+    ]
+  },
+  "caseStudies": {
+    "title": "Croissance réelle. Impact réel.",
+    "ctaButton": "Voir les études de cas complètes",
+    "items": [
+      {
+        "title": "E-Commerce Vape-Marke",
+        "metrics": ["+180 % organischer Traffic in 6 Monaten", "Top-10-Google-Rankings für hochintentionale Keywords"]
+      },
+      {
+        "title": "Dienstleister UAE",
+        "metrics": ["+95 % mehr qualifizierte Leads", "Verbesserte lokale SEO-Rankings in 3 Monaten"]
+      },
+      {
+        "title": "WordPress-Website-Redesign Kunde",
+        "metrics": ["Konversionsrate um 42 % gesteigert", "Schnellere Website, geringere Absprungrate"]
+      }
+    ]
+  },
+  "partners": {
+    "pre": "Ce que nous offrons",
+    "title": "Des solutions digitales qui dopent la croissance",
+    "sub": "Du développement web à l'e-commerce et au marketing digital – des solutions de bout en bout adaptées à votre entreprise.",
+    "subBold": "des solutions de bout en bout adaptées à votre entreprise",
+    "cta": "Découvrir tous les services"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Écoutez les entreprises que nous avons aidées à réussir."
+  },
+  "clientTestimonials": {
+    "title": "Ce que disent nos clients",
+    "viewReviews": "Voir les avis clients",
+    "designRushReviews": "34 AVIS",
+    "designRushOn": "SUR DESIGNRUSH",
+    "designRushRating": "4,9",
+    "designRushStarsAria": "4,9 sur 5 étoiles",
+    "items": [
+      {"name": "Nom du client", "position": "UAE", "quote": "Xentio Digital a triplé notre trafic organique en 6 mois. Leur expertise SEO est inégalée.", "quoteBold": "triplé notre trafic organique en 6 mois"},
+      {"name": "Nom du client", "position": "UK", "quote": "Nos campagnes publicitaires convertissent enfin et le ROI est excellent. Je recommande vivement.", "quoteBold": "ROI est excellent"},
+      {"name": "Nom du client", "position": "Pakistan", "quote": "Professionnels, réactifs et axés résultats. Notre site transforme les visiteurs en clients comme jamais.", "quoteBold": "transforme les visiteurs en clients comme jamais"}
+    ]
+  },
+  "about": {
+    "metaTitle": "À propos - Votre partenaire digital",
+    "metaDescription": "Découvrez Xentio Digital – notre mission, vision et engagement pour des solutions digitales d'exception.",
+    "heroTitle": "À propos de Xentio Digital",
+    "heroSubtitle": "Nous sommes une équipe d'experts digitaux passionnés qui aident les entreprises à réussir en ligne.",
+    "missionTitle": "Unsere Mission",
+    "mission1": "Unternehmen jeder Größe mit zukunftsweisenden digitalen Lösungen zu befähigen, die Wachstum fördern, Kundenerlebnisse verbessern und dauerhaften Wert schaffen. Wir glauben, dass jedes Unternehmen Zugang zu erstklassigen digitalen Dienstleistungen verdient.",
+    "mission2": "Unsere Mission ist es, die Lücke zwischen komplexer Technologie und Geschäftserfolg zu schließen und digitale Transformation zugänglich, verständlich und erreichbar zu machen.",
+    "visionTitle": "Unsere Vision",
+    "vision1": "Der vertrauenswürdigste globale Partner für digitale Dienstleistungen zu werden – anerkannt für Innovation, Zuverlässigkeit und unser Engagement für den Kundenerfolg.",
+    "vision2": "Durch kontinuierliche Innovation, außergewöhnliche Servicequalität und strategische Partnerschaften wollen wir die Zukunft digitaler Geschäftslösungen mitgestalten.",
+    "storyTitle": "Unsere Geschichte",
+    "story1": "Xentio Digital wurde 2015 mit einer klaren Vision gegründet: Enterprise-Digitallösungen für Unternehmen jeder Größe zugänglich zu machen.",
+    "story2": "Im Laufe der Jahre haben wir Hunderte erfolgreicher Projekte umgesetzt – von kleinen Unternehmenswebsites bis zu komplexen Enterprise-Anwendungen.",
+    "story3": "Heute entwickeln wir uns weiter, bleiben an der Spitze der Technologietrends und bewahren unsere Werte Integrität, Exzellenz und Partnerschaft.",
+    "valuesTitle": "Unsere Kernwerte",
+    "valuesSubtitle": "Die Prinzipien, die alles leiten, was wir tun",
+    "innovation": {"title": "Innovation", "description": "Wir bleiben durch neue Technologien und kreative Lösungen am Ball."},
+    "excellence": {"title": "Exzellenz", "description": "Wir streben in jedem Projekt nach Perfektion und höchster Qualität."},
+    "integrity": {"title": "Integrität", "description": "Wir schaffen Vertrauen durch Transparenz, Ehrlichkeit und ethisches Handeln."},
+    "partnership": {"title": "Partnerschaft", "description": "Jede Kundenbeziehung ist für uns eine langfristige Partnerschaft."},
+    "whyChooseTitle": "Warum Xentio Digital?",
+    "projectsCompleted": "Abgeschlossene Projekte",
+    "projectsCompletedDesc": "Erfolgreich umgesetzte Projekte in verschiedenen Branchen",
+    "clientSatisfaction": "Kundenzufriedenheit",
+    "clientSatisfactionDesc": "Unsere Kunden bewerten uns durchweg hoch",
+    "expertTeamMembers": "Fachleute im Team",
+    "expertTeamMembersDesc": "Engagierte Experten mit vielfältiger Expertise"
+  },
+  "contact": {
+    "metaTitle": "Contact - Parlez-nous",
+    "metaDescription": "Contactez Xentio Digital pour une consultation gratuite. Discutons de la transformation de votre présence digitale.",
+    "title": "Contact",
+    "subtitle": "Discutons de la façon dont nous pouvons transformer votre présence digitale",
+    "contactInfo": "Coordonnées",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "officeHours": "Heures d'ouverture",
+    "officeHoursMonFri": "Lundi – Vendredi : 9h – 18h",
+    "officeHoursSat": "Samedi : 10h – 16h",
+    "officeHoursSun": "Dimanche : Fermé",
+    "address": "Adresse",
+    "addressLine1": "123 Digital Street",
+    "addressLine2": "Tech City, TC 12345",
+    "addressLine3": "États-Unis",
+    "phoneNumber": "(123) 456-7890",
+    "sendMessage": "Envoyer un message"
+  },
+  "portfolio": {
+    "metaTitle": "Portfolio - Unsere Arbeiten & Referenzen",
+    "metaDescription": "Entdecken Sie unser Portfolio: Webentwicklung, Apps, E-Commerce und individuelle Software.",
+    "title": "Unser Portfolio",
+    "subtitle": "Entdecken Sie unsere erfolgreichen Projekte und sehen Sie, wie wir Unternehmen zu ihren digitalen Zielen verholfen haben.",
+    "readyTitle": "Bereit für Ihr Projekt?",
+    "readySubtitle": "Lassen Sie uns besprechen, wie wir ähnliche Ergebnisse für Sie erzielen können.",
+    "getStarted": "Loslegen",
+    "results": "Ergebnisse:",
+    "projects": {
+      "retailpro": {"title": "E-Commerce-Plattform für RetailPro", "description": "Umfassende E-Commerce-Lösung mit Warenwirtschaft, Zahlungsintegration und Analytics-Dashboard.", "results": "300 % mehr Online-Verkäufe, 50 % weniger Abbruch im Warenkorb", "category": "E-Commerce"},
+      "fitness": {"title": "Mobile App für Fitness-Tracker", "description": "Cross-Platform-App mit Echtzeit-Tracking, Social-Features und personalisierten Trainingsplänen.", "results": "100K+ Downloads, 4,8-Sterne-Bewertung, 40 % User-Retention", "category": "Mobile Apps"},
+      "corporate": {"title": "Corporate-Website-Redesign", "description": "Komplettes Redesign mit modernem UI/UX, besserer Performance und SEO.", "results": "250 % mehr organischer Traffic, 60 % schnellere Ladezeiten", "category": "Webentwicklung"},
+      "crm": {"title": "Individuelles CRM-System", "description": "Enterprise-CRM mit Lead-Management, Sales-Pipeline und Reporting.", "results": "35 % mehr Vertriebsproduktivität, 50 % weniger manuelle Dateneingabe", "category": "Individuelle Software"},
+      "restaurant": {"title": "Bestellplattform für Restaurants", "description": "Online-Bestellsystem mit Menüverwaltung, Zahlung und Lieferverfolgung.", "results": "200 % mehr Online-Bestellungen, 90 % Kundenzufriedenheit", "category": "Webentwicklung"},
+      "healthcare": {"title": "Healthcare-Management-App", "description": "HIPAA-konforme App für Patientenverwaltung, Termine und Telemedizin.", "results": "Straffere Abläufe, bessere Patientenzufriedenheit, 30 % Zeitersparnis", "category": "Mobile Apps"}
+    }
+  },
+  "team": {
+    "metaTitle": "Unser Team - Die Experten",
+    "metaDescription": "Lernen Sie das Team von Entwicklern, Designern und Digital-Experten hinter Xentio Digital kennen.",
+    "title": "Unser Team",
+    "subtitle": "Talente, die außergewöhnliche digitale Lösungen liefern",
+    "joinTitle": "Möchten Sie zu unserem Team stoßen?",
+    "joinSubtitle": "Wir suchen stets talentierte Menschen für unser wachsendes Team.",
+    "viewPositions": "Offene Stellen ansehen",
+    "members": {
+      "john": {"name": "John Smith", "role": "CEO & Gründer", "bio": "Mit über 15 Jahren Erfahrung in digitalen Dienstleistungen führt John unser Team mit einer Vision für Innovation und Kundenerfolg."},
+      "sarah": {"name": "Sarah Williams", "role": "Leitung Entwicklung", "bio": "Sarah bringt Expertise in modernen Webtechnologien ein und leitet unser Entwicklungsteam."},
+      "michael": {"name": "Michael Brown", "role": "Lead Designer", "bio": "Michael gestaltet benutzerzentrierte Designs, die echte Geschäftsprobleme lösen."},
+      "emily": {"name": "Emily Davis", "role": "Marketing Director", "bio": "Emily ist auf SEO und Digital Marketing spezialisiert und erzielt messbare Ergebnisse."},
+      "david": {"name": "David Martinez", "role": "Mobile App Lead", "bio": "David ist Experte für native und plattformübergreifende Apps für iOS und Android."},
+      "jessica": {"name": "Jessica Taylor", "role": "Projektmanagerin", "bio": "Jessica sorgt für reibungslose Projekte und hält Kunden von Anfang bis Ende auf dem Laufenden."}
+    }
+  },
+  "careers": {
+    "metaTitle": "Karriere - Werden Sie Teil unseres Teams",
+    "metaDescription": "Karrieremöglichkeiten bei Xentio Digital. Entwickler, Designer und Digital-Experten gesucht.",
+    "title": "Werden Sie Teil unseres Teams",
+    "subtitle": "Gestalten Sie mit uns die Zukunft digitaler Dienstleistungen",
+    "whyTitle": "Warum bei uns arbeiten?",
+    "growth": {"title": "Wachstumschancen", "description": "Kontinuierliches Lernen und Karriereentwicklung"},
+    "flexible": {"title": "Flexibles Arbeiten", "description": "Remote- und Hybrid-Optionen"},
+    "culture": {"title": "Tolles Umfeld", "description": "Zusammenarbeit und unterstützendes Team"},
+    "openPositions": "Offene Stellen",
+    "requirements": "Anforderungen:",
+    "applyNow": "Jetzt bewerben",
+    "noPositionTitle": "Keine passende Stelle gefunden?",
+    "noPositionSubtitle": "Wir suchen immer Talente. Senden Sie uns Ihren Lebenslauf für zukünftige Chancen.",
+    "sendResume": "Lebenslauf senden",
+    "positions": {
+      "developer": {"title": "Senior Full-Stack-Entwickler", "department": "Entwicklung", "location": "Remote / Hybrid", "type": "Vollzeit", "description": "Wir suchen einen erfahrenen Full-Stack-Entwickler. Sie arbeiten mit React, Next.js, Node.js und mehr.", "requirements": ["5+ Jahre Full-Stack-Erfahrung", "Starke Kenntnisse in React, Next.js, Node.js", "Erfahrung mit Datenbanken (PostgreSQL, MongoDB)", "Cloud-Plattformen (AWS, Vercel)", "Problemlösung und Kommunikation"]},
+      "designer": {"title": "UX/UI-Designer", "department": "Design", "location": "Remote / Hybrid", "type": "Vollzeit", "description": "Gestalten Sie benutzerzentrierte Oberflächen und arbeiten Sie mit Kunden und Entwicklern zusammen.", "requirements": ["3+ Jahre UX/UI-Erfahrung", "Figma, Adobe XD oder ähnlich", "Portfolio mit user-centered Design", "Responsive Design", "Präsentationsfähigkeiten"]},
+      "marketing": {"title": "Digital Marketing Spezialist", "department": "Marketing", "location": "Remote", "type": "Vollzeit", "description": "Unterstützen Sie Kunden bei SEO, Content Marketing und digitaler Werbung.", "requirements": ["3+ Jahre Digital Marketing", "SEO und SEM", "Google Analytics und Marketing-Tools", "Content und Copywriting", "Datengetriebener Ansatz"]},
+      "mobile": {"title": "Mobile App Entwickler", "department": "Entwicklung", "location": "Remote / Hybrid", "type": "Vollzeit", "description": "Entwicklung nativer und plattformübergreifender Apps für iOS und Android.", "requirements": ["4+ Jahre Mobile-Entwicklung", "React Native, Swift oder Kotlin", "App-Store-Einreichung", "Mobile UI/UX", "Debugging und Problemlösung"]}
+    }
+  },
+  "office": {
+    "title": "Besuchen Sie unser Büro",
+    "subtitle": "Besuchen Sie uns oder holen Sie sich die Wegbeschreibung zu unserem Büro",
+    "officeInformation": "Büroinformationen",
+    "address": "Adresse",
+    "addressLine1": "123 Digital Street",
+    "addressLine2": "Tech City, TC 12345",
+    "country": "Vereinigte Staaten",
+    "officeHours": "Bürozeiten",
+    "hoursWeekday": "Montag - Freitag: 9:00 - 18:00 Uhr",
+    "hoursSaturday": "Samstag: 10:00 - 16:00 Uhr",
+    "hoursSunday": "Sonntag: Geschlossen",
+    "contact": "Kontakt",
+    "getDirections": "Wegbeschreibung",
+    "openInGoogleMaps": "In Google Maps öffnen",
+    "companyName": "Xentio Digital"
+  },
+  "testimonialsPage": {
+    "metaTitle": "Témoignages clients - Ce que disent nos clients",
+    "metaDescription": "Lisez les témoignages de clients satisfaits par nos solutions digitales.",
+    "title": "Témoignages clients",
+    "subtitle": "Découvrez ce que disent les entreprises que nous avons aidées à réussir.",
+    "joinTitle": "Rejoignez nos succès",
+    "joinSubtitle": "Travaillons ensemble pour obtenir des résultats similaires pour votre entreprise.",
+    "getStarted": "Commencer",
+    "testimonials": {
+      "sarah": {"name": "Sarah Johnson", "role": "CEO", "company": "TechStart Inc.", "content": "Xentio Digital hat unsere Online-Präsenz transformiert. Unser Traffic ist um 300 % gestiegen. Hervorragende Arbeit."},
+      "michael": {"name": "Michael Chen", "role": "Gründer", "company": "RetailPro", "content": "Die E-Commerce-Lösung ist herausragend. Der Umsatz hat sich seit dem Launch verdoppelt. Professionell und verständnisvoll."},
+      "emily": {"name": "Emily Rodriguez", "role": "Marketing Director", "company": "Growth Labs", "content": "SEO und Digital Marketing waren game-changing. Deutlich mehr qualifizierte Leads und Markenbekanntheit. Transparentes Reporting."},
+      "david": {"name": "David Thompson", "role": "Operations Manager", "company": "HealthCare Plus", "content": "Die individuelle Software hat unsere Abläufe deutlich optimiert. Perfekte Anpassung an unseren Workflow."},
+      "lisa": {"name": "Lisa Anderson", "role": "Product Manager", "company": "FitnessFirst", "content": "Die Zusammenarbeit an unserer App war fantastisch. Pünktlich, im Budget, die App hat Erwartungen übertroffen."},
+      "james": {"name": "James Wilson", "role": "CTO", "company": "FinanceCorp", "content": "Das UX/UI-Design hat unser Kundenerlebnis transformiert. Intuitiv, ansprechend, deutlich bessere Konversionen."}
+    }
+  },
+  "contactForm": {
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "E-mail",
+    "emailPlaceholder": "votre@email.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+33 (0)1 23 45 67 89",
+    "serviceInterest": "Service souhaité",
+    "selectService": "Choisir un service",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous de votre projet...",
+    "sendMessage": "Envoyer",
+    "sending": "Envoi en cours...",
+    "successMessage": "Merci ! Nous vous recontacterons bientôt.",
+    "errorMessage": "Une erreur s'est produite. Veuillez réessayer.",
+    "services": {
+      "webDevelopment": "Développement web",
+      "mobileApps": "Applications mobiles",
+      "seo": "SEO & Marketing digital",
+      "ecommerce": "Solutions e-commerce",
+      "uxui": "UX/UI Design",
+      "customSoftware": "Logiciel sur mesure",
+      "other": "Autre"
+    }
+  },
+  "blog": {
+    "title": "Insights & Ressources",
+    "subtitle": "Insights sectoriels, guides et actualités pour développer votre entreprise",
+    "readMore": "Lire la suite",
+    "readTime": "min de lecture",
+    "published": "Publié",
+    "by": "Par",
+    "categories": "Catégories",
+    "tags": "Tags",
+    "share": "Partager",
+    "relatedPosts": "Articles similaires",
+    "relatedPostsSubtitle": "Continuer avec ces articles",
+    "noPosts": "Aucun article trouvé",
+    "noPostsSubtitle": "Modifiez vos filtres ou votre recherche",
+    "articlesFound": "articles trouvés",
+    "articleFound": "article trouvé",
+    "all": "Tous",
+    "searchPlaceholder": "Rechercher des articles...",
+    "tableOfContents": "Table des matières",
+    "activeFilters": "Filtres actifs :",
+    "viewAllArticles": "Voir tous les articles"
+  },
+  "common": {
+    "serviceNotFound": "Service introuvable",
+    "serviceNotFoundDescription": "Le service demandé n'existe pas.",
+    "backToServices": "Retour aux services",
+    "whatWeOffer": "Ce que nous offrons",
+    "keyFeatures": "Fonctionnalités clés",
+    "benefits": "Avantages",
+    "ctaReadyTitle": "Prêt pour votre site web ?",
+    "ctaReadyTitleMobile": "Prêt pour votre application ?",
+    "ctaReadyTitleSEO": "Prêt à développer votre présence en ligne ?",
+    "ctaReadyTitleEcommerce": "Prêt à lancer votre boutique en ligne ?",
+    "ctaReadyTitleDesign": "Prêt à améliorer votre design ?",
+    "ctaReadyTitleSoftware": "Prêt pour un logiciel sur mesure ?",
+    "ctaReadySubtitle": "Discutons de votre projet et créons une solution sur mesure.",
+    "getFreeQuote": "Devis gratuit"
+  },
+  "categoryPages": {
+    "businessConsulting": {
+      "name": "Unternehmensberatung",
+      "description": "Strategische Beratung für Wachstum, Skalierung und optimale Geschäftsabläufe.",
+      "intro": "Unternehmenswachstum braucht strategisches Denken, fachkundige Begleitung und umsetzbare Erkenntnisse. Unsere Beratung unterstützt Sie bei Herausforderungen, Chancen und nachhaltigem Wachstum.",
+      "subServices": [
+        { "name": "Wachstum für Ihr Unternehmen", "description": "Strategische Begleitung für schnelleres Wachstum und mehr Profitabilität." }
+      ],
+      "process": [
+        { "step": 1, "title": "Discovery", "description": "Ihr Unternehmen, Herausforderungen und Ziele verstehen." },
+        { "step": 2, "title": "Analyse", "description": "Ist-Zustand analysieren und Chancen identifizieren." },
+        { "step": 3, "title": "Strategie", "description": "Umsetzbare Strategien und Empfehlungen entwickeln." },
+        { "step": 4, "title": "Umsetzung", "description": "Unterstützung bei der Umsetzung der Empfehlungen." },
+        { "step": 5, "title": "Review", "description": "Ergebnisse prüfen und Strategien anpassen." }
+      ],
+      "benefits": [
+        { "title": "Strategische Klarheit", "description": "Klarheit über Richtung und Prioritäten." },
+        { "title": "Expertenwissen", "description": "Profitieren Sie von der Erfahrung unserer Berater." },
+        { "title": "Schnelleres Wachstum", "description": "Wachstum mit bewährten Strategien beschleunigen." },
+        { "title": "Risikominimierung", "description": "Geschäftsrisiken erkennen und mindern." }
+      ]
+    }
+  },
+  "servicePages": {
+    "appDevelopment": {
+      "title": "App-Entwicklung",
+      "subtitle": "Native und plattformübergreifende mobile Anwendungen für iOS und Android.",
+      "intro": "Mobile Apps sind für Unternehmen unverzichtbar, die Kunden erreichen, Abläufe verbessern und Wachstum fördern wollen. Wir entwickeln native und plattformübergreifende Apps mit herausragendem Nutzererlebnis.",
+      "features": [
+        "Native iOS- und Android-Entwicklung",
+        "Plattformübergreifende Lösungen (React Native, Flutter)",
+        "App-Store-Optimierung",
+        "Push-Benachrichtigungen",
+        "Offline-Funktionen",
+        "Sichere Authentifizierung",
+        "Zahlungsintegration",
+        "Analysen und Tracking"
+      ],
+      "benefits": [
+        { "title": "Stärkere Kundenbindung", "description": "Ihre Marke immer dabei – mit einer eigenen mobilen App." },
+        { "title": "Bessere Erreichbarkeit", "description": "Ihre Leistungen rund um die Uhr auf dem Smartphone verfügbar." },
+        { "title": "Personalisierte Erlebnisse", "description": "Individuelle Inhalte und Funktionen basierend auf Nutzerpräferenzen." },
+        { "title": "Mehr Umsatz", "description": "Apps können Verkäufe durch In-App-Käufe und Abos steigern." }
+      ],
+      "process": [
+        { "step": 1, "title": "Konzept & Planung", "description": "App-Funktionen, User Flows und technische Anforderungen definieren." },
+        { "step": 2, "title": "UI/UX-Design", "description": "Intuitive Oberflächen und nahtloses Nutzererlebnis gestalten." },
+        { "step": 3, "title": "Entwicklung", "description": "Ihre App in nativer oder plattformübergreifender Technik umsetzen." },
+        { "step": 4, "title": "Testing", "description": "Umfassende Tests auf verschiedenen Geräten und Betriebssystemen." },
+        { "step": 5, "title": "Launch & Support", "description": "Veröffentlichung in den App-Stores und laufende Wartung." }
+      ]
+    },
+    "customSoftware": {
+      "title": "Individuelle Softwareentwicklung",
+      "subtitle": "Maßgeschneiderte Softwarelösungen für schlanke Abläufe in Ihrem Unternehmen.",
+      "intro": "Standardsoftware erfüllt oft nicht Ihre spezifischen Anforderungen. Wir entwickeln individuelle Software, die exakt auf Ihre Abläufe, Prozesse und Ziele zugeschnitten ist.",
+      "features": [
+        "Individuelle Geschäftsanwendungen",
+        "Unternehmenssoftware",
+        "Workflow-Automatisierung",
+        "Datenbankdesign und -verwaltung",
+        "API-Entwicklung",
+        "Systemintegration",
+        "Cloud-Lösungen",
+        "Modernisierung bestehender Systeme"
+      ],
+      "benefits": [
+        { "title": "Passgenau", "description": "Software, die genau auf Ihre Geschäftsprozesse und Anforderungen zugeschnitten ist." },
+        { "title": "Mehr Produktivität", "description": "Wiederkehrende Aufgaben automatisieren und Abläufe optimieren." },
+        { "title": "Skalierbarkeit", "description": "Lösungen, die mit Ihrem Unternehmen mitwachsen." },
+        { "title": "Wettbewerbsvorteil", "description": "Einzigartige Funktionen, die Sie von der Konkurrenz abheben." }
+      ],
+      "process": [
+        { "step": 1, "title": "Anforderungsanalyse", "description": "Tiefgehende Analyse Ihrer Geschäfts- und technischen Anforderungen." },
+        { "step": 2, "title": "Architekturdesign", "description": "Skalierbare, wartbare Systemarchitektur entwerfen." },
+        { "step": 3, "title": "Entwicklung", "description": "Agile Entwicklung mit regelmäßigen Iterationen und Feedback." },
+        { "step": 4, "title": "Qualitätssicherung", "description": "Umfassende Tests für Zuverlässigkeit und Performance." },
+        { "step": 5, "title": "Einführung & Schulung", "description": "Deployment der Lösung und Schulung Ihres Teams." }
+      ]
+    },
+    "uiUxDesign": {
+      "title": "UX & UI Design",
+      "subtitle": "Nutzerzentriertes Design für intuitive, ansprechende Oberflächen.",
+      "intro": "Gutes Design ist mehr als Ästhetik – es schafft Erlebnisse, die Nutzer begeistern. Unsere UX/UI-Design-Leistungen verstehen Nutzerbedürfnisse und schaffen Oberflächen, die schön und funktional sind.",
+      "features": [
+        "Nutzerforschung und Personas",
+        "Wireframing und Prototyping",
+        "Visuelles Design und Branding",
+        "Interaktionsdesign",
+        "Usability-Tests",
+        "Design-Systeme",
+        "Responsives Design",
+        "Barrierefreiheit"
+      ],
+      "benefits": [
+        { "title": "Höhere Nutzerzufriedenheit", "description": "Intuitive, leicht bedienbare Oberflächen begeistern Ihre Nutzer." },
+        { "title": "Bessere Conversion-Raten", "description": "Durchdachte Erlebnisse führen Nutzer gezielt zu Aktionen." },
+        { "title": "Geringere Entwicklungskosten", "description": "Klare Designs reduzieren Nachbesserungen und Entwicklungszeit." },
+        { "title": "Markenkonsistenz", "description": "Stimmige Design-Systeme stärken Ihre Marke." }
+      ],
+      "process": [
+        { "step": 1, "title": "Recherche", "description": "Nutzer, Wettbewerb und Geschäftsziele verstehen." },
+        { "step": 2, "title": "Ideation", "description": "User Flows und Wireframes entwickeln." },
+        { "step": 3, "title": "Design", "description": "High-Fidelity-Designs und Prototypen erstellen." },
+        { "step": 4, "title": "Testing", "description": "Designs durch Nutzertests und Feedback validieren." },
+        { "step": 5, "title": "Feinschliff", "description": "Auf Basis von Feedback iterieren und starten." }
+      ]
+    },
+    "customerSupport": {
+      "title": "Kundensupport",
+      "subtitle": "24/7 Kundensupport für zufriedene Kunden.",
+      "intro": "Zuverlässiger Kundensupport ist entscheidend für den Geschäftserfolg. Wir bieten 24/7-Support über mehrere Kanäle, damit Ihre Kunden immer die nötige Hilfe erhalten.",
+      "features": [
+        "24/7 Verfügbarkeit",
+        "Multi-Kanal-Support",
+        "Schnelle Reaktionszeiten",
+        "Ticket-Verwaltung",
+        "Wissensdatenbank",
+        "Kundenfeedback",
+        "Performance-Metriken",
+        "Skalierbarer Support"
+      ],
+      "benefits": [
+        { "title": "Immer erreichbar", "description": "Unterstützen Sie Ihre Kunden rund um die Uhr." },
+        { "title": "Schnelle Lösung", "description": "Kurze Reaktionszeiten steigern die Zufriedenheit." },
+        { "title": "Professioneller Service", "description": "Geschulte Support-Mitarbeiter sorgen für exzellenten Service." },
+        { "title": "Kosteneinsparung", "description": "Outsourcing des Supports reduziert Fixkosten." }
+      ],
+      "process": [
+        { "step": 1, "title": "Bedarfsanalyse", "description": "Support-Anforderungen und Ziele verstehen." },
+        { "step": 2, "title": "Systemeinrichtung", "description": "Support-Tools und Infrastruktur einrichten." },
+        { "step": 3, "title": "Team-Schulung", "description": "Support-Team zu Produkten und Prozessen schulen." },
+        { "step": 4, "title": "Launch", "description": "Support-Leistungen live schalten." },
+        { "step": 5, "title": "Monitoring", "description": "Performance überwachen und kontinuierlich verbessern." }
+      ]
+    },
+    "seo": {
+      "title": "Suchmaschinenoptimierung (SEO)",
+      "subtitle": "Umfassende SEO-Strategien für bessere Suchrankings.",
+      "intro": "SEO ist die Grundlage für organische Sichtbarkeit im Web. Wir setzen SEO-Strategien um, die Ihre Rankings verbessern, qualifizierten Traffic erzeugen und Leads generieren.",
+      "features": [
+        "Keyword-Recherche und -Analyse",
+        "On-Page-SEO-Optimierung",
+        "Technische SEO-Audits",
+        "Content-Optimierung",
+        "Linkaufbau",
+        "Lokale SEO",
+        "SEO-Reporting und Analysen",
+        "Wettbewerbsanalyse"
+      ],
+      "benefits": [
+        { "title": "Organischer Traffic", "description": "Besucher gewinnen ohne Werbekosten." },
+        { "title": "Langfristige Ergebnisse", "description": "SEO schafft nachhaltiges, dauerhaftes Wachstum." },
+        { "title": "Höhere Glaubwürdigkeit", "description": "Top-Rankings stärken Vertrauen und Autorität." },
+        { "title": "Besserer ROI", "description": "Organischer Traffic verursacht keine Klickkosten." }
+      ],
+      "process": [
+        { "step": 1, "title": "Audit", "description": "Umfassendes SEO-Audit Ihrer aktuellen Website." },
+        { "step": 2, "title": "Strategie", "description": "SEO-Strategie auf Basis von Zielen und Wettbewerb entwickeln." },
+        { "step": 3, "title": "Optimierung", "description": "On-Page- und technische Optimierungen umsetzen." },
+        { "step": 4, "title": "Content", "description": "Content für Ziel-Keywords erstellen und optimieren." },
+        { "step": 5, "title": "Linkaufbau", "description": "Qualitäts-Backlinks für mehr Autorität aufbauen." },
+        { "step": 6, "title": "Monitoring", "description": "Rankings verfolgen und kontinuierlich optimieren." }
+      ]
+    },
+    "googleAds": {
+      "title": "Google Ads",
+      "subtitle": "Strategische Google-Ads-Kampagnen für qualifizierten Traffic.",
+      "intro": "Google Ads ist eine der effektivsten Wege, Kunden zu erreichen, die aktiv nach Ihren Produkten oder Leistungen suchen. Wir konzipieren und betreuen Kampagnen, die qualifizierten Traffic erzeugen und den ROI maximieren.",
+      "features": [
+        "Kampagnenstrategie und -einrichtung",
+        "Keyword-Recherche",
+        "Anzeigentexte",
+        "Landingpage-Optimierung",
+        "Gebotssteuerung",
+        "A/B-Tests",
+        "Conversion-Tracking",
+        "Performance-Reporting"
+      ],
+      "benefits": [
+        { "title": "Sofortige Ergebnisse", "description": "Traffic, sobald die Kampagnen live gehen." },
+        { "title": "Zielgerichteter Traffic", "description": "Nutzer erreichen, die aktiv nach Ihren Leistungen suchen." },
+        { "title": "Volle Kontrolle", "description": "Budget, Zielgruppen und Botschaften steuern." },
+        { "title": "Messbarer ROI", "description": "Jeden Klick und jede Conversion nachverfolgen." }
+      ],
+      "process": [
+        { "step": 1, "title": "Recherche", "description": "Keywords, Wettbewerb und Zielgruppe analysieren." },
+        { "step": 2, "title": "Kampagnen-Setup", "description": "Kampagnen mit optimierten Anzeigengruppen und Keywords erstellen." },
+        { "step": 3, "title": "Anzeigenerstellung", "description": "Überzeugende Anzeigentexte, die Klicks generieren." },
+        { "step": 4, "title": "Launch", "description": "Kampagnen starten und Performance überwachen." },
+        { "step": 5, "title": "Optimierung", "description": "Gebote, Keywords und Anzeigen kontinuierlich optimieren." }
+      ]
+    },
+    "tiktokAds": {
+      "title": "TikTok Ads",
+      "subtitle": "TikTok-Werbekampagnen für jüngere Zielgruppen.",
+      "intro": "TikTok ist eine der am schnellsten wachsenden Social-Media-Plattformen, besonders bei jüngeren Nutzern. Wir erstellen ansprechende TikTok-Kampagnen, die Aufmerksamkeit erzeugen und Ergebnisse liefern.",
+      "features": [
+        "TikTok-Kampagnenstrategie",
+        "Video-Anzeigen",
+        "Zielgruppen-Targeting",
+        "Trend-Integration",
+        "Influencer-Partnerschaften",
+        "Performance-Tracking",
+        "Kreativ-Tests",
+        "Budget-Optimierung"
+      ],
+      "benefits": [
+        { "title": "Junge Zielgruppe", "description": "Gen Z und Millennials erreichen." },
+        { "title": "Hohe Reichweite", "description": "TikTok-Nutzer sind sehr aktiv und engagiert." },
+        { "title": "Viral-Potenzial", "description": "Kreative Inhalte können viral gehen und Millionen erreichen." },
+        { "title": "Wachstumsplattform", "description": "Früh auf einer stark wachsenden Plattform präsent sein." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategie", "description": "TikTok-Marketingstrategie entwickeln." },
+        { "step": 2, "title": "Kreativ-Entwicklung", "description": "Ansprechende Video-Anzeigen passend zur TikTok-Kultur erstellen." },
+        { "step": 3, "title": "Kampagnen-Setup", "description": "Kampagnen mit optimalem Targeting einrichten." },
+        { "step": 4, "title": "Launch", "description": "Kampagnen starten und Performance überwachen." },
+        { "step": 5, "title": "Optimierung", "description": "Anhand von Reichweite und Conversions optimieren." }
+      ]
+    },
+    "socialMediaMarketing": {
+      "title": "Social Media Marketing",
+      "subtitle": "Komplettes Social-Media-Management und Content-Strategien.",
+      "intro": "Social Media ist dort, wo Ihre Kunden Zeit verbringen. Wir entwickeln umfassende Social-Media-Strategien, die Ihre Marke stärken, Ihre Zielgruppe einbinden und Geschäftsergebnisse erzielen.",
+      "features": [
+        "Social-Media-Strategie",
+        "Content-Erstellung",
+        "Community-Management",
+        "Influencer-Partnerschaften",
+        "Social-Media-Werbung",
+        "Analysen und Reporting",
+        "Krisenmanagement",
+        "Multi-Plattform-Management"
+      ],
+      "benefits": [
+        { "title": "Markenbekanntheit", "description": "Markenpräsenz aufbauen und stärken." },
+        { "title": "Kundenbindung", "description": "Direkt mit Ihrer Zielgruppe in Kontakt treten." },
+        { "title": "Lead-Generierung", "description": "Leads über Social-Media-Kanäle generieren." },
+        { "title": "Kundensupport", "description": "Kundenservice über Social-Media-Kanäle anbieten." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategie", "description": "Social-Media-Strategie und Ziele entwickeln." },
+        { "step": 2, "title": "Content-Planung", "description": "Content-Kalender und Themen planen." },
+        { "step": 3, "title": "Content-Erstellung", "description": "Ansprechende Inhalte für jede Plattform erstellen." },
+        { "step": 4, "title": "Veröffentlichung", "description": "Inhalte planen und regelmäßig veröffentlichen." },
+        { "step": 5, "title": "Engagement", "description": "Mit der Community interagieren und sie betreuen." },
+        { "step": 6, "title": "Analyse", "description": "Performance auswerten und Strategie optimieren." }
+      ]
+    },
+    "emailMarketing": {
+      "title": "Email Marketing",
+      "subtitle": "Automatisierte E-Mail-Kampagnen zur Lead-Pflege und Umsatzsteigerung.",
+      "intro": "E-Mail-Marketing zählt zu den effektivsten Kanälen mit hohem ROI und direktem Kundenkontakt. Wir erstellen automatisierte E-Mail-Kampagnen, die Leads pflegen und Verkäufe steigern.",
+      "features": [
+        "E-Mail-Kampagnenstrategie",
+        "E-Mail-Design und Vorlagen",
+        "Automatisierungs-Workflows",
+        "Segmentierung",
+        "A/B-Tests",
+        "Deliverability-Optimierung",
+        "Analysen und Reporting",
+        "Listenverwaltung"
+      ],
+      "benefits": [
+        { "title": "Hoher ROI", "description": "E-Mail-Marketing liefert einen der höchsten ROIs." },
+        { "title": "Direkte Ansprache", "description": "Kunden direkt in ihrem Posteingang erreichen." },
+        { "title": "Automatisierung", "description": "Kampagnen automatisieren – Zeit sparen und skalieren." },
+        { "title": "Personalisierung", "description": "Nachrichten personalisieren für mehr Engagement." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategie", "description": "E-Mail-Marketing-Strategie und Ziele entwickeln." },
+        { "step": 2, "title": "Listenaufbau", "description": "E-Mail-Liste aufbauen und segmentieren." },
+        { "step": 3, "title": "Template-Design", "description": "Responsive E-Mail-Vorlagen gestalten." },
+        { "step": 4, "title": "Automatisierung", "description": "Automatisierte E-Mail-Workflows einrichten." },
+        { "step": 5, "title": "Kampagnen-Start", "description": "Kampagnen starten und Performance überwachen." },
+        { "step": 6, "title": "Optimierung", "description": "Anhand von Öffnungsraten und Conversions optimieren." }
+      ]
+    },
+    "shopify": {
+      "title": "Shopify",
+      "subtitle": "Professionelle Shopify-Shops mit individuellen Themes und Integrationen.",
+      "intro": "Shopify ist eine der führenden E-Commerce-Plattformen weltweit und betreibt Millionen von Online-Shops. Wir erstellen maßgeschneiderte Shopify-Stores – ansprechend, schnell und conversionsoptimiert.",
+      "features": [
+        "Individuelle Shopify-Theme-Entwicklung",
+        "Shopify-App-Integration",
+        "Zahlungsanbieter-Einrichtung",
+        "Produktimport und -verwaltung",
+        "SEO-Optimierung",
+        "Mobile-responsive Design",
+        "Checkout-Anpassung",
+        "Analytics-Integration"
+      ],
+      "benefits": [
+        { "title": "Einfache Verwaltung", "description": "Benutzerfreundliches Admin-Panel für Produkte und Bestellungen." },
+        { "title": "Skalierbarkeit", "description": "Vom Start-up bis zum Unternehmen ohne Plattformgrenzen wachsen." },
+        { "title": "App-Ökosystem", "description": "Tausende Apps zur Erweiterung der Funktionalität." },
+        { "title": "Zuverlässiges Hosting", "description": "Schnelles, sicheres Hosting mit 99,99 % Uptime-Garantie." }
+      ],
+      "process": [
+        { "step": 1, "title": "Shop-Einrichtung", "description": "Shopify-Konto anlegen und Grundeinstellungen konfigurieren." },
+        { "step": 2, "title": "Theme-Entwicklung", "description": "Individuelles Theme gestalten und entwickeln oder bestehende anpassen." },
+        { "step": 3, "title": "Produkt-Setup", "description": "Produkte importieren, Varianten einrichten und Lager konfigurieren." },
+        { "step": 4, "title": "Integration", "description": "Zahlungsanbieter, Versand und Drittanbieter-Apps anbinden." },
+        { "step": 5, "title": "Launch", "description": "Gründlich testen und Ihren Shop live schalten." }
+      ]
+    },
+    "wordpress": {
+      "title": "WordPress",
+      "subtitle": "WooCommerce-Shops mit umfassenden Anpassungsmöglichkeiten.",
+      "intro": "WordPress mit WooCommerce bietet maximale Flexibilität für E-Commerce. Wir bauen individuelle WordPress-Shops, die Ihnen volle Kontrolle über Design, Funktionalität und Nutzererlebnis geben.",
+      "features": [
+        "WooCommerce-Shop-Entwicklung",
+        "Individuelle WordPress-Themes",
+        "Plugin-Integration",
+        "Zahlungsanbieter-Einrichtung",
+        "Produktkatalog-Verwaltung",
+        "SEO-Optimierung",
+        "Mehrsprachigkeit",
+        "Individuelle Funktionsentwicklung"
+      ],
+      "benefits": [
+        { "title": "Volle Kontrolle", "description": "Vollständige Kontrolle über Ihren Shop." },
+        { "title": "Flexibilität", "description": "Unbegrenzte Anpassung durch Themes und Plugins." },
+        { "title": "Kosteneffektiv", "description": "Keine Transaktionsgebühren, nur Hosting und Domain." },
+        { "title": "SEO-freundlich", "description": "WordPress ist bei richtiger Einrichtung von Haus aus SEO-freundlich." }
+      ],
+      "process": [
+        { "step": 1, "title": "WordPress-Setup", "description": "WordPress und WooCommerce auf Ihrem Hosting installieren." },
+        { "step": 2, "title": "Theme-Entwicklung", "description": "Theme für Ihre Marke erstellen oder anpassen." },
+        { "step": 3, "title": "WooCommerce-Konfiguration", "description": "Produkte, Versand, Steuern und Zahlungsmethoden einrichten." },
+        { "step": 4, "title": "Anpassung", "description": "Individuelle Funktionen und Plugins integrieren." },
+        { "step": 5, "title": "Launch", "description": "Performance optimieren und Shop live schalten." }
+      ]
+    },
+    "ebay": {
+      "title": "eBay",
+      "subtitle": "eBay-Shop-Einrichtung, Optimierung und automatisierte Listing-Verwaltung.",
+      "intro": "eBay ist einer der größten Online-Marktplätze weltweit mit Millionen aktiver Käufer. Wir helfen Ihnen beim Aufbau, der Optimierung und der Betreuung Ihres eBay-Shops für maximale Sichtbarkeit und Umsatz.",
+      "features": [
+        "eBay-Shop-Einrichtung und Design",
+        "Listing-Optimierung",
+        "Automatisierte Listing-Verwaltung",
+        "Bestandssynchronisation",
+        "Preisstrategien",
+        "Performance-Analysen",
+        "Kundenservice-Management",
+        "Multi-Account-Management"
+      ],
+      "benefits": [
+        { "title": "Mehr Sichtbarkeit", "description": "Optimierte Listings ranken besser in den eBay-Suchergebnissen." },
+        { "title": "Zeitersparnis", "description": "Wiederkehrende Aufgaben wie Listings und Bestandsupdates automatisieren." },
+        { "title": "Mehr Umsatz", "description": "Bessere Listings und Preisstrategien steigern den Verkauf." },
+        { "title": "Professioneller Auftritt", "description": "Mit einem gut gestalteten eBay-Shop hervorstechen." }
+      ],
+      "process": [
+        { "step": 1, "title": "Konto-Einrichtung", "description": "eBay-Verkäuferkonto anlegen und verifizieren." },
+        { "step": 2, "title": "Shop-Design", "description": "eBay-Shop mit individuellem Branding gestalten." },
+        { "step": 3, "title": "Listing-Optimierung", "description": "Optimierte Produktlistings mit guten Fotos und Beschreibungen erstellen." },
+        { "step": 4, "title": "Automatisierung", "description": "Tools für automatische Listings und Bestandsverwaltung einrichten." },
+        { "step": 5, "title": "Laufende Betreuung", "description": "Performance überwachen und Listings kontinuierlich optimieren." }
+      ]
+    },
+    "amazon": {
+      "title": "Amazon",
+      "subtitle": "Amazon-FBA-Einrichtung, Produktoptimierung und Konto-Management.",
+      "intro": "Amazon ist der größte Online-Marktplatz der Welt, und FBA (Fulfillment by Amazon) macht es einfacher denn je, Millionen Kunden zu erreichen. Wir helfen Ihnen beim Aufbau und der Optimierung Ihres Amazon-Geschäfts.",
+      "features": [
+        "Amazon-Verkäuferkonto-Einrichtung",
+        "FBA-Anmeldung und -Setup",
+        "Produktlisting-Optimierung",
+        "Keyword-Recherche und PPC-Management",
+        "Bestandsverwaltung",
+        "Bewertungs-Management",
+        "Brand Registry",
+        "Performance-Monitoring"
+      ],
+      "benefits": [
+        { "title": "Prime-Berechtigung", "description": "FBA-Produkte sind für Amazon-Prime-Versand berechtigt." },
+        { "title": "Bessere Rankings", "description": "Optimierte Listings ranken besser in der Amazon-Suche." },
+        { "title": "Kundenvertrauen", "description": "FBA schafft Vertrauen durch schnellen, zuverlässigen Versand." },
+        { "title": "Skalierbarkeit", "description": "Amazon übernimmt die Abwicklung – Sie können leicht skalieren." }
+      ],
+      "process": [
+        { "step": 1, "title": "Konto-Einrichtung", "description": "Amazon-Verkäuferkonto anlegen und verifizieren." },
+        { "step": 2, "title": "FBA-Anmeldung", "description": "Bei FBA anmelden und Versandeinstellungen einrichten." },
+        { "step": 3, "title": "Produktoptimierung", "description": "Optimierte Listings mit Keywords und starken Bildern erstellen." },
+        { "step": 4, "title": "Launch-Strategie", "description": "PPC-Kampagnen und Launch-Strategien entwickeln." },
+        { "step": 5, "title": "Laufende Betreuung", "description": "Performance überwachen, Bestand verwalten und kontinuierlich optimieren." }
+      ]
+    },
+    "etsy": {
+      "title": "Etsy",
+      "subtitle": "Etsy-Shop-Optimierung und Listing-Management für handgefertigte Produkte.",
+      "intro": "Etsy ist der führende Marktplatz für Handgemachtes, Vintage und einzigartige Produkte. Wir helfen Künstlern und Handwerkern, ihre Etsy-Shops zu optimieren und mehr zu verkaufen.",
+      "features": [
+        "Etsy-Shop-Einrichtung und Branding",
+        "Listing-Optimierung",
+        "SEO für Etsy",
+        "Fotografie-Beratung",
+        "Preisstrategien",
+        "Werbekampagnen",
+        "Bewertungs-Management",
+        "Analytics-Tracking"
+      ],
+      "benefits": [
+        { "title": "Mehr Sichtbarkeit", "description": "Optimierte Listings erscheinen in mehr Etsy-Suchen." },
+        { "title": "Professioneller Auftritt", "description": "Gut positionierte Shops schaffen Vertrauen und Glaubwürdigkeit." },
+        { "title": "Höhere Conversion", "description": "Bessere Fotos und Beschreibungen führen zu mehr Verkäufen." },
+        { "title": "Zeitersparnis", "description": "Optimierte Abläufe schaffen mehr Zeit für die Produkterstellung." }
+      ],
+      "process": [
+        { "step": 1, "title": "Shop-Einrichtung", "description": "Etsy-Shop anlegen und Branding einrichten." },
+        { "step": 2, "title": "Listing-Optimierung", "description": "Optimierte Listings mit starken Fotos und SEO erstellen." },
+        { "step": 3, "title": "Preisstrategie", "description": "Wettbewerbsfähige Preise entwickeln, die den Gewinn maximieren." },
+        { "step": 4, "title": "Marketing", "description": "Etsy-Anzeigen und Social-Media-Promotion einrichten." },
+        { "step": 5, "title": "Wachstum", "description": "Performance auswerten und kontinuierlich verbessern." }
+      ]
+    },
+    "onbuy": {
+      "title": "OnBuy",
+      "subtitle": "OnBuy-Marktplatz-Integration und Shop-Management.",
+      "intro": "OnBuy ist ein schnell wachsender, UK-basierter Marktplatz mit wettbewerbsfähigen Gebühren und verkäuferfreundlichen Richtlinien. Wir helfen Ihnen beim Aufbau und der Betreuung Ihres OnBuy-Shops, um neue Kunden zu erreichen.",
+      "features": [
+        "OnBuy-Verkäuferkonto-Einrichtung",
+        "Shop-Konfiguration",
+        "Produktlistings und -optimierung",
+        "Bestandssynchronisation",
+        "Bestellverwaltung",
+        "Performance-Analysen",
+        "Kundenservice-Unterstützung",
+        "Multi-Channel-Integration"
+      ],
+      "benefits": [
+        { "title": "Niedrigere Gebühren", "description": "Wettbewerbsfähige Marktplatzgebühren im Vergleich zu anderen Plattformen." },
+        { "title": "UK-Fokus", "description": "Starke Präsenz im UK-Markt." },
+        { "title": "Verkäufersupport", "description": "Dedizierter Support für Verkäufer." },
+        { "title": "Wachstumsplattform", "description": "Früher Einstieg in einen schnell wachsenden Marktplatz." }
+      ],
+      "process": [
+        { "step": 1, "title": "Konto-Einrichtung", "description": "OnBuy-Verkäuferkonto anlegen und verifizieren." },
+        { "step": 2, "title": "Shop-Konfiguration", "description": "Shop mit Branding und Richtlinien einrichten." },
+        { "step": 3, "title": "Produktlistings", "description": "Produkte für OnBuy listen und optimieren." },
+        { "step": 4, "title": "Integration", "description": "Mit Bestands- und Bestellverwaltungssystemen verbinden." },
+        { "step": 5, "title": "Management", "description": "Laufende Betreuung und Optimierung." }
+      ]
+    }
+  },
+  "serviceCategoryPage": {
+    "getStarted": "Loslegen",
+    "viewCaseStudies": "Referenzen ansehen",
+    "theChallenge": "Die Herausforderung",
+    "areYouStruggling": "Kämpfen Sie mit...",
+    "problem1": "Veraltete Systeme bremsen Ihr Wachstum",
+    "problem2": "Ineffiziente Prozesse verschwenden Zeit und Geld",
+    "problem3": "Fehlende Daten für bessere Entscheidungen",
+    "problem4": "Wettbewerber mit digitalem Vorsprung",
+    "ourSolution": "Unsere Lösung",
+    "transformYourBusiness": "Transformieren Sie Ihr Unternehmen",
+    "solutionIntro": "Wir liefern zukunftsweisende Lösungen für Ihre Herausforderungen, schlanke Abläufe und messbare Ergebnisse.",
+    "solution1": "Moderne, skalierbare Technologie",
+    "solution2": "Optimierte Abläufe und Automatisierung",
+    "solution3": "Echtzeit-Analysen und Einblicke",
+    "solution4": "Wettbewerbsvorteil durch Digitalisierung",
+    "whatWeDo": "Was wir tun",
+    "whatWeDoSub": "Umfassende Leistungen für Ihre Anforderungen",
+    "learnMore": "Mehr erfahren →",
+    "ourProcess": "Unser Prozess",
+    "ourProcessSub": "Ein bewährter Rahmen für außergewöhnliche Ergebnisse",
+    "provenResults": "Bewährte Ergebnisse",
+    "provenResultsSub": "Echte Erfolge aus echten Partnerschaften",
+    "averageRoi": "Durchschnittliche ROI-Steigerung",
+    "costReduction": "Kostenreduzierung",
+    "clientSatisfaction": "Kundenzufriedenheit",
+    "supportAvailability": "Support-Verfügbarkeit",
+    "industriesWeServe": "Branchen, die wir bedienen",
+    "industriesWeServeSub": "Maßgeschneiderte Lösungen für verschiedene Sektoren",
+    "industryEcommerce": "E-Commerce",
+    "industryEcommerceDesc": "Online-Handel und Marktplatzlösungen",
+    "industryHealthcare": "Gesundheitswesen",
+    "industryHealthcareDesc": "Medizin- und Gesundheitsplattformen",
+    "industryFinance": "Finanzen",
+    "industryFinanceDesc": "Banken und Finanzdienstleistungen",
+    "industryEducation": "Bildung",
+    "industryEducationDesc": "Lernmanagementsysteme",
+    "industryRealEstate": "Immobilien",
+    "industryRealEstateDesc": "Plattformen für Immobilienmanagement",
+    "industryManufacturing": "Produktion",
+    "industryManufacturingDesc": "Industrielle digitale Lösungen",
+    "whyChooseUs": "Warum wir",
+    "whyChooseUsSub": "Was uns auszeichnet",
+    "technologiesWeUse": "Technologien",
+    "technologiesWeUseSub": "Moderne Tools und Plattformen für beste Ergebnisse",
+    "readyToTransform": "Bereit für die digitale Transformation?",
+    "readyToTransformSub": "Sprechen wir darüber, wie unsere Leistungen messbare Ergebnisse für Ihr Unternehmen erzielen.",
+    "getStartedToday": "Jetzt starten",
+    "viewOurWork": "Referenzen ansehen",
+    "exploreOurServices": "Leistungen entdecken",
+    "exploreOurServicesSub": "Alle Lösungen im Überblick",
+    "viewAllServices": "Alle Leistungen →"
   }
 }

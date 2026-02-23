@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import TestimonialsContent from './TestimonialsContent'
 
-export const metadata: Metadata = {
-  title: 'Client Testimonials - What Our Clients Say',
-  description: 'Read testimonials from our satisfied clients who have experienced success with our digital services and solutions.',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('testimonialsPage')
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+  }
 }
 
 export default function TestimonialsPage() {

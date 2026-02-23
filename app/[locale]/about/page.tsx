@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import AboutContent from './AboutContent'
 
-export const metadata: Metadata = {
-  title: 'About Us - Your Trusted Digital Partner',
-  description: 'Learn about Xentio Digital - our mission, vision, and commitment to delivering exceptional digital solutions that drive business growth.',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('about')
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+  }
 }
 
 export default function AboutPage() {

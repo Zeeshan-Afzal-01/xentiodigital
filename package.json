@@ -13,7 +13,8 @@
     "deploy:run": "gcloud run deploy nextjs-server --source . --platform managed --region us-central1 --allow-unauthenticated",
     "deploy:hosting": "firebase deploy --only hosting",
     "deploy": "npm run deploy:run && npm run deploy:hosting",
-    "deploy:vercel": "vercel --prod"
+    "deploy:vercel": "vercel --prod",
+    "translate": "node scripts/translate-messages.mjs"
   },
   "dependencies": {
     "@auth/core": "^0.41.0",

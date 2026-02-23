@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import ReactMarkdown from 'react-markdown'
 import type { Blog } from '@/lib/blog-types'
 import {
@@ -32,6 +33,7 @@ export default async function BlogPostPageContent({
   locale: string
   relatedPosts: Blog[]
 }) {
+  const t = await getTranslations('blog')
   const rtl = isRTL(locale)
   const categoryColor = getCategoryColor(post.category)
   const headings = extractHeadingsFromMarkdown(post.content)
@@ -131,7 +133,7 @@ export default async function BlogPostPageContent({
               {/* Tags */}
               {post.tags?.length > 0 && (
                 <div className="mt-8">
-                  <h3 className="text-sm font-semibold text-muted-enhanced mb-4 uppercase tracking-wider">Tags</h3>
+                  <h3 className="text-sm font-semibold text-muted-enhanced mb-4 uppercase tracking-wider">{t('tags')}</h3>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag) => (
                       <span
@@ -155,7 +157,7 @@ export default async function BlogPostPageContent({
               {/* Related posts */}
               {relatedPosts.length > 0 && (
                 <div className="mt-12">
-                  <h2 className="text-2xl font-bold text-high-contrast mb-6">Related articles</h2>
+                  <h2 className="text-2xl font-bold text-high-contrast mb-6">{t('relatedPosts')}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {relatedPosts.map((p, idx) => (
                       <BlogCard key={p.id} post={p} index={idx} />
@@ -166,7 +168,7 @@ export default async function BlogPostPageContent({
                       href={`/${locale}/blog`}
                       className="text-primary-500 hover:text-primary-400 font-semibold text-sm transition-colors inline-flex items-center gap-2"
                     >
-                      View all articles
+                      {t('viewAllArticles')}
                       <Icon name="ChevronRight" rtlFlip rtl={rtl} className="w-4 h-4" strokeWidth={2} />
                     </Link>
                   </div>

@@ -13,24 +13,24 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { href: `/${locale}/services/web-development`, label: 'Web Development' },
-      { href: `/${locale}/services/mobile-apps`, label: 'Mobile Apps' },
-      { href: `/${locale}/services/seo-digital-marketing`, label: 'SEO & Marketing' },
-      { href: `/${locale}/services/ecommerce-solutions`, label: 'eCommerce' },
-      { href: `/${locale}/services/ux-ui-design`, label: 'UX/UI Design' },
-      { href: `/${locale}/services/desktop-custom-software`, label: 'Custom Software' },
+      { href: `/${locale}/services/web-development`, label: t('webDevelopment') },
+      { href: `/${locale}/services/mobile-apps`, label: t('mobileApps') },
+      { href: `/${locale}/services/seo-digital-marketing`, label: t('seoMarketing') },
+      { href: `/${locale}/services/ecommerce-solutions`, label: t('ecommerce') },
+      { href: `/${locale}/services/ux-ui-design`, label: t('uxUiDesign') },
+      { href: `/${locale}/services/desktop-custom-software`, label: t('customSoftware') },
     ],
     company: [
-      { href: `/${locale}/about`, label: 'About Us' },
-      { href: `/${locale}/portfolio`, label: 'Portfolio' },
-      { href: `/${locale}/testimonials`, label: 'Testimonials' },
-      { href: `/${locale}/team`, label: 'Team' },
-      { href: `/${locale}/careers`, label: 'Careers' },
-      { href: `/${locale}/contact`, label: 'Contact' },
+      { href: `/${locale}/about`, label: t('aboutUs') },
+      { href: `/${locale}/portfolio`, label: t('portfolio') },
+      { href: `/${locale}/testimonials`, label: t('testimonials') },
+      { href: `/${locale}/team`, label: t('team') },
+      { href: `/${locale}/careers`, label: t('careers') },
+      { href: `/${locale}/contact`, label: t('contact') },
     ],
     legal: [
-      { href: `/${locale}/privacy-policy`, label: 'Privacy Policy' },
-      { href: `/${locale}/terms-of-service`, label: 'Terms of Service' },
+      { href: `/${locale}/privacy-policy`, label: t('privacyPolicy') },
+      { href: `/${locale}/terms-of-service`, label: t('termsOfService') },
     ],
   }
 
@@ -61,7 +61,7 @@ export default function Footer() {
           >
             <h3 className="text-2xl font-bold gradient-text mb-4">Xentio Digital</h3>
             <p className="text-muted-enhanced mb-6 leading-relaxed">
-              Leading digital services provider helping businesses transform their digital presence.
+              {t('tagline')}
             </p>
             <div className={`flex gap-4 flex-wrap ${rtl ? 'flex-row-reverse' : ''}`}>
               {socialLinks.map((social, index) => (
@@ -132,7 +132,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4 className="text-high-contrast font-semibold mb-4">Contact</h4>
+            <h4 className="text-high-contrast font-semibold mb-4">{t('contact')}</h4>
             <ul className="space-y-3 text-muted-enhanced">
               <li>
                 <a
@@ -150,7 +150,7 @@ export default function Footer() {
               <li className="pt-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link href={`/${locale}/contact`} className="btn-primary inline-block">
-                    Get Quote
+                    {t('getQuote')}
                   </Link>
                 </motion.div>
               </li>

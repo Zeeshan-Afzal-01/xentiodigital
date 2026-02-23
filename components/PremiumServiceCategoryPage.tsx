@@ -1,13 +1,26 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import { ServiceCategory } from '@/lib/services-data'
 import { isRTL } from '@/lib/translation'
 import AnimatedCounter from './AnimatedCounter'
 import { Icon, IconName } from '@/components/icons'
+
+function slugToCamel(slug: string): string {
+  return slug.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+}
+
+interface CategoryPageContent {
+  name?: string
+  description?: string
+  intro?: string
+  subServices?: Array<{ name: string; description: string }>
+  process?: Array<{ step: number; title: string; description: string }>
+  benefits?: Array<{ title: string; description: string }>
+}
 
 interface PremiumServiceCategoryPageProps {
   category: ServiceCategory
@@ -15,26 +28,59 @@ interface PremiumServiceCategoryPageProps {
 
 export default function PremiumServiceCategoryPage({ category }: PremiumServiceCategoryPageProps) {
   const locale = useLocale()
+  const t = useTranslations('serviceCategoryPage')
+  const tCategories = useTranslations('categoryPages')
   const rtl = isRTL(locale)
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const { scrollYProgress } = useScroll()
   const heroRef = useRef<HTMLDivElement>(null)
+
+  const slugCamel = useMemo(() => slugToCamel(category.slug), [category.slug])
+  const categoryContent = useMemo(() => {
+    try {
+      const raw = tCategories.raw(slugCamel) as CategoryPageContent | undefined
+      return raw && typeof raw === 'object' ? raw : null
+    } catch {
+      return null
+    }
+  }, [tCategories, slugCamel])
+
+  const name = categoryContent?.name ?? category.name
+  const description = categoryContent?.description ?? category.description
+  const intro = categoryContent?.intro ?? category.intro ?? category.description
+  const subServices = useMemo(
+    () =>
+      category.subServices.map((s, i) => ({
+        ...s,
+        name: categoryContent?.subServices?.[i]?.name ?? s.name,
+        description: categoryContent?.subServices?.[i]?.description ?? s.description,
+      })),
+    [category.subServices, categoryContent?.subServices]
+  )
+  const processSteps = (categoryContent?.process?.length ? categoryContent.process : category.process) ?? []
+  const benefitsWithIcons = useMemo(() => {
+    const list = categoryContent?.benefits ?? category.benefits?.map((b) => ({ title: b.title, description: b.description })) ?? []
+    return list.map((b, i) => ({
+      ...b,
+      icon: category.benefits?.[i]?.icon ?? 'Star',
+    }))
+  }, [categoryContent?.benefits, category.benefits])
   
   // Parallax transforms
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
-  // Industry data (can be customized per category)
+  // Industry data (translated)
   const industries = [
-    { name: 'E-Commerce', icon: 'Ecommerce' as IconName, description: 'Online retail and marketplace solutions' },
-    { name: 'Healthcare', icon: 'Healthcare' as IconName, description: 'Medical and health service platforms' },
-    { name: 'Finance', icon: 'Finance' as IconName, description: 'Banking and financial services' },
-    { name: 'Education', icon: 'Education' as IconName, description: 'Learning management systems' },
-    { name: 'Real Estate', icon: 'Home' as IconName, description: 'Property management platforms' },
-    { name: 'Manufacturing', icon: 'Manufacturing' as IconName, description: 'Industrial digital solutions' },
+    { name: t('industryEcommerce'), icon: 'Ecommerce' as IconName, description: t('industryEcommerceDesc') },
+    { name: t('industryHealthcare'), icon: 'Healthcare' as IconName, description: t('industryHealthcareDesc') },
+    { name: t('industryFinance'), icon: 'Finance' as IconName, description: t('industryFinanceDesc') },
+    { name: t('industryEducation'), icon: 'Education' as IconName, description: t('industryEducationDesc') },
+    { name: t('industryRealEstate'), icon: 'Home' as IconName, description: t('industryRealEstateDesc') },
+    { name: t('industryManufacturing'), icon: 'Manufacturing' as IconName, description: t('industryManufacturingDesc') },
   ]
 
-  // Technology logos/icons (can be customized)
+  // Technology logos/icons (names stay as brand names)
   const technologies = [
     { name: 'React', icon: 'Code' as IconName },
     { name: 'Next.js', icon: 'Code' as IconName },
@@ -44,12 +90,12 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
     { name: 'Docker', icon: 'Container' as IconName },
   ]
 
-  // Results/metrics (customizable per category)
+  // Results/metrics (translated labels)
   const results = [
-    { value: '300%', label: 'Average ROI Increase', icon: 'Growth' as IconName },
-    { value: '50%', label: 'Cost Reduction', icon: 'Money' as IconName },
-    { value: '90%', label: 'Client Satisfaction', icon: 'Star' as IconName },
-    { value: '24/7', label: 'Support Availability', icon: 'Clock' as IconName },
+    { value: '300%', label: t('averageRoi'), icon: 'Growth' as IconName },
+    { value: '50%', label: t('costReduction'), icon: 'Money' as IconName },
+    { value: '90%', label: t('clientSatisfaction'), icon: 'Star' as IconName },
+    { value: '24/7', label: t('supportAvailability'), icon: 'Clock' as IconName },
   ]
 
   return (
@@ -131,7 +177,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
             >
-              <span className="gradient-text">{category.name}</span>
+              <span className="gradient-text">{name}</span>
             </motion.h1>
             
             <motion.p
@@ -140,7 +186,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-muted-enhanced mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              {category.intro || category.description}
+              {intro}
             </motion.p>
 
             <motion.div
@@ -155,7 +201,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 className="magnetic"
               >
                 <Link href={`/${locale}/contact`} className="btn-primary text-lg px-10 py-5">
-                  Get Started
+                  {t('getStarted')}
                 </Link>
               </motion.div>
               <motion.div
@@ -164,7 +210,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 className="magnetic"
               >
                 <Link href={`/${locale}/portfolio`} className="btn-secondary text-lg px-10 py-5">
-                  View Case Studies
+                  {t('viewCaseStudies')}
                 </Link>
               </motion.div>
             </motion.div>
@@ -205,18 +251,13 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               className="space-y-6"
             >
               <div className="inline-block px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 mb-4">
-                <span className="text-red-400 font-semibold text-sm">The Challenge</span>
+                <span className="text-red-400 font-semibold text-sm">{t('theChallenge')}</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-high-contrast mb-6">
-                Are You Struggling With...
+                {t('areYouStruggling')}
               </h2>
               <ul className="space-y-4">
-                {[
-                  'Outdated systems holding back growth',
-                  'Inefficient processes wasting time and money',
-                  'Lack of data insights for decision-making',
-                  'Competitors gaining digital advantage',
-                ].map((problem, index) => (
+                {[t('problem1'), t('problem2'), t('problem3'), t('problem4')].map((problem, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: rtl ? 20 : -20 }}
@@ -246,22 +287,16 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 }}
               >
                 <div className="inline-block px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
-                  <span className="text-green-400 font-semibold text-sm">Our Solution</span>
+                  <span className="text-green-400 font-semibold text-sm">{t('ourSolution')}</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-high-contrast mb-6">
-                  Transform Your Business
+                  {t('transformYourBusiness')}
                 </h3>
                 <p className="text-lg text-muted-enhanced leading-relaxed mb-6">
-                  We deliver cutting-edge {category.name.toLowerCase()} solutions that address your specific challenges, 
-                  streamline operations, and drive measurable results.
+                  {t('solutionIntro')}
                 </p>
                 <div className="space-y-3">
-                  {[
-                    'Modern, scalable technology stack',
-                    'Streamlined workflows and automation',
-                    'Real-time analytics and insights',
-                    'Competitive digital advantage',
-                  ].map((solution, index) => (
+                  {[t('solution1'), t('solution2'), t('solution3'), t('solution4')].map((solution, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: rtl ? 20 : -20 }}
@@ -292,15 +327,15 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">What We Do</span>
+              <span className="gradient-text">{t('whatWeDo')}</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto">
-              Comprehensive {category.name.toLowerCase()} services tailored to your needs
+              {t('whatWeDoSub')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {category.subServices.map((subService, index) => (
+            {subServices.map((subService, index) => (
               <motion.div
                 key={subService.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -358,7 +393,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                             }}
                           >
                             <span className="text-primary-500 font-semibold text-sm">
-                              Learn More →
+                              {t('learnMore')}
                             </span>
                           </div>
                         </motion.div>
@@ -373,7 +408,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
       </section>
 
       {/* Process / Framework Timeline */}
-      {category.process && category.process.length > 0 && (
+      {processSteps.length > 0 && (
         <section className="section-padding relative">
           <div className="container-custom">
             <motion.div
@@ -383,10 +418,10 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="gradient-text">Our Process</span>
+                <span className="gradient-text">{t('ourProcess')}</span>
               </h2>
               <p className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto">
-                A proven framework for delivering exceptional results
+                {t('ourProcessSub')}
               </p>
             </motion.div>
 
@@ -396,7 +431,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 <div className={`absolute top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500 ${rtl ? 'right-8' : 'left-8'} hidden md:block`} />
 
                 <div className="space-y-12">
-                  {category.process.map((step, index) => (
+                  {processSteps.map((step, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: rtl ? 50 : -50 }}
@@ -452,10 +487,10 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Proven Results</span>
+              <span className="gradient-text">{t('provenResults')}</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto">
-              Real outcomes from real partnerships
+              {t('provenResultsSub')}
             </p>
           </motion.div>
 
@@ -498,10 +533,10 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Industries We Serve</span>
+              <span className="gradient-text">{t('industriesWeServe')}</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto">
-              Tailored solutions across diverse sectors
+              {t('industriesWeServeSub')}
             </p>
           </motion.div>
 
@@ -547,7 +582,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
       </section>
 
       {/* Why Choose Us */}
-      {category.benefits && category.benefits.length > 0 && (
+      {benefitsWithIcons.length > 0 && (
         <section className="section-padding bg-surface relative overflow-hidden">
           <div className="container-custom">
             <motion.div
@@ -557,15 +592,15 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="gradient-text">Why Choose Us</span>
+                <span className="gradient-text">{t('whyChooseUs')}</span>
               </h2>
               <p className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto">
-                What sets us apart in {category.name.toLowerCase()}
+                {t('whyChooseUsSub')}
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {category.benefits.map((benefit, index) => (
+              {benefitsWithIcons.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
@@ -608,10 +643,10 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-high-contrast mb-4">
-              Technologies We Use
+              {t('technologiesWeUse')}
             </h2>
             <p className="text-lg text-muted-enhanced max-w-2xl mx-auto">
-              Cutting-edge tools and platforms for exceptional results
+              {t('technologiesWeUseSub')}
             </p>
           </motion.div>
 
@@ -692,10 +727,10 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent"
             >
-              Ready to Transform Your Business?
+              {t('readyToTransform')}
             </motion.h2>
             <p className="text-xl md:text-2xl mb-12 text-muted-enhanced max-w-3xl mx-auto leading-relaxed">
-              Let&apos;s discuss how our {category.name} services can drive measurable results for your organization.
+              {t('readyToTransformSub')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <motion.div
@@ -715,7 +750,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 }}
               >
                 <Link href={`/${locale}/contact`} className="btn-primary text-lg px-12 py-6 glow-purple">
-                  Get Started Today
+                  {t('getStartedToday')}
                 </Link>
               </motion.div>
               <motion.div
@@ -723,7 +758,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
                 whileTap={{ scale: 0.95 }}
               >
                 <Link href={`/${locale}/portfolio`} className="btn-secondary text-lg px-12 py-6">
-                  View Our Work
+                  {t('viewOurWork')}
                 </Link>
               </motion.div>
             </div>
@@ -741,15 +776,15 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-high-contrast mb-4">
-              Explore Our Services
+              {t('exploreOurServices')}
             </h2>
             <p className="text-lg text-muted-enhanced max-w-2xl mx-auto">
-              Discover all {category.name.toLowerCase()} solutions we offer
+              {t('exploreOurServicesSub')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {category.subServices.map((subService, index) => (
+            {subServices.map((subService, index) => (
               <motion.div
                 key={subService.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -805,7 +840,7 @@ export default function PremiumServiceCategoryPage({ category }: PremiumServiceC
               href={`/${locale}/services`}
               className="text-primary-500 hover:text-primary-400 font-semibold transition-colors"
             >
-              View All Services →
+              {t('viewAllServices')}
             </Link>
           </motion.div>
         </div>

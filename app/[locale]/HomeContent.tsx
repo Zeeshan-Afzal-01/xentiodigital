@@ -20,7 +20,7 @@ export default function HomeContent({ locale }: { locale: string }) {
         <PartnersSection />
         
         <ProfessionalServicesSection />
-        <OurProcessSection />
+        {/* <OurProcessSection /> */}
         <ClientTestimonialsSection />
       </ThemeSectionsWrapper>
       <HomeServicesSection locale={locale} />

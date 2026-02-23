@@ -33,6 +33,8 @@
   },
   "services": {
     "title": "Our Services Deliver Real Results",
+    "pageTitle": "Our Services",
+    "pageSubtitle": "Comprehensive digital solutions tailored to your business needs",
     "subtitle": "We focus on strategies that produce measurable growth. From improving your search rankings to managing high-converting ad campaigns, we handle it all.",
     "ctaButton": "Request a Free SEO Audit",
     "homepageServices": [
@@ -46,6 +48,33 @@
     "hideServices": "Hide Services",
     "servicesIncluded": "Services Included",
     "getQuote": "Get a Quote",
+    "whatWeOffer": "What We Offer",
+    "whatWeOfferSub": "Comprehensive solutions tailored to your needs",
+    "whyChooseTitle": "Why Choose Us?",
+    "discoverBenefits": "Discover the benefits of working with us",
+    "ourProcess": "Our Process",
+    "ourProcessSub": "A proven approach to delivering results",
+    "ctaReadyTitle": "Ready to Get Started?",
+    "ctaReadySub": "Let's discuss how we can help you achieve your goals.",
+    "webDevelopmentPage": {
+      "title": "Web Development Services",
+      "subtitle": "Transform your online presence with custom websites and web applications built for performance, scalability, and user experience.",
+      "intro": "Our web development services cover everything from simple business websites to complex web applications. We use modern technologies and best practices to ensure your website is fast, secure, and provides an excellent user experience.",
+      "features": [
+        "Responsive Design - Mobile-first approach ensuring perfect display on all devices",
+        "Modern Technologies - Built with React, Next.js, Node.js, and other cutting-edge frameworks",
+        "Performance Optimization - Fast loading times and optimal user experience",
+        "SEO-Friendly - Built-in SEO best practices for better search engine visibility",
+        "Secure & Scalable - Enterprise-grade security and architecture that grows with your business",
+        "Content Management - Easy-to-use CMS for managing your website content"
+      ],
+      "benefits": [
+        { "title": "Increased Online Presence", "description": "A professional website establishes your brand and makes you accessible 24/7 to potential customers." },
+        { "title": "Better User Experience", "description": "Intuitive navigation and fast loading times keep visitors engaged and reduce bounce rates." },
+        { "title": "Higher Conversion Rates", "description": "Optimized design and user flow guide visitors toward taking action, whether it's making a purchase or contacting you." },
+        { "title": "Competitive Advantage", "description": "Stand out from competitors with a modern, professional website that reflects your brand quality." }
+      ]
+    },
     "categories": {
       "digitalTransformation": {
         "name": "Digital Transformation",
@@ -74,7 +103,23 @@
     "services": "Services",
     "legal": "Legal",
     "follow": "Follow Us",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "tagline": "Leading digital services provider helping businesses transform their digital presence.",
+    "aboutUs": "About Us",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "team": "Team",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "webDevelopment": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "seoMarketing": "SEO & Marketing",
+    "ecommerce": "eCommerce",
+    "uxUiDesign": "UX/UI Design",
+    "customSoftware": "Custom Software",
+    "getQuote": "Get a Quote"
   },
   "cta": {
     "title": "Ready to Grow Your Business Online?",
@@ -125,30 +170,54 @@
     "title": "How We Work",
     "sub": "Our proven 4-step process drives real growth for your business. We analyze, plan, execute, and optimize to maximize your ROI.",
     "subLink": "maximize your ROI",
+    "stepAlts": [
+      "Web strategy and research",
+      "Planning and information architecture",
+      "Creative design",
+      "Responsive development",
+      "Quality assurance",
+      "Launch and optimization"
+    ],
     "steps": [
       {
-        "title": "Audit & Strategy",
-        "intro": "We analyze your website, competitors, and market to find growth opportunities.",
+        "title": "Web Strategy",
+        "intro": "We use in-depth research and analysis as key pillars to build a step-by-step plan that expands your digital presence and drives online growth.",
         "listTitle": "In this phase, we:",
-        "items": ["Conduct comprehensive website and SEO audits", "Analyze competitor strategies", "Identify market opportunities", "Define clear growth objectives"]
+        "items": ["Identify your target audiences", "Analyze user pain-points & define your UVPs", "Define key performance indicators (KPIs)", "Create a roadmap to growing your brand online"]
       },
       {
-        "title": "Planning & Goal Setting",
-        "intro": "We create a custom growth plan aligned with your business goals.",
-        "listTitle": "We deliver:",
-        "items": ["Custom strategy roadmap", "KPIs and success metrics", "Timeline and milestones", "Budget allocation plan"]
+        "title": "Planning & Information Architecture",
+        "intro": "We utilize proven techniques to map your content, meet user intentions and create an engaging user experience. By outlining your site's structure, we ensure seamless user journeys to key conversion points.",
+        "introBold": "we ensure seamless user journeys to key conversion points",
+        "listTitle": "Here's how our team does it:",
+        "items": ["We develop a base-level user flow & sitemap", "We utilize wireframing to create a seamless conversion funnel", "We add on-brand, consistent messaging to your structure"]
       },
       {
-        "title": "Execution",
-        "intro": "We implement SEO, ads, social media, and website optimization strategies.",
-        "listTitle": "We execute:",
-        "items": ["SEO optimization and content strategy", "Paid advertising campaigns", "Social media management", "Website performance improvements"]
+        "title": "Creative Design",
+        "intro": "This stage is where you will see your site come to life. Our award-winning designers implement your unique branding elements to add your identity to your custom web design.",
+        "introBold": "award-winning designers",
+        "listTitle": "With just 50 milliseconds to make a good first impression, your website needs to stand out. To achieve this, we:",
+        "items": ["Thoughtfully place design features to guide the user journey", "Utilize interactive videos & animations", "Create custom, branded illustrations", "Ensure accessibility & search engine optimization"]
       },
       {
-        "title": "Optimization & Reporting",
-        "intro": "We track performance and continuously improve results to maximize ROI.",
-        "listTitle": "We provide:",
-        "items": ["Regular performance reports", "Data-driven optimizations", "A/B testing and refinements", "Ongoing support and strategy adjustments"]
+        "title": "Responsive Development",
+        "intro": "A responsive website is fast, accessible and easy to navigate. It automatically scales to various screen sizes and devices, driving user experience and climbing search engine rankings.",
+        "listTitle": "To ensure your website reaches and satisfies every user, we:",
+        "introBold": "reaches and satisfies every user",
+        "items": ["Gather touchpoint & user-channel insights", "Transform your wireframes into a flexible UI", "Test across devices before approval & launch"]
+      },
+      {
+        "title": "Quality Assurance (QA)",
+        "intro": "We pride ourselves on delivering measurable results and professional outcomes. By following a strict quality assurance (QA) protocol, we guarantee a high-quality digital experience for your brand.",
+        "introBold": "we pride ourselves on delivering measurable results and professional outcomes",
+        "listTitle": "To achieve this, we:",
+        "items": ["Actively involve our clients throughout every project", "Meticulously test all designs to catch errors", "Use tried-and-tested tools to secure before launch"]
+      },
+      {
+        "title": "Launch & Optimization",
+        "intro": "Our end-to-end website design services cover both launch and post-launch support. We meticulously monitor, test and optimize your website elements to ensure every part of your site is functioning optimally.",
+        "listTitle": "Our design specialists make this happen by:",
+        "items": ["Following a strict protocol for every website launch", "Offering post-launch maintenance & optimization", "Creating & implementing a digital marketing plan to drive awareness across touchpoints"]
       }
     ]
   },
@@ -198,6 +267,10 @@
   "clientTestimonials": {
     "title": "What Our Clients Say",
     "viewReviews": "View client reviews",
+    "designRushReviews": "34 REVIEWS",
+    "designRushOn": "ON DESIGNRUSH",
+    "designRushRating": "4.9",
+    "designRushStarsAria": "4.9 out of 5 stars",
     "items": [
       { "name": "Client Name", "position": "UAE", "quote": "Xentio Digital helped us triple our organic traffic in just 6 months. Their SEO expertise is unmatched.", "quoteBold": "triple our organic traffic in just 6 months" },
       { "name": "Client Name", "position": "UK", "quote": "Our ad campaigns finally started converting, and ROI is amazing. Highly recommend Xentio Digital.", "quoteBold": "ROI is amazing" },
@@ -205,6 +278,8 @@
     ]
   },
   "about": {
+    "metaTitle": "About Us - Your Trusted Digital Partner",
+    "metaDescription": "Learn about Xentio Digital - our mission, vision, and commitment to delivering exceptional digital solutions that drive business growth.",
     "heroTitle": "About Xentio Digital",
     "heroSubtitle": "We're a team of passionate digital experts dedicated to helping businesses succeed online",
     "missionTitle": "Our Mission",
@@ -244,6 +319,8 @@
     "expertTeamMembersDesc": "Dedicated professionals with diverse expertise"
   },
   "contact": {
+    "metaTitle": "Contact Us - Get in Touch",
+    "metaDescription": "Get in touch with Xentio Digital for a free consultation. Let's discuss how we can help transform your digital presence.",
     "title": "Get in Touch",
     "subtitle": "Let's discuss how we can help transform your digital presence",
     "contactInfo": "Contact Information",
@@ -261,6 +338,8 @@
     "sendMessage": "Send Us a Message"
   },
   "portfolio": {
+    "metaTitle": "Portfolio - Our Work & Case Studies",
+    "metaDescription": "Explore our portfolio of successful projects including web development, mobile apps, eCommerce solutions, and custom software development.",
     "title": "Our Portfolio",
     "subtitle": "Explore our successful projects and see how we've helped businesses achieve their digital goals",
     "readyTitle": "Ready to Start Your Project?",
@@ -307,6 +386,8 @@
     }
   },
   "team": {
+    "metaTitle": "Our Team - Meet the Experts",
+    "metaDescription": "Meet the talented team of developers, designers, and digital experts behind Xentio Digital.",
     "title": "Meet Our Team",
     "subtitle": "Talented professionals dedicated to delivering exceptional digital solutions",
     "joinTitle": "Want to Join Our Team?",
@@ -346,6 +427,8 @@
     }
   },
   "careers": {
+    "metaTitle": "Careers - Join Our Team",
+    "metaDescription": "Explore career opportunities at Xentio Digital. Join our team of talented developers, designers, and digital experts.",
     "title": "Join Our Team",
     "subtitle": "Build your career with us and help shape the future of digital services",
     "whyTitle": "Why Work With Us?",
@@ -426,7 +509,26 @@
       }
     }
   },
+  "office": {
+    "title": "Visit Our Office",
+    "subtitle": "Come visit us or get directions to our office",
+    "officeInformation": "Office Information",
+    "address": "Address",
+    "addressLine1": "123 Digital Street",
+    "addressLine2": "Tech City, TC 12345",
+    "country": "United States",
+    "officeHours": "Office Hours",
+    "hoursWeekday": "Monday - Friday: 9:00 AM - 6:00 PM",
+    "hoursSaturday": "Saturday: 10:00 AM - 4:00 PM",
+    "hoursSunday": "Sunday: Closed",
+    "contact": "Contact",
+    "getDirections": "Get Directions",
+    "openInGoogleMaps": "Open in Google Maps",
+    "companyName": "Xentio Digital"
+  },
   "testimonialsPage": {
+    "metaTitle": "Client Testimonials - What Our Clients Say",
+    "metaDescription": "Read testimonials from our satisfied clients who have experienced success with our digital services and solutions.",
     "title": "Client Testimonials",
     "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed",
     "joinTitle": "Join Our Success Stories",
@@ -514,6 +616,525 @@
     "articleFound": "article found",
     "all": "All",
     "searchPlaceholder": "Search articles...",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "activeFilters": "Active filters:",
+    "viewAllArticles": "View all articles"
+  },
+  "common": {
+    "serviceNotFound": "Service Not Found",
+    "serviceNotFoundDescription": "The service you're looking for doesn't exist.",
+    "backToServices": "Back to Services",
+    "whatWeOffer": "What We Offer",
+    "keyFeatures": "Key Features",
+    "benefits": "Benefits",
+    "ctaReadyTitle": "Ready to Build Your Website?",
+    "ctaReadyTitleMobile": "Ready to Build Your Mobile App?",
+    "ctaReadyTitleSEO": "Ready to Grow Your Online Presence?",
+    "ctaReadyTitleEcommerce": "Ready to Launch Your Online Store?",
+    "ctaReadyTitleDesign": "Ready to Improve Your Design?",
+    "ctaReadyTitleSoftware": "Ready to Build Custom Software?",
+    "ctaReadySubtitle": "Let's discuss your project and create a custom solution that drives results.",
+    "getFreeQuote": "Get a Free Quote"
+  },
+  "categoryPages": {
+    "businessConsulting": {
+      "name": "Business Consulting",
+      "description": "Strategic consulting to help you grow, scale, and optimize your business operations.",
+      "intro": "Growing a business requires strategic thinking, expert guidance, and actionable insights. Our business consulting services help you navigate challenges, identify opportunities, and achieve sustainable growth.",
+      "subServices": [
+        { "name": "Help You Grow Your Business", "description": "Strategic guidance to accelerate growth and maximize profitability." }
+      ],
+      "process": [
+        { "step": 1, "title": "Discovery", "description": "Understand your business, challenges, and goals." },
+        { "step": 2, "title": "Analysis", "description": "Analyze current state and identify opportunities." },
+        { "step": 3, "title": "Strategy", "description": "Develop actionable strategies and recommendations." },
+        { "step": 4, "title": "Implementation", "description": "Support implementation of recommended changes." },
+        { "step": 5, "title": "Review", "description": "Review results and adjust strategies as needed." }
+      ],
+      "benefits": [
+        { "title": "Strategic Clarity", "description": "Gain clarity on direction and priorities." },
+        { "title": "Expert Insights", "description": "Benefit from experienced consultants' expertise." },
+        { "title": "Faster Growth", "description": "Accelerate growth with proven strategies." },
+        { "title": "Risk Mitigation", "description": "Identify and mitigate business risks." }
+      ]
+    }
+  },
+  "servicePages": {
+    "appDevelopment": {
+      "title": "App Development",
+      "subtitle": "Native and cross-platform mobile applications for iOS and Android.",
+      "intro": "Mobile apps have become essential for businesses looking to engage customers, improve operations, and drive growth. We develop native and cross-platform mobile applications that deliver exceptional user experiences.",
+      "features": [
+        "Native iOS and Android development",
+        "Cross-platform solutions (React Native, Flutter)",
+        "App store optimization",
+        "Push notifications",
+        "Offline functionality",
+        "Secure authentication",
+        "Payment integration",
+        "Analytics and tracking"
+      ],
+      "benefits": [
+        { "title": "Enhanced Customer Engagement", "description": "Keep your brand in customers' pockets with a dedicated mobile app." },
+        { "title": "Improved Accessibility", "description": "Make your services available 24/7 through mobile devices." },
+        { "title": "Personalized Experiences", "description": "Deliver tailored content and features based on user preferences." },
+        { "title": "Increased Revenue", "description": "Mobile apps can drive sales through in-app purchases and subscriptions." }
+      ],
+      "process": [
+        { "step": 1, "title": "Concept & Planning", "description": "Define app features, user flows, and technical requirements." },
+        { "step": 2, "title": "UI/UX Design", "description": "Create intuitive interfaces and seamless user experiences." },
+        { "step": 3, "title": "Development", "description": "Build your app using native or cross-platform technologies." },
+        { "step": 4, "title": "Testing", "description": "Rigorous testing across devices and operating systems." },
+        { "step": 5, "title": "Launch & Support", "description": "Deploy to app stores and provide ongoing maintenance." }
+      ]
+    },
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "subtitle": "Tailored software solutions designed to streamline your operations.",
+      "intro": "Off-the-shelf software often falls short of meeting your unique business needs. We develop custom software solutions tailored specifically to your workflows, processes, and requirements.",
+      "features": [
+        "Custom business applications",
+        "Enterprise software solutions",
+        "Workflow automation",
+        "Database design and management",
+        "API development",
+        "System integration",
+        "Cloud-based solutions",
+        "Legacy system modernization"
+      ],
+      "benefits": [
+        { "title": "Perfect Fit", "description": "Software designed specifically for your business processes and needs." },
+        { "title": "Increased Productivity", "description": "Automate repetitive tasks and streamline workflows." },
+        { "title": "Scalability", "description": "Solutions that grow with your business." },
+        { "title": "Competitive Edge", "description": "Unique capabilities that set you apart from competitors." }
+      ],
+      "process": [
+        { "step": 1, "title": "Requirements Analysis", "description": "Deep dive into your business needs and technical requirements." },
+        { "step": 2, "title": "Architecture Design", "description": "Design scalable, maintainable system architecture." },
+        { "step": 3, "title": "Development", "description": "Agile development with regular iterations and feedback." },
+        { "step": 4, "title": "Quality Assurance", "description": "Comprehensive testing to ensure reliability and performance." },
+        { "step": 5, "title": "Deployment & Training", "description": "Deploy the solution and train your team for success." }
+      ]
+    },
+    "uiUxDesign": {
+      "title": "UX & UI Design",
+      "subtitle": "User-centered design that creates intuitive, beautiful interfaces.",
+      "intro": "Great design is more than just aesthetics—it's about creating experiences that users love. Our UX/UI design services focus on understanding user needs and crafting interfaces that are both beautiful and functional.",
+      "features": [
+        "User research and personas",
+        "Wireframing and prototyping",
+        "Visual design and branding",
+        "Interaction design",
+        "Usability testing",
+        "Design systems",
+        "Responsive design",
+        "Accessibility compliance"
+      ],
+      "benefits": [
+        { "title": "Improved User Satisfaction", "description": "Delight users with intuitive, easy-to-use interfaces." },
+        { "title": "Higher Conversion Rates", "description": "Well-designed experiences guide users to take action." },
+        { "title": "Reduced Development Costs", "description": "Clear designs reduce revisions and development time." },
+        { "title": "Brand Consistency", "description": "Cohesive design systems that strengthen your brand." }
+      ],
+      "process": [
+        { "step": 1, "title": "Research", "description": "Understand users, competitors, and business goals." },
+        { "step": 2, "title": "Ideation", "description": "Brainstorm and create user flows and wireframes." },
+        { "step": 3, "title": "Design", "description": "Create high-fidelity designs and prototypes." },
+        { "step": 4, "title": "Testing", "description": "Validate designs through user testing and feedback." },
+        { "step": 5, "title": "Refinement", "description": "Iterate based on feedback and launch." }
+      ]
+    },
+    "customerSupport": {
+      "title": "Customer Support",
+      "subtitle": "24/7 customer support services to keep your customers happy.",
+      "intro": "Reliable customer support is essential for business success. We provide 24/7 customer support services across multiple channels to ensure your customers always receive the help they need.",
+      "features": [
+        "24/7 availability",
+        "Multi-channel support",
+        "Fast response times",
+        "Ticket management",
+        "Knowledge base",
+        "Customer feedback",
+        "Performance metrics",
+        "Scalable support"
+      ],
+      "benefits": [
+        { "title": "Always Available", "description": "Support your customers around the clock." },
+        { "title": "Quick Resolution", "description": "Fast response times improve satisfaction." },
+        { "title": "Professional Service", "description": "Trained support agents provide excellent service." },
+        { "title": "Cost Savings", "description": "Outsourced support reduces overhead costs." }
+      ],
+      "process": [
+        { "step": 1, "title": "Needs Assessment", "description": "Understand your support requirements and goals." },
+        { "step": 2, "title": "System Setup", "description": "Set up support tools and infrastructure." },
+        { "step": 3, "title": "Team Training", "description": "Train support team on products and processes." },
+        { "step": 4, "title": "Launch", "description": "Go live with support services." },
+        { "step": 5, "title": "Monitoring", "description": "Monitor performance and continuously improve." }
+      ]
+    },
+    "seo": {
+      "title": "Search Engine Optimization (SEO)",
+      "subtitle": "Comprehensive SEO strategies to improve your search rankings.",
+      "intro": "SEO is the foundation of organic online visibility. We implement comprehensive SEO strategies that improve your search rankings, drive qualified traffic, and generate leads.",
+      "features": [
+        "Keyword research and analysis",
+        "On-page SEO optimization",
+        "Technical SEO audits",
+        "Content optimization",
+        "Link building",
+        "Local SEO",
+        "SEO reporting and analytics",
+        "Competitor analysis"
+      ],
+      "benefits": [
+        { "title": "Organic Traffic", "description": "Attract visitors without paying for ads." },
+        { "title": "Long-Term Results", "description": "SEO provides sustainable, long-term growth." },
+        { "title": "Higher Credibility", "description": "Top rankings build trust and authority." },
+        { "title": "Better ROI", "description": "Organic traffic has no cost per click." }
+      ],
+      "process": [
+        { "step": 1, "title": "Audit", "description": "Comprehensive SEO audit of your current website." },
+        { "step": 2, "title": "Strategy", "description": "Develop SEO strategy based on goals and competition." },
+        { "step": 3, "title": "Optimization", "description": "Implement on-page and technical optimizations." },
+        { "step": 4, "title": "Content", "description": "Create and optimize content for target keywords." },
+        { "step": 5, "title": "Link Building", "description": "Build quality backlinks to improve authority." },
+        { "step": 6, "title": "Monitoring", "description": "Track rankings and continuously optimize." }
+      ]
+    },
+    "googleAds": {
+      "title": "Google Ads",
+      "subtitle": "Strategic Google Ads campaigns that drive qualified traffic.",
+      "intro": "Google Ads is one of the most effective ways to reach customers actively searching for your products or services. We create and manage strategic Google Ads campaigns that drive qualified traffic and maximize ROI.",
+      "features": [
+        "Campaign strategy and setup",
+        "Keyword research",
+        "Ad copy creation",
+        "Landing page optimization",
+        "Bid management",
+        "A/B testing",
+        "Conversion tracking",
+        "Performance reporting"
+      ],
+      "benefits": [
+        { "title": "Immediate Results", "description": "Start driving traffic as soon as campaigns go live." },
+        { "title": "Targeted Traffic", "description": "Reach people actively searching for your services." },
+        { "title": "Full Control", "description": "Control budget, targeting, and messaging." },
+        { "title": "Measurable ROI", "description": "Track every click and conversion." }
+      ],
+      "process": [
+        { "step": 1, "title": "Research", "description": "Research keywords, competitors, and target audience." },
+        { "step": 2, "title": "Campaign Setup", "description": "Create campaigns with optimized ad groups and keywords." },
+        { "step": 3, "title": "Ad Creation", "description": "Write compelling ad copy that drives clicks." },
+        { "step": 4, "title": "Launch", "description": "Launch campaigns and monitor performance." },
+        { "step": 5, "title": "Optimization", "description": "Continuously optimize bids, keywords, and ads." }
+      ]
+    },
+    "tiktokAds": {
+      "title": "TikTok Ads",
+      "subtitle": "TikTok advertising campaigns to reach younger demographics.",
+      "intro": "TikTok has become one of the fastest-growing social media platforms, especially among younger audiences. We create engaging TikTok ad campaigns that capture attention and drive results.",
+      "features": [
+        "TikTok campaign strategy",
+        "Video ad creation",
+        "Audience targeting",
+        "Trend integration",
+        "Influencer partnerships",
+        "Performance tracking",
+        "Creative testing",
+        "Budget optimization"
+      ],
+      "benefits": [
+        { "title": "Young Audience", "description": "Reach Gen Z and Millennial consumers." },
+        { "title": "High Engagement", "description": "TikTok users are highly engaged with content." },
+        { "title": "Viral Potential", "description": "Creative content can go viral and reach millions." },
+        { "title": "Growing Platform", "description": "Early adoption of a rapidly growing platform." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategy", "description": "Develop TikTok marketing strategy." },
+        { "step": 2, "title": "Creative Development", "description": "Create engaging video ads that fit TikTok culture." },
+        { "step": 3, "title": "Campaign Setup", "description": "Set up campaigns with optimal targeting." },
+        { "step": 4, "title": "Launch", "description": "Launch campaigns and monitor performance." },
+        { "step": 5, "title": "Optimization", "description": "Optimize based on engagement and conversions." }
+      ]
+    },
+    "socialMediaMarketing": {
+      "title": "Social Media Marketing",
+      "subtitle": "Complete social media management and content strategies.",
+      "intro": "Social media is where your customers spend their time. We develop comprehensive social media strategies that build your brand, engage your audience, and drive business results.",
+      "features": [
+        "Social media strategy",
+        "Content creation",
+        "Community management",
+        "Influencer partnerships",
+        "Social media advertising",
+        "Analytics and reporting",
+        "Crisis management",
+        "Multi-platform management"
+      ],
+      "benefits": [
+        { "title": "Brand Awareness", "description": "Build and strengthen your brand presence." },
+        { "title": "Customer Engagement", "description": "Connect and engage with your audience directly." },
+        { "title": "Lead Generation", "description": "Generate leads through social media channels." },
+        { "title": "Customer Support", "description": "Provide customer support through social channels." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategy", "description": "Develop social media strategy and goals." },
+        { "step": 2, "title": "Content Planning", "description": "Plan content calendar and themes." },
+        { "step": 3, "title": "Content Creation", "description": "Create engaging content for each platform." },
+        { "step": 4, "title": "Publishing", "description": "Schedule and publish content consistently." },
+        { "step": 5, "title": "Engagement", "description": "Engage with audience and manage community." },
+        { "step": 6, "title": "Analysis", "description": "Analyze performance and optimize strategy." }
+      ]
+    },
+    "emailMarketing": {
+      "title": "Email Marketing",
+      "subtitle": "Automated email campaigns that nurture leads and drive sales.",
+      "intro": "Email marketing remains one of the most effective digital marketing channels, with high ROI and direct customer communication. We create automated email campaigns that nurture leads and drive sales.",
+      "features": [
+        "Email campaign strategy",
+        "Email design and templates",
+        "Automation workflows",
+        "Segmentation",
+        "A/B testing",
+        "Deliverability optimization",
+        "Analytics and reporting",
+        "List management"
+      ],
+      "benefits": [
+        { "title": "High ROI", "description": "Email marketing delivers one of the highest ROIs." },
+        { "title": "Direct Communication", "description": "Reach customers directly in their inbox." },
+        { "title": "Automation", "description": "Automate campaigns to save time and scale." },
+        { "title": "Personalization", "description": "Personalize messages for better engagement." }
+      ],
+      "process": [
+        { "step": 1, "title": "Strategy", "description": "Develop email marketing strategy and goals." },
+        { "step": 2, "title": "List Building", "description": "Build and segment your email list." },
+        { "step": 3, "title": "Template Design", "description": "Design responsive email templates." },
+        { "step": 4, "title": "Automation Setup", "description": "Set up automated email workflows." },
+        { "step": 5, "title": "Campaign Launch", "description": "Launch campaigns and monitor performance." },
+        { "step": 6, "title": "Optimization", "description": "Optimize based on open rates and conversions." }
+      ]
+    },
+    "shopify": {
+      "title": "Shopify",
+      "subtitle": "Professional Shopify stores with custom themes and integrations.",
+      "intro": "Shopify is one of the world's leading eCommerce platforms, powering millions of online stores. We create custom Shopify stores that are beautiful, fast, and optimized for conversions.",
+      "features": [
+        "Custom Shopify theme development",
+        "Shopify app integration",
+        "Payment gateway setup",
+        "Product import and management",
+        "SEO optimization",
+        "Mobile-responsive design",
+        "Checkout customization",
+        "Analytics integration"
+      ],
+      "benefits": [
+        { "title": "Easy Management", "description": "User-friendly admin panel for managing products and orders." },
+        { "title": "Scalability", "description": "Grow from startup to enterprise without platform limitations." },
+        { "title": "App Ecosystem", "description": "Access thousands of apps to extend functionality." },
+        { "title": "Reliable Hosting", "description": "Fast, secure hosting with 99.99% uptime guarantee." }
+      ],
+      "process": [
+        { "step": 1, "title": "Store Setup", "description": "Create your Shopify account and configure basic settings." },
+        { "step": 2, "title": "Theme Development", "description": "Design and develop a custom theme or customize existing ones." },
+        { "step": 3, "title": "Product Setup", "description": "Import products, set up variants, and configure inventory." },
+        { "step": 4, "title": "Integration", "description": "Connect payment gateways, shipping, and third-party apps." },
+        { "step": 5, "title": "Launch", "description": "Test thoroughly and launch your store to the world." }
+      ]
+    },
+    "wordpress": {
+      "title": "WordPress",
+      "subtitle": "WooCommerce-powered stores with full customization options.",
+      "intro": "WordPress with WooCommerce offers unparalleled flexibility for eCommerce. We build custom WordPress stores that give you complete control over design, functionality, and user experience.",
+      "features": [
+        "WooCommerce store development",
+        "Custom WordPress themes",
+        "Plugin integration",
+        "Payment gateway setup",
+        "Product catalog management",
+        "SEO optimization",
+        "Multi-language support",
+        "Custom functionality development"
+      ],
+      "benefits": [
+        { "title": "Full Control", "description": "Complete ownership and control over your store." },
+        { "title": "Flexibility", "description": "Unlimited customization options with themes and plugins." },
+        { "title": "Cost-Effective", "description": "No transaction fees, only hosting and domain costs." },
+        { "title": "SEO Friendly", "description": "WordPress is inherently SEO-friendly with the right setup." }
+      ],
+      "process": [
+        { "step": 1, "title": "WordPress Setup", "description": "Install WordPress and WooCommerce on your hosting." },
+        { "step": 2, "title": "Theme Development", "description": "Create or customize a theme for your brand." },
+        { "step": 3, "title": "WooCommerce Configuration", "description": "Set up products, shipping, taxes, and payment methods." },
+        { "step": 4, "title": "Customization", "description": "Add custom functionality and integrate plugins." },
+        { "step": 5, "title": "Launch", "description": "Optimize performance and launch your store." }
+      ]
+    },
+    "ebay": {
+      "title": "eBay",
+      "subtitle": "eBay store setup, optimization, and automated listing management.",
+      "intro": "eBay is one of the world's largest online marketplaces, with millions of active buyers. We help you set up, optimize, and manage your eBay store to maximize visibility and sales.",
+      "features": [
+        "eBay store setup and design",
+        "Listing optimization",
+        "Automated listing management",
+        "Inventory synchronization",
+        "Pricing strategies",
+        "Performance analytics",
+        "Customer service management",
+        "Multi-account management"
+      ],
+      "benefits": [
+        { "title": "Increased Visibility", "description": "Optimized listings rank higher in eBay search results." },
+        { "title": "Time Savings", "description": "Automate repetitive tasks like listing and inventory updates." },
+        { "title": "Higher Sales", "description": "Better listings and pricing strategies drive more sales." },
+        { "title": "Professional Presence", "description": "Stand out with a well-designed eBay store." }
+      ],
+      "process": [
+        { "step": 1, "title": "Account Setup", "description": "Create and verify your eBay seller account." },
+        { "step": 2, "title": "Store Design", "description": "Design your eBay store with custom branding." },
+        { "step": 3, "title": "Listing Optimization", "description": "Create optimized product listings with great photos and descriptions." },
+        { "step": 4, "title": "Automation Setup", "description": "Configure tools for automated listing and inventory management." },
+        { "step": 5, "title": "Ongoing Management", "description": "Monitor performance and continuously optimize listings." }
+      ]
+    },
+    "amazon": {
+      "title": "Amazon",
+      "subtitle": "Amazon FBA setup, product optimization, and account management.",
+      "intro": "Amazon is the world's largest online marketplace, and FBA (Fulfillment by Amazon) makes it easier than ever to reach millions of customers. We help you set up and optimize your Amazon business for success.",
+      "features": [
+        "Amazon seller account setup",
+        "FBA enrollment and setup",
+        "Product listing optimization",
+        "Keyword research and PPC management",
+        "Inventory management",
+        "Review management",
+        "Brand registry",
+        "Performance monitoring"
+      ],
+      "benefits": [
+        { "title": "Prime Eligibility", "description": "FBA products are eligible for Amazon Prime shipping." },
+        { "title": "Higher Rankings", "description": "Optimized listings rank higher in Amazon search." },
+        { "title": "Customer Trust", "description": "FBA builds trust with fast, reliable shipping." },
+        { "title": "Scalability", "description": "Amazon handles fulfillment, allowing you to scale easily." }
+      ],
+      "process": [
+        { "step": 1, "title": "Account Setup", "description": "Create and verify your Amazon seller account." },
+        { "step": 2, "title": "FBA Enrollment", "description": "Enroll in FBA and set up your fulfillment settings." },
+        { "step": 3, "title": "Product Optimization", "description": "Create optimized listings with keywords and great images." },
+        { "step": 4, "title": "Launch Strategy", "description": "Develop PPC campaigns and launch strategies." },
+        { "step": 5, "title": "Ongoing Management", "description": "Monitor performance, manage inventory, and optimize continuously." }
+      ]
+    },
+    "etsy": {
+      "title": "Etsy",
+      "subtitle": "Etsy shop optimization and listing management for handmade products.",
+      "intro": "Etsy is the go-to marketplace for handmade, vintage, and unique products. We help artisans and crafters optimize their Etsy shops to stand out and drive sales.",
+      "features": [
+        "Etsy shop setup and branding",
+        "Listing optimization",
+        "SEO for Etsy",
+        "Photography guidance",
+        "Pricing strategies",
+        "Promotional campaigns",
+        "Review management",
+        "Analytics tracking"
+      ],
+      "benefits": [
+        { "title": "Increased Discoverability", "description": "Optimized listings appear in more Etsy searches." },
+        { "title": "Professional Appearance", "description": "Well-branded shops build trust and credibility." },
+        { "title": "Higher Conversion", "description": "Better photos and descriptions lead to more sales." },
+        { "title": "Time Savings", "description": "Streamlined processes save time for creating products." }
+      ],
+      "process": [
+        { "step": 1, "title": "Shop Setup", "description": "Create your Etsy shop and set up branding." },
+        { "step": 2, "title": "Listing Optimization", "description": "Create optimized listings with great photos and SEO." },
+        { "step": 3, "title": "Pricing Strategy", "description": "Develop competitive pricing that maximizes profit." },
+        { "step": 4, "title": "Marketing", "description": "Set up Etsy ads and social media promotion." },
+        { "step": 5, "title": "Growth", "description": "Analyze performance and continuously improve." }
+      ]
+    },
+    "onbuy": {
+      "title": "OnBuy",
+      "subtitle": "OnBuy marketplace integration and store management.",
+      "intro": "OnBuy is a fast-growing UK-based marketplace offering competitive fees and seller-friendly policies. We help you set up and manage your OnBuy store to reach new customers.",
+      "features": [
+        "OnBuy seller account setup",
+        "Store configuration",
+        "Product listing and optimization",
+        "Inventory synchronization",
+        "Order management",
+        "Performance analytics",
+        "Customer service support",
+        "Multi-channel integration"
+      ],
+      "benefits": [
+        { "title": "Lower Fees", "description": "Competitive marketplace fees compared to other platforms." },
+        { "title": "UK Focus", "description": "Strong presence in the UK market." },
+        { "title": "Seller Support", "description": "Dedicated support for sellers." },
+        { "title": "Growing Platform", "description": "Early adoption of a rapidly growing marketplace." }
+      ],
+      "process": [
+        { "step": 1, "title": "Account Setup", "description": "Create and verify your OnBuy seller account." },
+        { "step": 2, "title": "Store Configuration", "description": "Set up your store with branding and policies." },
+        { "step": 3, "title": "Product Listing", "description": "List and optimize your products for OnBuy." },
+        { "step": 4, "title": "Integration", "description": "Connect with inventory and order management systems." },
+        { "step": 5, "title": "Management", "description": "Ongoing management and optimization." }
+      ]
+    }
+  },
+  "serviceCategoryPage": {
+    "getStarted": "Get Started",
+    "viewCaseStudies": "View Case Studies",
+    "theChallenge": "The Challenge",
+    "areYouStruggling": "Are You Struggling With...",
+    "problem1": "Outdated systems holding back growth",
+    "problem2": "Inefficient processes wasting time and money",
+    "problem3": "Lack of data insights for decision-making",
+    "problem4": "Competitors gaining digital advantage",
+    "ourSolution": "Our Solution",
+    "transformYourBusiness": "Transform Your Business",
+    "solutionIntro": "We deliver cutting-edge solutions that address your specific challenges, streamline operations, and drive measurable results.",
+    "solution1": "Modern, scalable technology stack",
+    "solution2": "Streamlined workflows and automation",
+    "solution3": "Real-time analytics and insights",
+    "solution4": "Competitive digital advantage",
+    "whatWeDo": "What We Do",
+    "whatWeDoSub": "Comprehensive services tailored to your needs",
+    "learnMore": "Learn More →",
+    "ourProcess": "Our Process",
+    "ourProcessSub": "A proven framework for delivering exceptional results",
+    "provenResults": "Proven Results",
+    "provenResultsSub": "Real outcomes from real partnerships",
+    "averageRoi": "Average ROI Increase",
+    "costReduction": "Cost Reduction",
+    "clientSatisfaction": "Client Satisfaction",
+    "supportAvailability": "Support Availability",
+    "industriesWeServe": "Industries We Serve",
+    "industriesWeServeSub": "Tailored solutions across diverse sectors",
+    "industryEcommerce": "E-Commerce",
+    "industryEcommerceDesc": "Online retail and marketplace solutions",
+    "industryHealthcare": "Healthcare",
+    "industryHealthcareDesc": "Medical and health service platforms",
+    "industryFinance": "Finance",
+    "industryFinanceDesc": "Banking and financial services",
+    "industryEducation": "Education",
+    "industryEducationDesc": "Learning management systems",
+    "industryRealEstate": "Real Estate",
+    "industryRealEstateDesc": "Property management platforms",
+    "industryManufacturing": "Manufacturing",
+    "industryManufacturingDesc": "Industrial digital solutions",
+    "whyChooseUs": "Why Choose Us",
+    "whyChooseUsSub": "What sets us apart",
+    "technologiesWeUse": "Technologies We Use",
+    "technologiesWeUseSub": "Cutting-edge tools and platforms for exceptional results",
+    "readyToTransform": "Ready to Transform Your Business?",
+    "readyToTransformSub": "Let's discuss how our services can drive measurable results for your organization.",
+    "getStartedToday": "Get Started Today",
+    "viewOurWork": "View Our Work",
+    "exploreOurServices": "Explore Our Services",
+    "exploreOurServicesSub": "Discover all solutions we offer",
+    "viewAllServices": "View All Services →"
   }
 }

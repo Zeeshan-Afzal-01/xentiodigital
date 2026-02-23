@@ -2,7 +2,7 @@
 
 import ServiceCard from '@/components/ServiceCard'
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import type { IconName } from '@/components/icons'
 
@@ -47,7 +47,8 @@ const services = [
 
 export default function ServicesContent() {
   const locale = useLocale()
-  
+  const t = useTranslations('services')
+
   return (
     <>
       <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32">
@@ -64,7 +65,7 @@ export default function ServicesContent() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            <span className="gradient-text">Our Services</span>
+            <span className="gradient-text">{t('pageTitle')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -72,7 +73,7 @@ export default function ServicesContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto"
           >
-            Comprehensive digital solutions tailored to your business needs
+            {t('pageSubtitle')}
           </motion.p>
         </div>
       </div>

@@ -99,6 +99,7 @@ export function getLanguageFromCountry(countryCode: string): string | null {
     EG: 'ar', // Egypt
     FR: 'fr', // France
     BE: 'fr', // Belgium (French)
+    AT: 'de', // Austria
     CH: 'de', // Switzerland (German)
     DE: 'de', // Germany
     ES: 'es', // Spain

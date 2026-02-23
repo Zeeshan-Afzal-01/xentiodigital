@@ -155,11 +155,11 @@ export default function ClientTestimonialsSection() {
                   </svg>
                 </span>
                 <div className={styles.drTextBlock}>
-                  <span className={styles.drCount}>34 REVIEWS</span>
-                  <span className={styles.drOn}>ON DESIGNRUSH</span>
+                  <span className={styles.drCount}>{t('designRushReviews')}</span>
+                  <span className={styles.drOn}>{t('designRushOn')}</span>
                   <span className={styles.drRating}>
-                    <span className={styles.drScore}>4.9</span>
-                    <span className={styles.drStars} aria-label="4.9 out of 5 stars">
+                    <span className={styles.drScore}>{t('designRushRating')}</span>
+                    <span className={styles.drStars} aria-label={t('designRushStarsAria')}>
                       <span className={styles.starFull} />
                       <span className={styles.starFull} />
                       <span className={styles.starFull} />

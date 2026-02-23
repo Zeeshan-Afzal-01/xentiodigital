@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { generateStructuredData } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -35,7 +36,9 @@ const benefits = [
   },
 ]
 
-export default function DesktopCustomSoftwarePage() {
+export default async function DesktopCustomSoftwarePage() {
+  const t = await getTranslations('common')
+  const locale = await getLocale()
   const structuredData = generateStructuredData('Service', {
     serviceType: 'Desktop & Custom Software Development',
     description: 'Tailored desktop applications and custom software solutions for business operations.',
@@ -61,14 +64,14 @@ export default function DesktopCustomSoftwarePage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-high-contrast mb-6">What We Offer</h2>
+            <h2 className="text-3xl font-bold text-high-contrast mb-6">{t('whatWeOffer')}</h2>
             <p className="text-lg text-muted-enhanced mb-8">
               Our custom software development services create solutions tailored to your specific 
               business needs. Whether you need a desktop application or a custom software solution, 
               we build reliable, scalable systems that improve your operations.
             </p>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-4">Key Features</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-4">{t('keyFeatures')}</h3>
             <ul className="space-y-3 mb-12">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -80,7 +83,7 @@ export default function DesktopCustomSoftwarePage() {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-6">Benefits</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-6">{t('benefits')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {benefits.map((benefit, index) => (
                 <div key={index} className="glass rounded-xl p-6">
@@ -95,12 +98,12 @@ export default function DesktopCustomSoftwarePage() {
 
       <section className="section-padding bg-primary-600 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Custom Software?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('ctaReadyTitleSoftware')}</h2>
           <p className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
-            Let&apos;s discuss your requirements and create a solution that transforms your operations.
+            {t('ctaReadySubtitle')}
           </p>
-          <Link href="/contact" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
-            Get a Free Quote
+          <Link href={`/${locale}/contact`} className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
+            {t('getFreeQuote')}
           </Link>
         </div>
       </section>

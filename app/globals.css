@@ -3209,11 +3209,44 @@ select option {
 }
 
 .theme-sections-root[data-theme='light'] .m-partners .partners-service-name {
-  color: #334155;
+  color: #000000;
 }
 
 .theme-sections-root[data-theme='light'] .m-partners .partners-service-item:hover .partners-service-name {
-  color: #1a1a2e;
+  color: #000000;
+}
+
+/* Light mode: visible border on client/service item cards */
+.theme-sections-root[data-theme='light'] .m-partners .partners-client-item::before {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-service-item:hover::before {
+  border-color: rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode: black text for client item label */
+.theme-sections-root[data-theme='light'] .m-partners .partners-client-item span {
+  color: #000000;
+  opacity: 0.85;
+}
+
+/* Light mode: Explore All Services button — visible border, black text */
+.theme-sections-root[data-theme='light'] .m-partners .partners-cta {
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.theme-sections-root[data-theme='light'] .m-partners .partners-cta:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #000000;
 }
 
 .theme-sections-root[data-theme='light'] .partners-bg-glow::before,

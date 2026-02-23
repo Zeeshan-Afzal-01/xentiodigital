@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import PortfolioContent from './PortfolioContent'
 
-export const metadata: Metadata = {
-  title: 'Portfolio - Our Work & Case Studies',
-  description: 'Explore our portfolio of successful projects including web development, mobile apps, eCommerce solutions, and custom software development.',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('portfolio')
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+  }
 }
 
 export default function PortfolioPage() {

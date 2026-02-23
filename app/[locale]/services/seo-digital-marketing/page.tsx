@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { generateStructuredData } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -35,7 +36,9 @@ const benefits = [
   },
 ]
 
-export default function SEODigitalMarketingPage() {
+export default async function SEODigitalMarketingPage() {
+  const t = await getTranslations('common')
+  const locale = await getLocale()
   const structuredData = generateStructuredData('Service', {
     serviceType: 'SEO & Digital Marketing',
     description: 'Comprehensive SEO strategies and digital marketing campaigns to increase online visibility.',
@@ -61,14 +64,14 @@ export default function SEODigitalMarketingPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-high-contrast mb-6">What We Offer</h2>
+            <h2 className="text-3xl font-bold text-high-contrast mb-6">{t('whatWeOffer')}</h2>
             <p className="text-lg text-muted-enhanced mb-8">
               Our SEO and digital marketing services are designed to help your business get found 
               online, attract the right audience, and convert visitors into customers. We use proven 
               strategies and data-driven approaches to deliver measurable results.
             </p>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-4">Key Features</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-4">{t('keyFeatures')}</h3>
             <ul className="space-y-3 mb-12">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -80,7 +83,7 @@ export default function SEODigitalMarketingPage() {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-6">Benefits</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-6">{t('benefits')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {benefits.map((benefit, index) => (
                 <div key={index} className="glass rounded-xl p-6">
@@ -95,12 +98,12 @@ export default function SEODigitalMarketingPage() {
 
       <section className="section-padding bg-primary-600 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Grow Your Online Presence?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('ctaReadyTitleSEO')}</h2>
           <p className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
-            Let&apos;s discuss your marketing goals and create a strategy that drives results.
+            {t('ctaReadySubtitle')}
           </p>
-          <Link href="/contact" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
-            Get a Free Quote
+          <Link href={`/${locale}/contact`} className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
+            {t('getFreeQuote')}
           </Link>
         </div>
       </section>

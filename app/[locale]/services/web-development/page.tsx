@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { generateStructuredData } from '@/lib/seo'
 
 export const metadata: Metadata = {
@@ -7,35 +8,12 @@ export const metadata: Metadata = {
   description: 'Professional web development services including responsive websites, web applications, and e-commerce platforms built with modern technologies.',
 }
 
-const features = [
-  'Responsive Design - Mobile-first approach ensuring perfect display on all devices',
-  'Modern Technologies - Built with React, Next.js, Node.js, and other cutting-edge frameworks',
-  'Performance Optimization - Fast loading times and optimal user experience',
-  'SEO-Friendly - Built-in SEO best practices for better search engine visibility',
-  'Secure & Scalable - Enterprise-grade security and architecture that grows with your business',
-  'Content Management - Easy-to-use CMS for managing your website content',
-]
-
-const benefits = [
-  {
-    title: 'Increased Online Presence',
-    description: 'A professional website establishes your brand and makes you accessible 24/7 to potential customers.',
-  },
-  {
-    title: 'Better User Experience',
-    description: 'Intuitive navigation and fast loading times keep visitors engaged and reduce bounce rates.',
-  },
-  {
-    title: 'Higher Conversion Rates',
-    description: 'Optimized design and user flow guide visitors toward taking action, whether it\'s making a purchase or contacting you.',
-  },
-  {
-    title: 'Competitive Advantage',
-    description: 'Stand out from competitors with a modern, professional website that reflects your brand quality.',
-  },
-]
-
-export default function WebDevelopmentPage() {
+export default async function WebDevelopmentPage() {
+  const t = await getTranslations('common')
+  const tServices = await getTranslations('services')
+  const locale = await getLocale()
+  const features = (tServices.raw('webDevelopmentPage.features') as string[]) ?? []
+  const benefits = (tServices.raw('webDevelopmentPage.benefits') as Array<{ title: string; description: string }>) ?? []
   const structuredData = generateStructuredData('Service', {
     serviceType: 'Web Development',
     description: 'Professional web development services including responsive websites, web applications, and e-commerce platforms.',
@@ -50,10 +28,10 @@ export default function WebDevelopmentPage() {
       <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white section-padding">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Web Development Services
+            {tServices('webDevelopmentPage.title')}
           </h1>
           <p className="text-xl md:text-2xl text-primary-100 max-w-3xl">
-            Transform your online presence with custom websites and web applications built for performance, scalability, and user experience.
+            {tServices('webDevelopmentPage.subtitle')}
           </p>
         </div>
       </div>
@@ -61,14 +39,12 @@ export default function WebDevelopmentPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-high-contrast mb-6">What We Offer</h2>
+            <h2 className="text-3xl font-bold text-high-contrast mb-6">{t('whatWeOffer')}</h2>
             <p className="text-lg text-muted-enhanced mb-8">
-              Our web development services cover everything from simple business websites to complex 
-              web applications. We use modern technologies and best practices to ensure your website 
-              is fast, secure, and provides an excellent user experience.
+              {tServices('webDevelopmentPage.intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-4">Key Features</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-4">{t('keyFeatures')}</h3>
             <ul className="space-y-3 mb-12">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -80,7 +56,7 @@ export default function WebDevelopmentPage() {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-high-contrast mb-6">Benefits</h3>
+            <h3 className="text-2xl font-semibold text-high-contrast mb-6">{t('benefits')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {benefits.map((benefit, index) => (
                 <div key={index} className="glass rounded-xl p-6">
@@ -95,12 +71,12 @@ export default function WebDevelopmentPage() {
 
       <section className="section-padding bg-primary-600 text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Website?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('ctaReadyTitle')}</h2>
           <p className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto">
-            Let&apos;s discuss your project and create a custom solution that drives results.
+            {t('ctaReadySubtitle')}
           </p>
-          <Link href="/contact" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
-            Get a Free Quote
+          <Link href={`/${locale}/contact`} className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200 inline-block">
+            {t('getFreeQuote')}
           </Link>
         </div>
       </section>

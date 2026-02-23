@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Blog } from '@/lib/blog-types'
 import { getCategoryColor } from '@/lib/blog-utils'
@@ -25,6 +26,7 @@ export default function BlogFilters({
   onTagChange,
   onSearchChange,
 }: BlogFiltersProps) {
+  const t = useTranslations('blog')
   const categories = Array.from(new Set(posts.map((p) => p.category))).sort()
   const tags = Array.from(new Set(posts.flatMap((p) => p.tags || []))).sort()
   const [showTags, setShowTags] = useState(false)
@@ -35,7 +37,7 @@ export default function BlogFilters({
       <div className="relative">
         <input
           type="text"
-          placeholder="Search articles..."
+          placeholder={t('searchPlaceholder')}
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           className="w-full px-4 py-3 pl-12 rounded-xl glass-premium border text-high-contrast placeholder:text-muted-enhanced focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
@@ -53,7 +55,7 @@ export default function BlogFilters({
       {/* Categories */}
       <div>
         <h3 className="text-sm font-semibold text-muted-enhanced mb-3 uppercase tracking-wider">
-          Categories
+          {t('categories')}
         </h3>
         <div className="flex flex-wrap gap-2">
           <motion.button
@@ -69,7 +71,7 @@ export default function BlogFilters({
               borderColor: selectedCategory === null ? 'transparent' : 'var(--border-default)',
             }}
           >
-            All
+            {t('all')}
           </motion.button>
           {categories.map((category) => {
             const isSelected = selectedCategory === category
@@ -102,7 +104,7 @@ export default function BlogFilters({
           onClick={() => setShowTags(!showTags)}
           className="flex items-center justify-between w-full text-sm font-semibold text-muted-enhanced mb-3 uppercase tracking-wider"
         >
-          <span>Tags</span>
+          <span>{t('tags')}</span>
           <motion.svg
             animate={{ rotate: showTags ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -156,7 +158,7 @@ export default function BlogFilters({
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-2 flex-wrap"
         >
-          <span className="text-sm text-muted-enhanced">Active filters:</span>
+          <span className="text-sm text-muted-enhanced">{t('activeFilters')}</span>
           {selectedCategory && (
             <motion.button
               initial={{ scale: 0 }}

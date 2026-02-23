@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Blog } from '@/lib/blog-types'
 import BlogCard from '@/components/BlogCard'
@@ -8,6 +9,7 @@ import BlogFilters from '@/components/BlogFilters'
 import { Icon } from '@/components/icons'
 
 export default function BlogListContent({ posts }: { posts: Blog[] }) {
+  const t = useTranslations('blog')
   const allPosts = posts
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
@@ -63,7 +65,7 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            <span className="gradient-text">Insights & Resources</span>
+            <span className="gradient-text">{t('title')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -71,7 +73,7 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto"
           >
-            Industry insights, guides, and updates to help you grow your business
+            {t('subtitle')}
           </motion.p>
         </div>
       </section>
@@ -104,7 +106,7 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
                 className="mb-8"
               >
                 <p className="text-muted-enhanced">
-                  {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'} found
+                  {filteredPosts.length} {filteredPosts.length === 1 ? t('articleFound') : t('articlesFound')}
                 </p>
               </motion.div>
 
@@ -130,10 +132,10 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
                     <Icon name="Search" className="w-14 h-14 text-primary-500" strokeWidth={2} />
                   </div>
                   <h3 className="text-2xl font-bold text-high-contrast mb-2">
-                    No articles found
+                    {t('noPosts')}
                   </h3>
                   <p className="text-muted-enhanced">
-                    Try adjusting your filters or search query
+                    {t('noPostsSubtitle')}
                   </p>
                 </motion.div>
               )}
