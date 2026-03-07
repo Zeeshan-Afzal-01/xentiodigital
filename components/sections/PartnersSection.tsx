@@ -56,15 +56,6 @@ const rowVariants = {
   }),
 }
 
-const ctaVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: 0.5, ease: [0.22, 0.61, 0.36, 1] },
-  },
-}
-
 function ServiceSlide({ name, slug, locale }: { name: string; slug: string; locale: string }) {
   return (
     <Link
@@ -161,22 +152,6 @@ export default function PartnersSection() {
         custom={1}
       >
         <SliderRow services={ROW2_SERVICES} reverse locale={locale} />
-      </motion.div>
-
-      <motion.div
-        className="block-center"
-        variants={ctaVariants}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-      >
-        <Link href={`/${locale}/services`} className="c-btn -glow partners-cta">
-          <span>{t('cta')}</span>
-          <span className="c-btn__ico">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7-7 7" />
-            </svg>
-          </span>
-        </Link>
       </motion.div>
     </motion.section>
   )

@@ -17,6 +17,7 @@ import {
   X,
   Check,
   Star,
+  Minus,
 
   // Services / marketing
   Rocket,
@@ -95,6 +96,7 @@ export const Icons = {
   Close: X,
   Check,
   Star,
+  Minus,
 
   // Services (semantic)
   DigitalTransformation: Rocket,

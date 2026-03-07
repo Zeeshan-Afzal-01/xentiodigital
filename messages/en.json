@@ -31,6 +31,14 @@
     "bestAgency2024": "Best Digital Agency of 2024",
     "forbes": "Forbes"
   },
+  "digiServices": {
+    "subHeading": "WHY XENTIO DIGITAL?",
+    "heading": "Discover Our Expertise As A Digital Agency",
+    "para1": "At Xentio Digital, we are a digital agency that handles everything related to web design, development, and digital strategy.",
+    "para2": "Research, planning, the actual design work, figuring out how to get people to your site—it's all in-house. If it's digital and you need it done, we can help.",
+    "exploreLink": "Explore our {service} services.",
+    "scrollLabel": "Services list"
+  },
   "services": {
     "title": "Our Services Deliver Real Results",
     "pageTitle": "Our Services",
@@ -236,20 +244,96 @@
     ]
   },
   "caseStudies": {
-    "title": "Real Growth. Real Impact.",
-    "ctaButton": "View Full Case Studies",
+    "title": "Case Studies",
+    "tagline": "From Concept To Market: We Engineer Projects For",
+    "taglineBold": "Superior Performance",
+    "ctaRead": "Read {name} Case Study",
+    "ctaPlan": "Get A Custom Plan",
     "items": [
       {
-        "title": "Ecommerce Vape Brand",
-        "metrics": ["+180% Organic Traffic in 6 Months", "Top 10 Google Rankings for High-Intent Keywords"]
+        "name": "GreenLeaf Commerce",
+        "summary": "An e-commerce brand in a competitive niche had stagnant organic traffic. We built a content-led SEO strategy and technical foundation. In 6 months:",
+        "keywords": ["SEO", "Organic Traffic", "Content Strategy", "Top Rankings"],
+        "metric1Value": "+187%",
+        "metric1Line1": "organic traffic",
+        "metric1Line2": "in 6 months",
+        "metric2Value": "12",
+        "metric2Line1": "keywords in",
+        "metric2Line2": "top 3 on Google",
+        "bgImage": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80"
       },
       {
-        "title": "UAE Service Provider",
-        "metrics": ["+95% Increase in Qualified Leads", "Improved Local SEO Rankings in 3 Months"]
+        "name": "MedFirst UAE",
+        "summary": "A UAE healthcare provider needed more qualified leads from local search. We implemented local SEO, intent-based landing pages, and lead-nurture flows. Results:",
+        "keywords": ["Local SEO", "Lead Generation", "Landing Pages", "Healthcare"],
+        "metric1Value": "+94%",
+        "metric1Line1": "qualified leads",
+        "metric1Line2": "in 3 months",
+        "metric2Value": "3x",
+        "metric2Line1": "local pack",
+        "metric2Line2": "visibility",
+        "bgImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
       },
       {
-        "title": "WordPress Website Redesign Client",
-        "metrics": ["Conversion Rate Increased by 42%", "Faster Website, Lower Bounce Rate"]
+        "name": "CloudBase SaaS",
+        "summary": "A B2B SaaS startup needed predictable lead flow. We launched Google and Meta campaigns with high-intent targeting and conversion-optimized landing pages. In 4 months:",
+        "keywords": ["Google Ads", "Meta Ads", "ROAS", "B2B Leads"],
+        "metric1Value": "2.8x",
+        "metric1Line1": "ROAS",
+        "metric1Line2": "vs. previous agency",
+        "metric2Value": "340",
+        "metric2Line1": "demo requests",
+        "metric2Line2": "per month",
+        "bgImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"
+      },
+      {
+        "name": "BrightGate Academy",
+        "summary": "A school needed a modern website and parent portal to cut admin load and improve engagement. We delivered a fast, accessible site and simple portal. Within 5 months:",
+        "keywords": ["Web Design", "Portal", "UX", "Accessibility"],
+        "metric1Value": "78%",
+        "metric1Line1": "of parents",
+        "metric1Line2": "using the portal",
+        "metric2Value": "-52%",
+        "metric2Line1": "fewer",
+        "metric2Line2": "office enquiries",
+        "bgImage": "https://images.unsplash.com/photo-1523050856858-f3101d20f0ce?w=1200&q=80"
+      },
+      {
+        "name": "Summit Consulting",
+        "summary": "A consulting firm had no clear digital strategy—weak site, no paid or SEO plan. We built an end-to-end strategy: new site, SEO, and targeted ads. In 6 months:",
+        "keywords": ["Digital Strategy", "SEO", "Paid Ads", "Conversion"],
+        "metric1Value": "4.2%",
+        "metric1Line1": "site",
+        "metric1Line2": "conversion rate",
+        "metric2Value": "2.1x",
+        "metric2Line1": "inbound",
+        "metric2Line2": "lead volume",
+        "bgImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How can I get started with your digital marketing services?",
+        "answer": "You can schedule a free strategy call through our website, contact us via the form, or reach out directly. We'll discuss your goals, audit your current presence, and outline a tailored plan."
+      },
+      {
+        "question": "What types of services do you offer?",
+        "answer": "We specialize in SEO, Google and Meta ads, social media management, website development, and full digital strategy. From research and design to driving traffic and conversions, we handle it in-house."
+      },
+      {
+        "question": "How long does it typically take to see results?",
+        "answer": "SEO and content efforts often show early traction in 3–6 months; paid campaigns can drive leads within weeks. We set clear milestones and report on progress so you know what to expect."
+      },
+      {
+        "question": "Do you work with businesses outside my country?",
+        "answer": "Yes. We work with clients worldwide and tailor strategies to local markets, languages, and time zones. Our team is used to coordinating across regions."
+      },
+      {
+        "question": "Are your strategies data-driven and measurable?",
+        "answer": "Absolutely. We use analytics, tracking, and clear KPIs so every channel and campaign is measurable. You get regular reports and insights to see ROI and optimize over time."
       }
     ]
   },
@@ -323,6 +407,12 @@
     "metaDescription": "Get in touch with Xentio Digital for a free consultation. Let's discuss how we can help transform your digital presence.",
     "title": "Get in Touch",
     "subtitle": "Let's discuss how we can help transform your digital presence",
+    "kicker": "Ready for real growth?",
+    "visualTitle": "Tell us where you want to go. We'll map the way.",
+    "visualSubtitle": "Share a bit about your business and goals. We'll respond with a focused, no-fluff plan.",
+    "visualPoint1": "Strategy-first approach, not just random tactics",
+    "visualPoint2": "Clear timelines, reporting, and next steps",
+    "visualPoint3": "No pressure — just an honest conversation",
     "contactInfo": "Contact Information",
     "email": "Email",
     "phone": "Phone",
@@ -1113,18 +1203,25 @@
     "supportAvailability": "Support Availability",
     "industriesWeServe": "Industries We Serve",
     "industriesWeServeSub": "Tailored solutions across diverse sectors",
+    "industriesSectionSub": "Target Industries",
     "industryEcommerce": "E-Commerce",
     "industryEcommerceDesc": "Online retail and marketplace solutions",
+    "industryEcommerceDetail": "200+ stores & marketplaces delivered · Avg. 35% sales uplift",
     "industryHealthcare": "Healthcare",
     "industryHealthcareDesc": "Medical and health service platforms",
+    "industryHealthcareDetail": "HIPAA-compliant platforms · Patient portals & telemedicine",
     "industryFinance": "Finance",
     "industryFinanceDesc": "Banking and financial services",
+    "industryFinanceDetail": "Secure fintech solutions · KYC, payments & dashboards",
     "industryEducation": "Education",
     "industryEducationDesc": "Learning management systems",
+    "industryEducationDetail": "LMS & EdTech for 50+ institutions · Higher engagement",
     "industryRealEstate": "Real Estate",
     "industryRealEstateDesc": "Property management platforms",
+    "industryRealEstateDetail": "Listings, CRM & virtual tours · Faster deal closure",
     "industryManufacturing": "Manufacturing",
     "industryManufacturingDesc": "Industrial digital solutions",
+    "industryManufacturingDetail": "IoT dashboards & supply chain · 40% efficiency gains",
     "whyChooseUs": "Why Choose Us",
     "whyChooseUsSub": "What sets us apart",
     "technologiesWeUse": "Technologies We Use",

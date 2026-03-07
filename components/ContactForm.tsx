@@ -67,17 +67,23 @@ export default function ContactForm() {
 
   return (
     <motion.form
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0, y: 30, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
+      whileHover={{ y: -4, boxShadow: '0 24px 60px rgba(15, 23, 42, 0.22)' }}
       onSubmit={handleSubmit}
-      className="glass-strong rounded-2xl p-8 border"
+      className="contact-form-flat rounded-2xl w-full"
       style={{
         borderColor: 'var(--border-default)',
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div className="min-w-0">
+      <div className="space-y-5 mb-6">
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.05 }}
+        >
           <label htmlFor="name" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
             {t('name')} *
           </label>
@@ -89,15 +95,20 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             dir="auto"
-            className="w-full ps-4 pe-4 py-3 bg-surface border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
+            className="w-full ps-4 pe-4 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
             style={{
               borderColor: 'var(--border-default)',
               color: 'var(--text-primary)',
             }}
             placeholder={t('namePlaceholder')}
           />
-        </div>
-        <div className="min-w-0">
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.1 }}
+        >
           <label htmlFor="email" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
             {t('email')} *
           </label>
@@ -109,15 +120,20 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             dir="ltr"
-            className="w-full ps-4 pe-4 py-3 bg-surface border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
+            className="w-full ps-4 pe-4 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
             style={{
               borderColor: 'var(--border-default)',
               color: 'var(--text-primary)',
             }}
             placeholder={t('emailPlaceholder')}
           />
-        </div>
-        <div className="min-w-0">
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.15 }}
+        >
           <label htmlFor="phone" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
             {t('phone')}
           </label>
@@ -128,15 +144,20 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             dir="ltr"
-            className="w-full ps-4 pe-4 py-3 bg-surface border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
+            className="w-full ps-4 pe-4 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
             style={{
               borderColor: 'var(--border-default)',
               color: 'var(--text-primary)',
             }}
             placeholder={t('phonePlaceholder')}
           />
-        </div>
-        <div className="min-w-0">
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.2 }}
+        >
           <label htmlFor="service" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
             {t('serviceInterest')} *
           </label>
@@ -147,7 +168,7 @@ export default function ContactForm() {
               required
               value={formData.service}
               onChange={handleChange}
-              className="w-full ps-4 pe-10 py-3 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start appearance-none cursor-pointer hover:border-[var(--border-strong)]"
+              className="w-full ps-4 pe-10 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start appearance-none cursor-pointer hover:border-[var(--border-strong)]"
               style={{
                 borderColor: 'var(--border-default)',
                 color: 'var(--text-primary)',
@@ -172,9 +193,14 @@ export default function ContactForm() {
               className="pointer-events-none absolute top-1/2 -translate-y-1/2 end-3 w-5 h-5 text-[var(--text-primary)] opacity-70"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="mb-6 min-w-0">
+      <motion.div
+        className="mb-6 min-w-0"
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45, delay: 0.25 }}
+      >
         <label htmlFor="message" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
           {t('message')} *
         </label>
@@ -193,7 +219,7 @@ export default function ContactForm() {
           }}
           placeholder={t('messagePlaceholder')}
         />
-      </div>
+      </motion.div>
       {submitStatus === 'success' && (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -227,7 +253,7 @@ export default function ContactForm() {
         disabled={isSubmitting}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="btn-primary w-full md:w-auto"
+        className="btn-primary w-full"
       >
         {isSubmitting ? t('sending') : t('sendMessage')}
       </motion.button>

@@ -1,31 +1,34 @@
 import Hero from '@/components/sections/Hero'
-import WhatWhoSection from '@/components/sections/WhatWhoSection'
+import JourneyStatsSection from '@/components/sections/JourneyStatsSection'
+import DigiStyleServicesSection from '@/components/sections/DigiStyleServicesSection'
 import PartnersSection from '@/components/sections/PartnersSection'
-import OurProcessSection from '@/components/sections/OurProcessSection'
-import ProfessionalServicesSection from '@/components/sections/ProfessionalServicesSection'
-import HomeServicesSection from '@/components/sections/HomeServicesSection'
-import CaseStudiesSection from '@/components/sections/CaseStudiesSection'
 import ClientTestimonialsSection from '@/components/sections/ClientTestimonialsSection'
-import CTASection from '@/components/sections/CTASection'
+import CaseStudiesNavSection from '@/components/sections/CaseStudiesNavSection'
+import CinematicIndustriesSection from '@/components/sections/CinematicIndustriesSection'
+import FaqSection from '@/components/sections/FaqSection'
+import ContactFormSection from '@/components/sections/ContactFormSection'
 import ParticleBackground from '@/components/ParticleBackground'
 import ThemeSectionsWrapper from '@/components/ThemeSectionsWrapper'
 
-export default function HomeContent({ locale }: { locale: string }) {
+export default function HomeContent({ locale: _locale }: { locale: string }) {
   return (
     <div className="relative">
       <ParticleBackground />
       <Hero />
       <ThemeSectionsWrapper>
-        <WhatWhoSection />
+        {/* ia-what-who section (Bold Ideas heading) — commented out */}
+        {/* <WhatWhoSection /> */}
+        <JourneyStatsSection />
+        <DigiStyleServicesSection />
         <PartnersSection />
-        
-        <ProfessionalServicesSection />
+        {/* <ProfessionalServicesSection /> — "Why Businesses Trust Us" removed */}
         {/* <OurProcessSection /> */}
         <ClientTestimonialsSection />
+        <CaseStudiesNavSection />
+        <CinematicIndustriesSection />
+        <FaqSection />
+        <ContactFormSection />
       </ThemeSectionsWrapper>
-      <HomeServicesSection locale={locale} />
-      <CaseStudiesSection />
-      <CTASection />
     </div>
   )
 }

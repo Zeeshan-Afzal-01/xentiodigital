@@ -2,7 +2,9 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { useRef } from 'react'
+import { useTheme } from 'next-themes'
 import ScrollingImages from '@/components/ScrollingImages'
 
 const fadeUp = {
@@ -11,12 +13,52 @@ const fadeUp = {
   transition: { duration: 0.55, ease: [0.22, 0.61, 0.36, 1] },
 }
 
+/** Theme-aware hero bg: dark = moody, light = bright agency vibe */
+const HERO_BG_DARK =
+  'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&q=82&fit=crop'
+const HERO_BG_LIGHT =
+  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=82&fit=crop'
+
 export default function Hero() {
   const t = useTranslations('hero')
   const locale = useLocale()
+  const { resolvedTheme } = useTheme()
+  const sectionRef = useRef<HTMLElement>(null)
+  const isDark = resolvedTheme !== 'light' // default dark until theme resolves
+  const heroBgSrc = isDark ? HERO_BG_DARK : HERO_BG_LIGHT
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  })
+  const scale = useTransform(scrollYProgress, [0, 0.35], [1.12, 1])
+  const y = useTransform(scrollYProgress, [0, 0.35], [0, 24])
 
   return (
-    <section className="hero home-hero m-banner relative min-h-screen overflow-hidden bg-[#00042a]">
+    <section
+      ref={sectionRef}
+      className="hero home-hero m-banner relative min-h-screen overflow-hidden bg-[#00042a]"
+    >
+      {/* Animated background: gentle scroll-driven “move inward” + subtle float */}
+      <motion.div
+        className="hero-bg_animated"
+        style={{ scale, y }}
+        aria-hidden
+      >
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={heroBgSrc}
+            src={heroBgSrc}
+            alt=""
+            className="hero-bg_animated__img"
+            fetchPriority="high"
+            decoding="async"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
+          />
+        </AnimatePresence>
+      </motion.div>
       <div className="m-banner__content">
         {/* Scrolling image columns + gradient (ScrollingImages renders hero-bg_wrap) */}
         <ScrollingImages />

@@ -1,17 +1,59 @@
 'use client'
 
-/**
- * Matches DigitalSilk hero-bg_wrap structure exactly:
- * - Each hero-bg_wrap-col has TWO .hero-bg_wrap-slides.v-scroll strips (same slides in each for seamless loop)
- * - Odd columns: animation heroscroll (0 → -100%); even: heroscroll-reverse (-100% → 0)
- * - Client logos bar at bottom, inside hero-bg_wrap
- */
-const DEMO_BASE = 'https://www.digitalsilk.com/wp-content/uploads/2024/05'
+import { useTheme } from 'next-themes'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
-const COLUMNS: { images: string[] }[] = [
-  { images: ['1', '2', '3', '4', '5'] },
-  { images: ['8', '9', '10', '11', '12'] },
-  { images: ['13', '14', '15', '6', '7'] },
+/**
+ * Hero scrolling background: two columns of images, theme-aware.
+ * - Dark: moody tech/creative; Light: bright, clean agency vibe.
+ * - Crossfade when theme changes.
+ */
+const U = (id: string, w = 800) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&q=82&fit=crop`
+
+// Dark theme: moody, tech, digital agency
+const COLUMNS_DARK: { images: string[] }[] = [
+  {
+    images: [
+      U('1550751827-4bd374c3f58b'), // tech screens
+      U('1497366216548-37526070297c'), // modern office
+      U('1460925895917-afdab827c52f'), // analytics
+      U('1551434678-e076c223a692'),   // team dev
+      U('1517694712202-14dd9538aa97'), // laptop code
+    ],
+  },
+  {
+    images: [
+      U('1504384308090-c894fdcc538d'), // workspace
+      U('1522071820081-009f0129c71c'), // collaboration
+      U('1552664730-d307ca884978'),   // team meeting
+      U('1499951360447-b19be8af80c5'), // laptop
+      U('1516321318423-f06f85e504b3'), // creative workspace
+    ],
+  },
+]
+
+// Light theme: bright, clean, agency
+const COLUMNS_LIGHT: { images: string[] }[] = [
+  {
+    images: [
+      U('1497366811353-6870744d04b2'), // bright office
+      U('1523240795612-9a054b0db644'), // woman at laptop
+      U('1557804506-669a67965ba0'),   // business handshake
+      U('1542744173-8e7e53415bb0'),   // team meeting bright
+      U('1600880292203-757bb62b4baf'), // laptop workspace
+    ],
+  },
+  {
+    images: [
+      U('1556761175-b413da4baf72'),   // team discussion
+      U('1553877522-43269d4ea984'),   // office bright
+      U('1517245386807-bb43f82c33c4'), // team planning
+      U('1552664730-d307ca884978'),   // meeting
+      U('1522071820081-009f0129c71c'), // collaboration light
+    ],
+  },
 ]
 
 const HERO_CLIENT_LOGOS = [
@@ -28,48 +70,59 @@ const HERO_CLIENT_LOGOS = [
   { src: 'https://www.digitalsilk.com/wp-content/uploads/2024/05/BRU_Logo-1.png', alt: 'BRU', width: 125, height: 27 },
 ]
 
-function imageSrc(name: string) {
-  return `${DEMO_BASE}/${name}.jpg`
-}
-
 export default function ScrollingImages() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const isDark = mounted ? resolvedTheme === 'dark' : true
+  const columns = isDark ? COLUMNS_DARK : COLUMNS_LIGHT
+
   return (
     <div className="hero-bg_wrap">
       <div className="hero-bg_wrap-cols">
-        {COLUMNS.map((col, colIndex) => (
-          <div key={colIndex} className="hero-bg_wrap-col">
-            {/* First strip */}
-            <div className="hero-bg_wrap-slides v-scroll">
-              {col.images.map((name, i) => (
-                <div key={`a-${colIndex}-${i}`} className="hero-bg_wrap_slide">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imageSrc(name)}
-                    alt=""
-                    className="img-cover"
-                    loading={colIndex === 0 && i === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                  />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={isDark ? 'dark' : 'light'}
+            className="hero-bg_wrap-cols-inner"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
+          >
+            {columns.map((col, colIndex) => (
+              <div key={colIndex} className="hero-bg_wrap-col">
+                <div className="hero-bg_wrap-slides v-scroll">
+                  {col.images.map((src, i) => (
+                    <div key={`a-${colIndex}-${i}`} className="hero-bg_wrap_slide">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt=""
+                        className="img-cover"
+                        loading={colIndex === 0 && i === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            {/* Second strip (duplicate for seamless loop) */}
-            <div className="hero-bg_wrap-slides v-scroll">
-              {col.images.map((name, i) => (
-                <div key={`b-${colIndex}-${i}`} className="hero-bg_wrap_slide">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imageSrc(name)}
-                    alt=""
-                    className="img-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                <div className="hero-bg_wrap-slides v-scroll">
+                  {col.images.map((src, i) => (
+                    <div key={`b-${colIndex}-${i}`} className="hero-bg_wrap_slide">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt=""
+                        className="img-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
       <div className="hero-bg-gradient_overlay" aria-hidden />
 
