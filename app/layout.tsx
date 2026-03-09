@@ -16,8 +16,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang={defaultLocale}
       dir="ltr"
       suppressHydrationWarning
-      className={`${inter.variable} ${cairo.variable}`}
+      className={`${inter.variable} ${cairo.variable} dark`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=document.documentElement;if(t==='light'){d.classList.remove('dark');d.classList.add('light')}else{d.classList.add('dark');d.classList.remove('light')}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body 
         className={inter.className}
         style={{

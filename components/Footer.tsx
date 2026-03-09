@@ -51,19 +51,20 @@ export default function Footer() {
       }} />
 
       <div className="container-custom section-padding relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-center place-items-center">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center"
           >
             <h3 className="text-2xl font-bold gradient-text mb-4">Xentio Digital</h3>
             <p className="text-muted-enhanced mb-6 leading-relaxed">
               {t('tagline')}
             </p>
-            <div className={`flex gap-4 flex-wrap ${rtl ? 'flex-row-reverse' : ''}`}>
+            <div className={`flex gap-4 flex-wrap justify-center ${rtl ? 'flex-row-reverse' : ''}`}>
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
@@ -87,6 +88,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex flex-col items-center"
           >
             <h4 className="text-high-contrast font-semibold mb-4">{t('services')}</h4>
             <ul className="space-y-3">
@@ -109,6 +111,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col items-center"
           >
             <h4 className="text-high-contrast font-semibold mb-4">{t('company')}</h4>
             <ul className="space-y-3">
@@ -131,6 +134,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col items-center"
           >
             <h4 className="text-high-contrast font-semibold mb-4">{t('contact')}</h4>
             <ul className="space-y-3 text-muted-enhanced">
@@ -158,13 +162,13 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="border-t pt-8 mt-8"
+        <div className="border-t pt-8 mt-8 text-center"
           style={{
             borderColor: 'var(--border-default)',
           }}
         >
-          <div className={`flex flex-col md:flex-row justify-between items-center ${rtl ? 'md:flex-row-reverse' : ''}`}>
-            <p className="text-muted-enhanced text-sm mb-4 md:mb-0 text-start md:text-center">
+          <div className={`flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center ${rtl ? 'md:flex-row-reverse' : ''}`}>
+            <p className="text-muted-enhanced text-sm mb-0">
               &copy; {currentYear} Xentio Digital. {t('rights')}.
             </p>
             <div className={`flex gap-6 flex-wrap ${rtl ? 'flex-row-reverse' : ''}`}>

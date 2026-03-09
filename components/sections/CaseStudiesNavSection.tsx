@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMemo, useState, useEffect, useRef } from 'react'
 
+const CASE_STUDIES_MOBILE_BREAKPOINT = 900
+
 type CaseItem = {
   name: string
   summary: string
@@ -34,8 +36,18 @@ export default function CaseStudiesNavSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [keywordIndex, setKeywordIndex] = useState(0)
   const [hoveredTabIndex, setHoveredTabIndex] = useState<number | null>(null)
-  const [hoverReunite, setHoverReunite] = useState(false) // usi hover ke dauran letters phir jur jayen
+  const [hoverReunite, setHoverReunite] = useState(false)
   const reuniteTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${CASE_STUDIES_MOBILE_BREAKPOINT}px)`)
+    const set = () => setIsMobile(mq.matches)
+    set()
+    mq.addEventListener('change', set)
+    return () => mq.removeEventListener('change', set)
+  }, [])
 
   const items = useMemo(() => {
     const raw = t.raw('items') as CaseItem[]
@@ -45,7 +57,6 @@ export default function CaseStudiesNavSection() {
   const active = items[activeIndex]
   const keywords = active?.keywords ?? []
 
-  // Preload all background images so switching is instant
   useEffect(() => {
     items.forEach((item) => {
       if (item?.bgImage) {
@@ -55,7 +66,6 @@ export default function CaseStudiesNavSection() {
     })
   }, [items])
 
-  // Cycle through keywords every 2s
   useEffect(() => {
     if (keywords.length <= 1) return
     const id = setInterval(() => {
@@ -66,13 +76,126 @@ export default function CaseStudiesNavSection() {
 
   if (!items.length) return null
 
+  /* ========== Mobile: reference card layout (CLICK TO VIEW MORE) ========== */
+  if (isMobile) {
+    return (
+      <section
+        className="case-studies-nav case-studies-nav--cards section-padding themeable-section"
+        aria-labelledby="case-studies-nav-heading"
+      >
+        <header className="case-studies-nav__header">
+          <h2 id="case-studies-nav-heading" className="case-studies-nav__title">
+            {t('title')}
+          </h2>
+          <p className="case-studies-nav__tagline-line1">{t('tagline')}</p>
+          <p className="case-studies-nav__tagline-line2">
+            {t('taglineLine2')} <strong className="case-studies-nav__tagline-accent">{t('taglineBold')}</strong>
+          </p>
+        </header>
+
+        <div className="case-studies-nav__cards">
+          {items.map((item, index) => {
+            const isOpen = openIndex === index
+            const itemKeywords = item.keywords ?? []
+            return (
+              <div key={index} className={`case-studies-nav__card ${isOpen ? 'is-open' : ''}`}>
+                <button
+                  type="button"
+                  className="case-studies-nav__card-trigger"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  aria-expanded={isOpen}
+                >
+                  <div
+                    className="case-studies-nav__card-bg"
+                    style={{ backgroundImage: `url(${item.bgImage})` }}
+                    aria-hidden
+                  />
+                  <div className="case-studies-nav__card-overlay" aria-hidden />
+                  <div className="case-studies-nav__card-head">
+                    <span className="case-studies-nav__card-name">{item.name}</span>
+                    <span className="case-studies-nav__card-cta">
+                      {t('clickToViewMore')}
+                      <span className="case-studies-nav__card-chevron" aria-hidden>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </span>
+                  </div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      className="case-studies-nav__card-panel"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
+                    >
+                      <div
+                        className="case-studies-nav__card-panel-bg"
+                        style={{ backgroundImage: `url(${item.bgImage})` }}
+                        aria-hidden
+                      />
+                      <div className="case-studies-nav__card-panel-overlay" aria-hidden />
+                      <div className="case-studies-nav__card-panel-inner">
+                        <p className="case-studies-nav__panel-tagline">
+                          {t('tagline')} {t('taglineLine2')} <strong className="case-studies-nav__tagline-accent">{t('taglineBold')}</strong>
+                        </p>
+                        <div className="case-studies-nav__logo-flow">
+                          <div className="case-studies-nav__logo-main" aria-hidden>{item.name}</div>
+                          <div className="case-studies-nav__logo-line" aria-hidden />
+                          <div className="case-studies-nav__logo-ghost" aria-hidden>{item.name}</div>
+                        </div>
+                        {itemKeywords.length > 0 && (
+                          <div className="case-studies-nav__keywords-wrap">
+                            <span className="case-studies-nav__keywords-prefix">Key focus: </span>
+                            <span className="case-studies-nav__keyword">{itemKeywords[0]}</span>
+                          </div>
+                        )}
+                        <p className="case-studies-nav__summary">{item.summary}</p>
+                        <div className="case-studies-nav__metrics">
+                          <div className="case-studies-nav__metric">
+                            <span className="case-studies-nav__metric-value">{item.metric1Value}</span>
+                            <span className="case-studies-nav__metric-lines">
+                              {item.metric1Line1}<br />{item.metric1Line2}
+                            </span>
+                          </div>
+                          <div className="case-studies-nav__metric">
+                            <span className="case-studies-nav__metric-value">{item.metric2Value}</span>
+                            <span className="case-studies-nav__metric-lines">
+                              {item.metric2Line1}<br />{item.metric2Line2}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="case-studies-nav__ctas">
+                          <Link href={`/${locale}/portfolio`} className="case-studies-nav__btn case-studies-nav__btn--primary">
+                            {t('ctaRead', { name: item.name })} &gt;
+                          </Link>
+                          <Link href={`/${locale}/contact`} className="case-studies-nav__btn case-studies-nav__btn--secondary">
+                            {t('ctaPlan')} &gt;
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+    )
+  }
+
+  /* ========== Desktop: original two-column (left list + right content) ========== */
   return (
     <section
       className="case-studies-nav section-padding themeable-section"
       aria-labelledby="case-studies-nav-heading"
     >
       <div className="case-studies-nav__layout">
-        {/* Left: stacked background images (all preloaded), fade active */}
         <div className="case-studies-nav__left">
           <div className="case-studies-nav__left-bg-wrap">
             {items.map((item, index) => (
@@ -159,7 +282,6 @@ export default function CaseStudiesNavSection() {
           </div>
         </div>
 
-        {/* Right: content with motion + keyword line */}
         <div
           id="case-studies-nav-panel"
           role="tabpanel"
@@ -167,7 +289,7 @@ export default function CaseStudiesNavSection() {
           className="case-studies-nav__right"
         >
           <p className="case-studies-nav__tagline">
-            {t('tagline')} <strong className="case-studies-nav__tagline-bold">{t('taglineBold')}</strong>
+            {t('tagline')} {t('taglineLine2')} <strong className="case-studies-nav__tagline-bold">{t('taglineBold')}</strong>
           </p>
           <div className="case-studies-nav__logo-flow">
             <div className="case-studies-nav__logo-main" aria-hidden>
@@ -179,7 +301,6 @@ export default function CaseStudiesNavSection() {
             </div>
           </div>
 
-          {/* Animated keyword line */}
           {keywords.length > 0 && (
             <div className="case-studies-nav__keywords-wrap" aria-hidden>
               <span className="case-studies-nav__keywords-prefix">Key focus: </span>

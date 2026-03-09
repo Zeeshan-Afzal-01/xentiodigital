@@ -73,13 +73,22 @@ const HERO_CLIENT_LOGOS = [
 export default function ScrollingImages() {
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)')
+    const cb = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    setIsMobile(mq.matches)
+    mq.addEventListener('change', cb)
+    return () => mq.removeEventListener('change', cb)
+  }, [])
   const isDark = mounted ? resolvedTheme === 'dark' : true
-  const columns = isDark ? COLUMNS_DARK : COLUMNS_LIGHT
+  const allColumns = isDark ? COLUMNS_DARK : COLUMNS_LIGHT
+  const columns = isMobile ? allColumns.slice(0, 1) : allColumns
 
   return (
     <div className="hero-bg_wrap">
-      <div className="hero-bg_wrap-cols">
+      <div className={`hero-bg_wrap-cols${isMobile ? ' hero-bg_wrap-cols--single' : ''}`}>
         <AnimatePresence mode="wait">
           <motion.div
             key={isDark ? 'dark' : 'light'}
