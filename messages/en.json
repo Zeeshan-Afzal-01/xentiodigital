@@ -11,30 +11,30 @@
     "blog": "Blog",
     "getStarted": "Get Started",
     "menu": "Menu",
-    "requestAQuote": "Request a Quote",
+    "requestAQuote": "Contact Us",
     "letsTalk": "Let's Talk",
     "workingWorldwide": "Working Worldwide",
     "discussProject": "Discuss a project",
     "phone": "Phone"
   },
   "hero": {
-    "preHeading": "Digital Marketing Agency",
-    "heading": "We Turn Online Presence into Real Business Growth",
+    "preHeading": "The Digital Marketing Agency That Turns Clicks Into Customers",
+    "heading": "We Don't Just Run Campaigns. We Grow Businesses.",
     "mainTitleLine1": "We Turn Online Presence",
     "mainTitleLine2": "into Real Business Growth",
     "mainTitle": "We Turn Online Presence into Real Business Growth",
-    "subtitle": "At Xentio Digital, we create data-driven digital marketing strategies that increase traffic, generate leads, and boost revenue for businesses worldwide.",
-    "cta": "Book Your Free Strategy Call",
-    "ctaSecondary": "See Our Work",
-    "trustLine": "5+ Years of SEO & Digital Marketing Expertise | International Clients | Performance-Focused Solutions",
+    "subtitle": "We help businesses worldwide grow faster with SEO, Google Ads, Meta Ads, TikTok Ads, and high-converting websites. No fluff. No guesswork. Just results you can measure.",
+    "cta": "Contact Us",
+    "ctaSecondary": "",
+    "trustLine": "Trusted by businesses across the US, UK, UAE, Australia and beyond | SEO, Paid Ads & Web Development | Results-First Approach",
     "designRushReviews": "5 Star DesignRush Reviews",
     "bestAgency2024": "Best Digital Agency of 2024",
     "forbes": "Forbes"
   },
   "digiServices": {
     "subHeading": "WHY XENTIO DIGITAL?",
-    "heading": "Discover Our Expertise As A Digital Agency",
-    "para1": "At Xentio Digital, we are a digital agency that handles everything related to web design, development, and digital strategy.",
+    "heading": "Digital Marketing Services That Drive Real Business Growth",
+    "para1": "From getting found on Google to turning visitors into paying customers — we handle it all.",
     "para2": "Research, planning, the actual design work, figuring out how to get people to your site—it's all in-house. If it's digital and you need it done, we can help.",
     "exploreLink": "Explore our {service} services.",
     "scrollLabel": "Services list"
@@ -340,9 +340,9 @@
     ]
   },
   "partners": {
-    "pre": "What We Offer",
-    "title": "Digital Solutions That Drive Growth",
-    "sub": "From web development to e-commerce and digital marketing, we deliver end-to-end solutions tailored to your business.",
+    "pre": "How We Work",
+    "title": "How We Take Your Business From Where It Is to Where You Want It to Be",
+    "sub": "",
     "subBold": "we deliver end-to-end solutions tailored to your business",
     "cta": "Explore All Services"
   },
@@ -351,16 +351,16 @@
     "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed"
   },
   "clientTestimonials": {
-    "title": "What Our Clients Say",
+    "title": "What Our Clients Say About Working With Xentio Digital",
     "viewReviews": "View client reviews",
     "designRushReviews": "34 REVIEWS",
     "designRushOn": "ON DESIGNRUSH",
     "designRushRating": "4.9",
     "designRushStarsAria": "4.9 out of 5 stars",
     "items": [
-      { "name": "Client Name", "position": "UAE", "quote": "Xentio Digital helped us triple our organic traffic in just 6 months. Their SEO expertise is unmatched.", "quoteBold": "triple our organic traffic in just 6 months" },
-      { "name": "Client Name", "position": "UK", "quote": "Our ad campaigns finally started converting, and ROI is amazing. Highly recommend Xentio Digital.", "quoteBold": "ROI is amazing" },
-      { "name": "Client Name", "position": "Pakistan", "quote": "Professional, responsive, and results-driven. Our website now converts visitors like never before.", "quoteBold": "converts visitors like never before" }
+      { "name": "UK Vaper Wholesale", "position": "UK", "quote": "Within 4 months, we were ranking on the first page for multiple competitive keywords. Their SEO work brought us consistent sales without spending a penny on ads.", "quoteBold": "ranking on the first page for multiple competitive keywords" },
+      { "name": "No 1 Vape Wholesale", "position": "UK", "quote": "Xentio Digital built our Shopify store exactly how we needed it. Clean design, fast loading, and easy for customers to place bulk orders.", "quoteBold": "Clean design, fast loading, and easy for customers to place bulk orders." },
+      { "name": "GlowSkin Aesthetics", "position": "UAE", "quote": "Our ad campaigns finally started converting, and ROI is amazing. Highly recommend Xentio Digital.", "quoteBold": "ROI is amazing" }
     ]
   },
   "about": {
@@ -1205,7 +1205,7 @@
     "supportAvailability": "Support Availability",
     "industriesWeServe": "Industries We Serve",
     "industriesWeServeSub": "Tailored solutions across diverse sectors",
-    "industriesSectionSub": "Target Industries",
+    "industriesSectionSub": "INDUSTRIES WE SERVE",
     "industryEcommerce": "E-Commerce",
     "industryEcommerceDesc": "Online retail and marketplace solutions",
     "industryEcommerceDetail": "200+ stores & marketplaces delivered · Avg. 35% sales uplift",
@@ -1238,8 +1238,8 @@
     "industrySaaS": "SaaS Platforms",
     "industrySaaSDesc": "Scalable cloud software and subscription solutions",
     "industrySaaSDetails": ["Custom SaaS development", "Cloud infrastructure & APIs", "Subscription billing & UX/UI"],
-    "industriesHeading": "Industries We Transform With Technology",
-    "industriesSubtext": "Helping businesses across industries scale with innovative digital solutions.",
+    "industriesHeading": "We Have Helped Businesses Grow in Almost Every Industry",
+    "industriesSubtext": "SEO, paid ads, and great websites work in every industry. Here are some of the sectors we have experience in.",
     "exploreSolutions": "Explore Solutions →",
     "whyChooseUs": "Why Choose Us",
     "whyChooseUsSub": "What sets us apart",

@@ -111,6 +111,8 @@
   @media (min-width: 768px) {
     flex-direction: row;
     padding: 0 3rem 3rem;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   @media (min-width: 1024px) {
@@ -281,7 +283,7 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.25rem;
     flex-shrink: 0;
   }
 
@@ -292,11 +294,13 @@
   // Second column (Customer Care, Business Consulting): push right so submenus don't overlap
   @media (min-width: 768px) {
     & > .serviceCategories:nth-child(2) {
-      margin-left: 200px;
+      margin-left: 0;
     }
   }
 
   @media (min-width: 1024px) {
+    gap: 2.5rem;
+
     & > .serviceCategories:nth-child(2) {
       margin-left: 260px;
     }

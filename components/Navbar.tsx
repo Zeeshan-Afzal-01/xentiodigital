@@ -9,6 +9,7 @@ import FullScreenMenu from './FullScreenMenu'
 import { isRTL } from '@/lib/translation'
 
 const SITE_LOGO_TEXT = 'XENTIO DIGITAL'
+const SHOW_LANGUAGE_SWITCHER = false
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +41,7 @@ export default function Navbar() {
 
           <div className={`site-header__col -right flex items-center gap-3 md:gap-4 ${rtl ? 'flex-row-reverse' : ''}`}>
             <ThemeToggle />
-            <LanguageSwitcher />
+            {SHOW_LANGUAGE_SWITCHER ? <LanguageSwitcher /> : null}
             <Link
               href={`/${locale}/contact`}
               className="c-btn -primary-v1 -opacity hidden sm:inline-flex items-center justify-center rounded-sm border border-white bg-white/10 px-5 py-2.5 text-sm font-medium uppercase tracking-[0.12em] text-white hover:bg-white hover:text-[#1e1b4b] transition-colors"

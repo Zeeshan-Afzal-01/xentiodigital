@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import JourneyStatsSection from '@/components/sections/JourneyStatsSection'
+import WhyChooseUsSection from '@/components/sections/WhyChooseUsSection'
 import DigiStyleServicesSection from '@/components/sections/DigiStyleServicesSection'
 import PartnersSection from '@/components/sections/PartnersSection'
 import ClientTestimonialsSection from '@/components/sections/ClientTestimonialsSection'
@@ -19,6 +20,7 @@ export default function HomeContent({ locale: _locale }: { locale: string }) {
         {/* ia-what-who section (Bold Ideas heading) — commented out */}
         {/* <WhatWhoSection /> */}
         <JourneyStatsSection />
+        <WhyChooseUsSection />
         <DigiStyleServicesSection />
         <PartnersSection />
         {/* <ProfessionalServicesSection /> — "Why Businesses Trust Us" removed */}

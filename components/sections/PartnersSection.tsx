@@ -1,27 +1,15 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import { useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { servicesData } from '@/lib/services-data'
 
-/** Flat list of service names + slugs for the partners sliders (from website services) */
-function getServicesForSliders(): { name: string; slug: string }[] {
-  const list: { name: string; slug: string }[] = []
-  for (const cat of servicesData) {
-    list.push({ name: cat.name, slug: cat.slug })
-    for (const sub of cat.subServices) {
-      list.push({ name: sub.name, slug: sub.slug })
-    }
-  }
-  return list
-}
-
-const ALL_SERVICES = getServicesForSliders()
-const ROW1_SERVICES = ALL_SERVICES.slice(0, 8)
-const ROW2_SERVICES = ALL_SERVICES.slice(8, 16)
+const WORK_STEPS = [
+  'Contact Us (Free)',
+  'Audit and Strategy',
+  'Execution',
+  'Reporting and Optimization',
+]
 
 const preVariants = {
   hidden: { opacity: 0, y: 20, filter: 'blur(6px)' },
@@ -56,36 +44,31 @@ const rowVariants = {
   }),
 }
 
-function ServiceSlide({ name, slug, locale }: { name: string; slug: string; locale: string }) {
+function ServiceSlide({ name }: { name: string }) {
   return (
-    <Link
-      href={`/${locale}/services/${slug}`}
-      className="m-slide client-item partners-client-item partners-service-item"
-    >
+    <div className="m-slide client-item partners-client-item partners-service-item">
       <div className="partners-service-name">{name}</div>
-    </Link>
+    </div>
   )
 }
 
 function SliderRow({
   services,
   reverse,
-  locale,
 }: {
-  services: { name: string; slug: string }[]
+  services: { name: string }[]
   reverse?: boolean
-  locale: string
 }) {
   return (
     <div className={`m-slider -client-logos slider-css__wrap ${reverse ? '-reverse' : ''}`}>
       <div className="m-slider__wrapper slider-css">
         {services.map((s, i) => (
-          <ServiceSlide key={`a-${i}-${s.slug}`} name={s.name} slug={s.slug} locale={locale} />
+          <ServiceSlide key={`a-${i}-${s.name}`} name={s.name} />
         ))}
       </div>
       <div className="m-slider__wrapper slider-css" aria-hidden="true">
         {services.map((s, i) => (
-          <ServiceSlide key={`b-${i}-${s.slug}`} name={s.name} slug={s.slug} locale={locale} />
+          <ServiceSlide key={`b-${i}-${s.name}`} name={s.name} />
         ))}
       </div>
     </div>
@@ -94,7 +77,6 @@ function SliderRow({
 
 export default function PartnersSection() {
   const t = useTranslations('partners')
-  const locale = useLocale()
   const sectionRef = useRef<HTMLElement>(null)
   const headingRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' })
@@ -142,16 +124,7 @@ export default function PartnersSection() {
         animate={isInView ? 'visible' : 'hidden'}
         custom={0}
       >
-        <SliderRow services={ROW1_SERVICES} locale={locale} />
-      </motion.div>
-      <motion.div
-        className="partners-rows-wrap"
-        variants={rowVariants}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-        custom={1}
-      >
-        <SliderRow services={ROW2_SERVICES} reverse locale={locale} />
+        <SliderRow services={WORK_STEPS.map((name) => ({ name }))} />
       </motion.div>
     </motion.section>
   )

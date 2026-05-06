@@ -1,10 +1,9 @@
 import { getTranslations } from 'next-intl/server'
-import Link from 'next/link'
 import { Icon } from '@/components/icons'
 
 const SERVICE_ICONS = ['Search', 'Target', 'Megaphone', 'Code'] as const
 
-export default async function HomeServicesSection({ locale }: { locale: string }) {
+export default async function HomeServicesSection({ locale: _locale }: { locale: string }) {
   const t = await getTranslations('services')
 
   const homepageServices = t.raw('homepageServices') as Array<{ name: string; description: string }>
@@ -46,14 +45,7 @@ export default async function HomeServicesSection({ locale }: { locale: string }
           ))}
         </div>
 
-        <div className="text-center">
-          <Link
-            href={`/${locale}/contact`}
-            className="btn-secondary text-lg px-12 py-6 relative overflow-hidden group inline-block transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
-          >
-            <span className="relative z-10">{t('ctaButton')}</span>
-          </Link>
-        </div>
+        {/* SEO CTA hidden temporarily per requirement */}
       </div>
     </section>
   )

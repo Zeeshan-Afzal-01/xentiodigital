@@ -66,16 +66,18 @@ export default function Hero() {
         {/* Content: container > c-heading, CTA, cert-list */}
         <div className="container">
           <div className="c-heading -h1">
-            <div className="c-heading__pre">
-              <motion.span
-                className="hero-pre-label"
-                initial={fadeUp.initial}
-                animate={fadeUp.animate}
-                transition={fadeUp.transition}
-              >
-                {t('preHeading')}
-              </motion.span>
-            </div>
+            {t('preHeading') ? (
+              <div className="c-heading__pre">
+                <motion.span
+                  className="hero-pre-label"
+                  initial={fadeUp.initial}
+                  animate={fadeUp.animate}
+                  transition={fadeUp.transition}
+                >
+                  {t('preHeading')}
+                </motion.span>
+              </div>
+            ) : null}
             <h1 className="c-heading__title">
               <motion.span
                 className="text-shadow-white block"
@@ -113,12 +115,14 @@ export default function Hero() {
                 </span>
               </span>
             </Link>
-            <Link
-              href={`/${locale}/portfolio`}
-              className="c-btn -primary-v1 -opacity inline-flex items-center justify-center rounded-sm border border-white bg-white/10 px-5 py-2.5 text-xs md:text-sm font-medium uppercase tracking-[0.1em] text-white hover:bg-white hover:text-[#1e1b4b] transition-colors"
-            >
-              {t('ctaSecondary')}
-            </Link>
+            {t('ctaSecondary') ? (
+              <Link
+                href={`/${locale}/portfolio`}
+                className="c-btn -primary-v1 -opacity inline-flex items-center justify-center rounded-sm border border-white bg-white/10 px-5 py-2.5 text-xs md:text-sm font-medium uppercase tracking-[0.1em] text-white hover:bg-white hover:text-[#1e1b4b] transition-colors"
+              >
+                {t('ctaSecondary')}
+              </Link>
+            ) : null}
           </motion.div>
 
           <motion.p

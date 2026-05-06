@@ -8,7 +8,7 @@ import { parseCookies } from './lib/cookies'
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
-  localePrefix: 'always',
+  localePrefix: 'as-needed',
 })
 
 export default async function middleware(request: NextRequest) {

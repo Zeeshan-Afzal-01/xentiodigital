@@ -15,9 +15,9 @@ const HEADLINE_PARTS = [
 
 const METRICS = [
   { value: '95%', label: 'Client Satisfaction Rate' },
-  { value: 'Zero', label: 'Detractors' },
-  { value: '81.8', label: 'Net Promoter Score' },
-  { value: 'Avg. 3 Years', label: 'Client Relationship' },
+  { value: '50+', label: 'Projects Delivered'},
+  { value: ' 8+', label: 'Countries Served' },
+  { value: '100%', label: 'Transparent Reporting — Always' },
 ]
 
 const ROTATE_INTERVAL_MS = 2000
