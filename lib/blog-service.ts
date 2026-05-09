@@ -1,4 +1,4 @@
-import 'server-only'
+"use server"
 import { unstable_cache } from 'next/cache'
 import { getAdminDb } from '@/lib/firebase-admin'
 import type { Blog, BlogAuthor, BlogCreateInput, BlogUpdateInput } from '@/lib/blog-types'
