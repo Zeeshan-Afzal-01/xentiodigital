@@ -14,20 +14,39 @@ export default function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    websiteUrl: '',
     service: '',
+    budget: '',
+    goal: '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const services = [
-    t('services.webDevelopment'),
-    t('services.mobileApps'),
     t('services.seo'),
-    t('services.ecommerce'),
-    t('services.uxui'),
-    t('services.customSoftware'),
-    t('services.other'),
+    t('services.googleAds'),
+    t('services.metaAds'),
+    t('services.tiktokAds'),
+    t('services.webDevelopment'),
+    t('services.fullGrowth'),
+    t('services.notSure'),
+  ]
+
+  const budgets = [
+    t('budgets.under500'),
+    t('budgets.500to1000'),
+    t('budgets.1000to3000'),
+    t('budgets.3000plus'),
+    t('budgets.notDecided'),
+  ]
+
+  const goals = [
+    t('goals.moreTraffic'),
+    t('goals.moreLeads'),
+    t('goals.moreSales'),
+    t('goals.newWebsite'),
+    t('goals.allAbove'),
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,7 +64,7 @@ export default function ContactForm() {
 
       if (res.ok && data.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', websiteUrl: '', service: '', budget: '', goal: '', message: '' })
       } else {
         setSubmitStatus('error')
       }
@@ -156,6 +175,30 @@ export default function ContactForm() {
           className="min-w-0"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.18 }}
+        >
+          <label htmlFor="websiteUrl" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
+            {t('websiteUrl')}
+          </label>
+          <input
+            type="url"
+            id="websiteUrl"
+            name="websiteUrl"
+            value={formData.websiteUrl}
+            onChange={handleChange}
+            dir="ltr"
+            className="w-full ps-4 pe-4 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start"
+            style={{
+              borderColor: 'var(--border-default)',
+              color: 'var(--text-primary)',
+            }}
+            placeholder={t('websiteUrlPlaceholder')}
+          />
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.2 }}
         >
           <label htmlFor="service" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
@@ -185,6 +228,88 @@ export default function ContactForm() {
                   style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}
                 >
                   {service}
+                </option>
+              ))}
+            </select>
+            <Icon
+              name="ChevronDown"
+              className="pointer-events-none absolute top-1/2 -translate-y-1/2 end-3 w-5 h-5 text-[var(--text-primary)] opacity-70"
+            />
+          </div>
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.22 }}
+        >
+          <label htmlFor="budget" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
+            {t('budget')}
+          </label>
+          <div className="relative">
+            <select
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              className="w-full ps-4 pe-10 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start appearance-none cursor-pointer hover:border-[var(--border-strong)]"
+              style={{
+                borderColor: 'var(--border-default)',
+                color: 'var(--text-primary)',
+                backgroundColor: 'var(--bg-surface)',
+              }}
+            >
+              <option value="" style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}>
+                {t('selectBudget')}
+              </option>
+              {budgets.map((b) => (
+                <option
+                  key={b}
+                  value={b}
+                  style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}
+                >
+                  {b}
+                </option>
+              ))}
+            </select>
+            <Icon
+              name="ChevronDown"
+              className="pointer-events-none absolute top-1/2 -translate-y-1/2 end-3 w-5 h-5 text-[var(--text-primary)] opacity-70"
+            />
+          </div>
+        </motion.div>
+        <motion.div
+          className="min-w-0"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.24 }}
+        >
+          <label htmlFor="goal" className="block text-sm font-semibold text-high-contrast mb-2 text-start">
+            {t('goal')}
+          </label>
+          <div className="relative">
+            <select
+              id="goal"
+              name="goal"
+              value={formData.goal}
+              onChange={handleChange}
+              className="w-full ps-4 pe-10 py-3.5 bg-surface border rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all text-start appearance-none cursor-pointer hover:border-[var(--border-strong)]"
+              style={{
+                borderColor: 'var(--border-default)',
+                color: 'var(--text-primary)',
+                backgroundColor: 'var(--bg-surface)',
+              }}
+            >
+              <option value="" style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}>
+                {t('selectGoal')}
+              </option>
+              {goals.map((g) => (
+                <option
+                  key={g}
+                  value={g}
+                  style={{ backgroundColor: 'var(--bg-elevated)', color: 'var(--text-primary)' }}
+                >
+                  {g}
                 </option>
               ))}
             </select>

@@ -35,7 +35,7 @@ const DIGI_SERVICES: DigiService[] = [
       'Google Ads is one of the fastest ways to put your business in front of people who are actively searching for what you offer. We set up, manage, and continuously optimize your campaigns - from Search and Shopping to Display and YouTube. You get maximum return on every dollar spent.',
     icon: 'Target',
     cta: 'Explore Google Ads',
-    href: null,
+    href: '/services/google-ads',
   },
   {
     id: 'meta-ads',
@@ -45,7 +45,7 @@ const DIGI_SERVICES: DigiService[] = [
       'With over 3 billion people on Facebook and Instagram, the opportunity is massive - if you know how to target the right audience with the right creative. We build Meta Ads campaigns that build brand awareness, generate leads, and drive sales across every industry and every budget.',
     icon: 'Users',
     cta: 'Explore Meta Ads',
-    href: null,
+    href: '/services/meta-ads',
   },
   {
     id: 'tiktok-ads',
@@ -55,7 +55,7 @@ const DIGI_SERVICES: DigiService[] = [
       'TikTok has become one of the most powerful advertising platforms for businesses in 2025 and beyond. With lower competition and higher engagement than most platforms, TikTok Ads give you a serious edge. We create campaigns that stop the scroll and drive real action - from product sales to app downloads to lead generation.',
     icon: 'Sparkles',
     cta: 'Explore TikTok Ads',
-    href: null,
+    href: '/services/tiktok-ads',
   },
   {
     id: 'web-development',
@@ -131,8 +131,7 @@ export default function DigiStyleServicesSection() {
           <div className="digi-services__accent-line" aria-hidden />
           <p className="digi-services__sub">{t('subHeading')}</p>
           <h2 className="digi-services__heading">{t('heading')}</h2>
-          <p className="digi-services__para">{t('para1')}</p>
-          <p className="digi-services__para digi-services__para--last">{t('para2')}</p>
+          <p className="digi-services__para digi-services__para--last">{t('para1')}</p>
         </div>
 
         <div className="digi-services__right-wrap is-mobile digi-services__right-wrap--sticky-scroll">

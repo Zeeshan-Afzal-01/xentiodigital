@@ -171,10 +171,6 @@
 }
 
 .logo {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #f0f0f0;
   text-decoration: none;
   margin-bottom: 1.5rem;
   display: inline-block;
@@ -182,6 +178,16 @@
   @media (max-width: 767px) {
     margin-bottom: 0.5rem;
   }
+}
+
+.logoImg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .navMain {

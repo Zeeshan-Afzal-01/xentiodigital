@@ -29,6 +29,7 @@ export default function ContactFormSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
         >
+          <p className="contact-form-section__section-label">{t('sectionLabel')}</p>
           <h2 id="contact-form-heading" className="contact-form-section__heading">
             {t('title')}
           </h2>
@@ -57,6 +58,7 @@ export default function ContactFormSection() {
                 <li>{t('visualPoint1')}</li>
                 <li>{t('visualPoint2')}</li>
                 <li>{t('visualPoint3')}</li>
+                <li>{t('visualPoint4')}</li>
               </ul>
             </div>
           </motion.aside>

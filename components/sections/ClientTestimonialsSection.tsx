@@ -1,27 +1,28 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState, useCallback } from 'react'
 import styles from './ClientTestimonialsSection.module.scss'
 
-const DS = 'https://www.digitalsilk.com/wp-content/uploads/2024/07'
-const DS01 = 'https://www.digitalsilk.com/wp-content/uploads/2024/01'
-
-const LOGOS = [
-  { src: `${DS}/national-golf-foundation.svg`, alt: 'National Golf Foundation' },
-  { src: `${DS}/smart-solutions.svg`, alt: 'Smart Software Solutions' },
-  { src: `${DS}/promptcare.svg`, alt: 'PromptCare' },
-  { src: `${DS}/benigro.svg`, alt: 'BeniGro' },
-  { src: `${DS01}/buddha.svg`, alt: 'Buddha Brands' },
-  { src: `${DS01}/rollink.svg`, alt: 'Rollink' },
-  { src: `${DS}/amida.svg`, alt: 'Amida Technology Solutions' },
-  { src: `${DS}/tray.svg`, alt: 'TRAY' },
-  { src: `${DS}/growpath.svg`, alt: 'GrowPath' },
-  { src: `${DS}/matrix.svg`, alt: 'Matrix New World Engineering' },
+const CLIENT_LOGOS = [
+  {
+    name: 'UK Vaper Wholesale',
+    initials: 'UVW',
+    color: '#38bdf8',
+  },
+  {
+    name: 'No 1 Vape Wholesale',
+    initials: 'N1V',
+    color: '#a78bfa',
+  },
+  {
+    name: 'GlowSkin Aesthetics',
+    initials: 'GSA',
+    color: '#34d399',
+  },
 ]
 
 const ROW_HEIGHT = 80
@@ -50,7 +51,9 @@ export default function ClientTestimonialsSection() {
 
   if (items.length === 0) return null
 
-  const title = typeof t('title') === 'string' ? t('title') : 'What our clients LOVE about our work'
+  const sectionLabel = typeof t('sectionLabel') === 'string' ? t('sectionLabel') : 'WHAT OUR CLIENTS SAY'
+  const title = typeof t('title') === 'string' ? t('title') : 'Real Businesses. Real Results. Real Words'
+  const subtitle = typeof t('subtitle') === 'string' ? t('subtitle') : ''
   const viewReviews = typeof t('viewReviews') === 'string' ? t('viewReviews') : 'View client reviews'
   const activeItem = items[activeIndex]
 
@@ -67,7 +70,16 @@ export default function ClientTestimonialsSection() {
       <div className={styles.bgGlowRight} aria-hidden />
 
       <div className={styles.container}>
-        <h2 className={styles.sectionHeading}>{title}</h2>
+        <motion.div
+          className={styles.sectionHeader}
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <p className={styles.sectionLabel}>{sectionLabel}</p>
+          <h2 className={styles.sectionHeading}>{title}</h2>
+          {subtitle && <p className={styles.sectionSubtitle}>{subtitle}</p>}
+        </motion.div>
 
         <div className={styles.twoCol}>
           <div className={styles.leftCol}>
@@ -79,41 +91,42 @@ export default function ClientTestimonialsSection() {
                   transform: `translate3d(0, ${-activeIndex * ROW_HEIGHT + TRACK_OFFSET}px, 0)`,
                 }}
               >
-                {items.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`${styles.clientRow} ${index === activeIndex ? styles.clientRowActive : ''}`}
-                    style={{ height: ROW_HEIGHT }}
-                    onClick={() => setActiveIndex(index)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault()
-                        setActiveIndex(index)
-                      }
-                    }}
-                    role="button"
-                    tabIndex={0}
-                    aria-pressed={index === activeIndex}
-                    aria-label={`${item.name}, ${item.position}`}
-                  >
-                    <div className={styles.clientRowInner}>
-                      <div className={styles.logoWrap}>
-                        <Image
-                          src={LOGOS[index]?.src ?? LOGOS[0].src}
-                          alt=""
-                          width={120}
-                          height={48}
-                          loading={index < 3 ? 'eager' : 'lazy'}
-                          sizes="80px"
-                        />
-                      </div>
-                      <div className={styles.clientMeta}>
-                        <div className={styles.name}>{item.name}</div>
-                        <div className={styles.position}>{item.position}</div>
+                {items.map((item, index) => {
+                  const logo = CLIENT_LOGOS[index]
+                  return (
+                    <div
+                      key={index}
+                      className={`${styles.clientRow} ${index === activeIndex ? styles.clientRowActive : ''}`}
+                      style={{ height: ROW_HEIGHT }}
+                      onClick={() => setActiveIndex(index)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault()
+                          setActiveIndex(index)
+                        }
+                      }}
+                      role="button"
+                      tabIndex={0}
+                      aria-pressed={index === activeIndex}
+                      aria-label={`${item.name}, ${item.position}`}
+                    >
+                      <div className={styles.clientRowInner}>
+                        <div className={styles.logoWrap}>
+                          <div
+                            className={styles.logoInitials}
+                            style={{ borderColor: logo?.color ?? '#38bdf8', color: logo?.color ?? '#38bdf8' }}
+                          >
+                            {logo?.initials ?? item.name.slice(0, 2).toUpperCase()}
+                          </div>
+                        </div>
+                        <div className={styles.clientMeta}>
+                          <div className={styles.name}>{item.name}</div>
+                          <div className={styles.position}>{item.position}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
               <div className={styles.arrows}>
@@ -147,28 +160,6 @@ export default function ClientTestimonialsSection() {
               </p>
             </div>
             <div className={styles.reviewsRow}>
-              <div className={styles.designRushWidget}>
-                <span className={styles.drIcon} aria-hidden>
-                  <svg viewBox="0 0 40 44" fill="currentColor" width="100%" height="100%">
-                    <path d="M20 0L2 8v14c0 11 8 20 18 22 10-2 18-11 18-22V8L20 0zm0 4.5L34 11v11c0 9-6 16.5-14 18.5-8-2-14-9.5-14-18.5V11l14-6.5z" opacity="0.9" />
-                    <path d="M20 14c-2 1-4 3-4 6 0 2 1 3.5 2.5 4.5-1.5.8-2.5 2.5-2.5 4.5 0 3 2 5 4 6 2-1 4-3 4-6 0-2-1-3.7-2.5-4.5 1.5-1 2.5-2.5 2.5-4.5 0-3-2-5-4-6z" />
-                  </svg>
-                </span>
-                <div className={styles.drTextBlock}>
-                  <span className={styles.drCount}>{t('designRushReviews')}</span>
-                  <span className={styles.drOn}>{t('designRushOn')}</span>
-                  <span className={styles.drRating}>
-                    <span className={styles.drScore}>{t('designRushRating')}</span>
-                    <span className={styles.drStars} aria-label={t('designRushStarsAria')}>
-                      <span className={styles.starFull} />
-                      <span className={styles.starFull} />
-                      <span className={styles.starFull} />
-                      <span className={styles.starFull} />
-                      <span className={styles.starPartial} />
-                    </span>
-                  </span>
-                </div>
-              </div>
               <Link href={`/${locale}/testimonials`} className={styles.viewReviewsBtn}>
                 <span>{viewReviews}</span>
                 <svg className={styles.btnIco} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

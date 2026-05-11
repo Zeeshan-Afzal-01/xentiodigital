@@ -87,10 +87,6 @@ export default function CaseStudiesNavSection() {
           <h2 id="case-studies-nav-heading" className="case-studies-nav__title">
             {t('title')}
           </h2>
-          <p className="case-studies-nav__tagline-line1">{t('tagline')}</p>
-          <p className="case-studies-nav__tagline-line2">
-            {t('taglineLine2')} <strong className="case-studies-nav__tagline-accent">{t('taglineBold')}</strong>
-          </p>
         </header>
 
         <div className="case-studies-nav__cards">
@@ -140,9 +136,6 @@ export default function CaseStudiesNavSection() {
                       />
                       <div className="case-studies-nav__card-panel-overlay" aria-hidden />
                       <div className="case-studies-nav__card-panel-inner">
-                        <p className="case-studies-nav__panel-tagline">
-                          {t('tagline')} {t('taglineLine2')} <strong className="case-studies-nav__tagline-accent">{t('taglineBold')}</strong>
-                        </p>
                         <div className="case-studies-nav__logo-flow">
                           <div className="case-studies-nav__logo-main" aria-hidden>{item.name}</div>
                           <div className="case-studies-nav__logo-line" aria-hidden />
@@ -170,10 +163,7 @@ export default function CaseStudiesNavSection() {
                           </div>
                         </div>
                         <div className="case-studies-nav__ctas">
-                          <Link href={`/${locale}/portfolio`} className="case-studies-nav__btn case-studies-nav__btn--primary">
-                            {t('ctaRead', { name: item.name })} &gt;
-                          </Link>
-                          <Link href={`/${locale}/contact`} className="case-studies-nav__btn case-studies-nav__btn--secondary">
+                          <Link href={`/${locale}/contact`} className="case-studies-nav__btn case-studies-nav__btn--primary">
                             {t('ctaPlan')} &gt;
                           </Link>
                         </div>
@@ -288,9 +278,6 @@ export default function CaseStudiesNavSection() {
           aria-labelledby={`case-studies-tab-${activeIndex}`}
           className="case-studies-nav__right"
         >
-          <p className="case-studies-nav__tagline">
-            {t('tagline')} {t('taglineLine2')} <strong className="case-studies-nav__tagline-bold">{t('taglineBold')}</strong>
-          </p>
           <div className="case-studies-nav__logo-flow">
             <div className="case-studies-nav__logo-main" aria-hidden>
               {active?.name}
@@ -355,14 +342,8 @@ export default function CaseStudiesNavSection() {
                 </div>
                 <motion.div className="case-studies-nav__ctas" variants={contentVariants} custom={3}>
                   <Link
-                    href={`/${locale}/portfolio`}
-                    className="case-studies-nav__btn case-studies-nav__btn--primary"
-                  >
-                    {t('ctaRead', { name: active.name })} &gt;
-                  </Link>
-                  <Link
                     href={`/${locale}/contact`}
-                    className="case-studies-nav__btn case-studies-nav__btn--secondary"
+                    className="case-studies-nav__btn case-studies-nav__btn--primary"
                   >
                     {t('ctaPlan')} &gt;
                   </Link>

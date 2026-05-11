@@ -32,10 +32,10 @@
     "forbes": "Forbes"
   },
   "digiServices": {
-    "subHeading": "WHY XENTIO DIGITAL?",
+    "subHeading": "OUR SERVICES",
     "heading": "Digital Marketing Services That Drive Real Business Growth",
-    "para1": "From getting found on Google to turning visitors into paying customers — we handle it all.",
-    "para2": "Research, planning, the actual design work, figuring out how to get people to your site—it's all in-house. If it's digital and you need it done, we can help.",
+    "para1": "From getting found on Google to building a website that converts, we handle every piece of your online growth. Here is what we do best.",
+    "para2": "",
     "exploreLink": "Explore our {service} services.",
     "scrollLabel": "Services list"
   },
@@ -245,39 +245,27 @@
   },
   "caseStudies": {
     "title": "Case Studies",
-    "tagline": "From Concept To Market:",
-    "taglineLine2": "We Engineer Projects For",
-    "taglineBold": "Superior Performance",
+    "tagline": "",
+    "taglineLine2": "",
+    "taglineBold": "",
     "clickToViewMore": "CLICK TO VIEW MORE",
     "ctaRead": "Read {name} Case Study",
     "ctaPlan": "Get A Custom Plan",
     "items": [
       {
-        "name": "GreenLeaf Commerce",
+        "name": "UK Vaper Wholesale",
         "summary": "An e-commerce brand in a competitive niche had stagnant organic traffic. We built a content-led SEO strategy and technical foundation. In 6 months:",
         "keywords": ["SEO", "Organic Traffic", "Content Strategy", "Top Rankings"],
         "metric1Value": "+187%",
         "metric1Line1": "organic traffic",
         "metric1Line2": "in 6 months",
-        "metric2Value": "12",
+        "metric2Value": "30",
         "metric2Line1": "keywords in",
         "metric2Line2": "top 3 on Google",
-        "bgImage": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80"
+        "bgImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
       },
       {
-        "name": "MedFirst UAE",
-        "summary": "A UAE healthcare provider needed more qualified leads from local search. We implemented local SEO, intent-based landing pages, and lead-nurture flows. Results:",
-        "keywords": ["Local SEO", "Lead Generation", "Landing Pages", "Healthcare"],
-        "metric1Value": "+94%",
-        "metric1Line1": "qualified leads",
-        "metric1Line2": "in 3 months",
-        "metric2Value": "3x",
-        "metric2Line1": "local pack",
-        "metric2Line2": "visibility",
-        "bgImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
-      },
-      {
-        "name": "CloudBase SaaS",
+        "name": "CoreStack Solutions",
         "summary": "A B2B SaaS startup needed predictable lead flow. We launched Google and Meta campaigns with high-intent targeting and conversion-optimized landing pages. In 4 months:",
         "keywords": ["Google Ads", "Meta Ads", "ROAS", "B2B Leads"],
         "metric1Value": "2.8x",
@@ -289,16 +277,16 @@
         "bgImage": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"
       },
       {
-        "name": "BrightGate Academy",
-        "summary": "A school needed a modern website and parent portal to cut admin load and improve engagement. We delivered a fast, accessible site and simple portal. Within 5 months:",
-        "keywords": ["Web Design", "Portal", "UX", "Accessibility"],
-        "metric1Value": "78%",
-        "metric1Line1": "of parents",
-        "metric1Line2": "using the portal",
-        "metric2Value": "-52%",
-        "metric2Line1": "fewer",
-        "metric2Line2": "office enquiries",
-        "bgImage": "https://images.unsplash.com/photo-1523050856858-f3101d20f0ce?w=1200&q=80"
+        "name": "Ever Care Meds",
+        "summary": "Ever Care Meds was struggling with low organic visibility and inconsistent sales. We improved their SEO strategy, optimized product pages, and fixed technical issues across the website. Results:",
+        "keywords": ["SEO", "Sales"],
+        "metric1Value": "90%",
+        "metric1Line1": "increase in",
+        "metric1Line2": "sales",
+        "metric2Value": "65%",
+        "metric2Line1": "growth in",
+        "metric2Line2": "organic traffic",
+        "bgImage": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80"
       },
       {
         "name": "Summit Consulting",
@@ -315,32 +303,53 @@
     ]
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "sectionLabel": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Everything You Want to Know Before Working With Us",
     "items": [
       {
-        "question": "How can I get started with your digital marketing services?",
-        "answer": "You can schedule a free strategy call through our website, contact us via the form, or reach out directly. We'll discuss your goals, audit your current presence, and outline a tailored plan."
+        "question": "How quickly can I start seeing results from SEO?",
+        "answer": "SEO is a long-term investment, not an overnight switch. Most businesses start seeing meaningful movement in rankings within 3 to 4 months, with significant results typically visible at the 6-month mark. The timeline depends on your industry competition, your website's current state, and the strategy we build together. We will give you a realistic projection."
       },
       {
-        "question": "What types of services do you offer?",
-        "answer": "We specialize in SEO, Google and Meta ads, social media management, website development, and full digital strategy. From research and design to driving traffic and conversions, we handle it in-house."
+        "question": "Do you work with businesses outside Pakistan?",
+        "answer": "Yes, absolutely. Xentio Digital serves clients in the US, UK, UAE, Canada, Australia, and across Europe and Asia. Digital marketing works across borders and so do we. All communication is done in English, and we adjust our working hours to accommodate different time zones."
       },
       {
-        "question": "How long does it typically take to see results?",
-        "answer": "SEO and content efforts often show early traction in 3–6 months; paid campaigns can drive leads within weeks. We set clear milestones and report on progress so you know what to expect."
+        "question": "How much should I budget for paid ads?",
+        "answer": "Your ad spend is separate from our management fee. The right budget depends on your industry, competition, and goals, but for most businesses, we recommend starting with at least $300–$800/month for Meta Ads and around $500–$1,500/month for Google Ads to generate reliable data and meaningful results. For local businesses in Pakistan, even smaller budgets can work well when campaigns are targeted correctly. During your consultation, we'll suggest a realistic budget based on your market and growth goals — not just a random number."
       },
       {
-        "question": "Do you work with businesses outside my country?",
-        "answer": "Yes. We work with clients worldwide and tailor strategies to local markets, languages, and time zones. Our team is used to coordinating across regions."
+        "question": "What platforms do you build websites on?",
+        "answer": "We build websites on WordPress, Shopify, and fully custom platforms using modern frameworks. We recommend WordPress for service businesses, blogs, and informational sites. Shopify is our first recommendation for ecommerce businesses. For complex requirements, we build fully custom solutions tailored to your specific needs."
       },
       {
-        "question": "Are your strategies data-driven and measurable?",
-        "answer": "Absolutely. We use analytics, tracking, and clear KPIs so every channel and campaign is measurable. You get regular reports and insights to see ROI and optimize over time."
+        "question": "Do you require long-term contracts?",
+        "answer": "We do not lock you into long-term contracts. Our services run on a monthly basis and you can cancel with 30 days notice. We prefer to earn your business every month through results rather than legal obligations. That said, SEO in particular requires a minimum of 3 to 6 months to show meaningful results, so we encourage clients to commit to that initial window."
+      },
+      {
+        "question": "How do you measure and report results?",
+        "answer": "Every client gets a weekly performance report. For SEO clients, we track keyword rankings, organic traffic, backlinks earned, and conversion metrics. For paid ads clients, we report on impressions, clicks, click-through rate, cost per click, conversions, and return on ad spend. You always know exactly what your investment is returning."
+      },
+      {
+        "question": "What industries do you work with?",
+        "answer": "We work with businesses in every industry. Ecommerce, retail, health and wellness, finance, real estate, education, SaaS, legal services, hospitality, food and beverage, automotive, fashion, B2B, manufacturing, and many more. Our SEO and paid advertising strategies are adapted to your specific industry, your competition, and your customers."
+      },
+      {
+        "question": "Can you help a business that is starting from zero online presence?",
+        "answer": "Yes. A significant number of our clients come to us with little to no online presence. We build everything from the ground up: the website, the SEO foundation, the ad accounts, and the content strategy. Starting from scratch actually has an advantage: we get to build it right from the beginning, without fixing someone else's mistakes first."
+      },
+      {
+        "question": "How do I get started with Xentio Digital?",
+        "answer": "It starts with a free consultation. Fill in the contact form on this page, and tell us a bit about your business and your goals. We will contact you back within 24 hours, audit your current situation, and present a clear plan. No pressure, no hard sell. Just an honest conversation about how we can help."
+      },
+      {
+        "question": "What information do you need from me to get started?",
+        "answer": "To give you the most useful strategy call, it helps to know: what your business does and who your ideal customers are, what you have tried before in marketing and what the results were, your main goal right now (more traffic, more leads, more sales, or a new website), and your monthly budget range. You do not need to have all the answers. That is what the consultation is for."
       }
     ]
   },
   "partners": {
-    "pre": "How We Work",
+    "pre": "HOW WE WORK",
     "title": "How We Take Your Business From Where It Is to Where You Want It to Be",
     "sub": "",
     "subBold": "we deliver end-to-end solutions tailored to your business",
@@ -351,7 +360,9 @@
     "subtitle": "Don't just take our word for it - hear from businesses we've helped succeed"
   },
   "clientTestimonials": {
-    "title": "What Our Clients Say About Working With Xentio Digital",
+    "sectionLabel": "WHAT OUR CLIENTS SAY",
+    "title": "Real Businesses. Real Results. Real Words",
+    "subtitle": "Do not just take our word for it. Here is what happens when businesses actually work with us.",
     "viewReviews": "View client reviews",
     "designRushReviews": "34 REVIEWS",
     "designRushOn": "ON DESIGNRUSH",
@@ -407,14 +418,16 @@
   "contact": {
     "metaTitle": "Contact Us - Get in Touch",
     "metaDescription": "Get in touch with Xentio Digital for a free consultation. Let's discuss how we can help transform your digital presence.",
-    "title": "Get in Touch",
-    "subtitle": "Let's discuss how we can help transform your digital presence",
-    "kicker": "Ready for real growth?",
-    "visualTitle": "Tell us where you want to go. We'll map the way.",
-    "visualSubtitle": "Share a bit about your business and goals. We'll respond with a focused, no-fluff plan.",
-    "visualPoint1": "Strategy-first approach, not just random tactics",
-    "visualPoint2": "Clear timelines, reporting, and next steps",
-    "visualPoint3": "No pressure — just an honest conversation",
+    "sectionLabel": "GET IN TOUCH",
+    "title": "Tell Us Where You Want to Go. We Will Map the Way.",
+    "subtitle": "Whether you are ready to start today or just exploring your options, we want to hear from you. Share a little about your business and your goals, and we will come back with a focused, honest plan.",
+    "kicker": "WHAT HAPPENS NEXT",
+    "visualTitle": "What to Expect After You Submit",
+    "visualSubtitle": "No pressure. No obligation. Just an honest conversation about how we can help.",
+    "visualPoint1": "We will review your message within 24 business hours",
+    "visualPoint2": "We will prepare a preliminary audit of your website or ad accounts before the call",
+    "visualPoint3": "The call is free. There is no obligation to move forward.",
+    "visualPoint4": "A member of our team will reach out to schedule a strategy call",
     "contactInfo": "Contact Information",
     "email": "Email",
     "phone": "Phone",
@@ -666,28 +679,48 @@
     }
   },
   "contactForm": {
-    "name": "Name",
-    "namePlaceholder": "Your name",
-    "email": "Email",
-    "emailPlaceholder": "your@email.com",
-    "phone": "Phone",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "email": "Business Email",
+    "emailPlaceholder": "your@business.com",
+    "phone": "Phone / WhatsApp Number",
     "phonePlaceholder": "+1 (234) 567-890",
-    "serviceInterest": "Service Interest",
+    "websiteUrl": "Website URL",
+    "websiteUrlPlaceholder": "https://yourwebsite.com",
+    "serviceInterest": "What service are you interested in?",
     "selectService": "Select a service",
-    "message": "Message",
-    "messagePlaceholder": "Tell us about your project...",
+    "budget": "What is your monthly marketing budget?",
+    "selectBudget": "Select your budget range",
+    "goal": "What is your main goal?",
+    "selectGoal": "Select your main goal",
+    "message": "Tell us about your business and what you want to achieve",
+    "messagePlaceholder": "Tell us about your business and your goals...",
     "sendMessage": "Send Message",
     "sending": "Sending...",
     "successMessage": "Thank you! We'll get back to you soon.",
     "errorMessage": "Something went wrong. Please try again.",
     "services": {
+      "seo": "SEO",
+      "googleAds": "Google Ads",
+      "metaAds": "Meta Ads",
+      "tiktokAds": "TikTok Ads",
       "webDevelopment": "Web Development",
-      "mobileApps": "Mobile Apps",
-      "seo": "SEO & Digital Marketing",
-      "ecommerce": "eCommerce Solutions",
-      "uxui": "UX/UI Design",
-      "customSoftware": "Desktop & Custom Software",
-      "other": "Other"
+      "fullGrowth": "Full Growth Package",
+      "notSure": "Not sure yet"
+    },
+    "budgets": {
+      "under500": "Under $500",
+      "500to1000": "$500 to $1,000",
+      "1000to3000": "$1,000 to $3,000",
+      "3000plus": "$3,000 and above",
+      "notDecided": "Not decided yet"
+    },
+    "goals": {
+      "moreTraffic": "More traffic",
+      "moreLeads": "More leads",
+      "moreSales": "More sales",
+      "newWebsite": "A new website",
+      "allAbove": "All of the above"
     }
   },
   "blog": {

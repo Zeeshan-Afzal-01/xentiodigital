@@ -7,17 +7,15 @@ const HEADLINE_PARTS = [
   { text: 'A Journey of ', accent: false },
   { text: '3 years', accent: true },
   { text: ' with ', accent: false },
-  { text: '1050+', accent: true },
-  { text: ' projects ', accent: false },
-  { text: '350+', accent: true },
-  { text: ' tech partnerships', accent: false },
+  { text: '50+', accent: true },
+  { text: ' Projects', accent: false },
 ]
 
 const METRICS = [
   { value: '95%', label: 'Client Satisfaction Rate' },
-  { value: '50+', label: 'Projects Delivered'},
-  { value: ' 8+', label: 'Countries Served' },
-  { value: '100%', label: 'Transparent Reporting — Always' },
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '8+', label: 'Countries Served' },
+  { value: '100%', label: 'Transparent Reporting' },
 ]
 
 const ROTATE_INTERVAL_MS = 2000
@@ -28,7 +26,6 @@ export default function JourneyStatsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [direction, setDirection] = useState(0)
 
-  // Auto-rotate: 95% → Zero → 81.8 → Avg. 3 Years → loop
   useEffect(() => {
     if (!isInView) return
     const id = setInterval(() => {
@@ -51,7 +48,6 @@ export default function JourneyStatsSection() {
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
     >
-      {/* Same background as PartnersSection: glow orbs + grid */}
       <div className="partners-bg-glow" aria-hidden />
       <div className="partners-bg-grid" aria-hidden />
 

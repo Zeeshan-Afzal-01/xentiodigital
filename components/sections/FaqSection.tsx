@@ -14,6 +14,7 @@ export default function FaqSection() {
 
   const items = (t.raw('items') as FaqItem[]) ?? []
   const list = Array.isArray(items) ? items : []
+  const sectionLabel = t('sectionLabel') as string | undefined
 
   return (
     <motion.section
@@ -26,15 +27,19 @@ export default function FaqSection() {
     >
       <div className="faq-section__bg" aria-hidden />
       <div className="faq-section__container">
-        <motion.h2
-          id="faq-heading"
-          className="faq-section__title"
+        <motion.div
+          className="faq-section__header"
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          {t('title')}
-        </motion.h2>
+          {sectionLabel && (
+            <p className="faq-section__label">{sectionLabel}</p>
+          )}
+          <h2 id="faq-heading" className="faq-section__title">
+            {t('title')}
+          </h2>
+        </motion.div>
         <ul className="faq-section__list">
           {list.map((item, index) => {
             const isOpen = openIndex === index
