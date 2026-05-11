@@ -4,54 +4,46 @@ import { useTheme } from 'next-themes'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-/**
- * Hero scrolling background: two columns of images, theme-aware.
- * - Dark: moody tech/creative; Light: bright, clean agency vibe.
- * - Crossfade when theme changes.
- */
-const U = (id: string, w = 800) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&q=82&fit=crop`
+const H = (name: string) => `/images/hero/${name}`
 
-// Dark theme: moody, tech, digital agency
 const COLUMNS_DARK: { images: string[] }[] = [
   {
     images: [
-      U('1550751827-4bd374c3f58b'), // tech screens
-      U('1497366216548-37526070297c'), // modern office
-      U('1460925895917-afdab827c52f'), // analytics
-      U('1551434678-e076c223a692'),   // team dev
-      U('1517694712202-14dd9538aa97'), // laptop code
+      H('seo-research.jpg'),
+      H('analytics-dashboard.jpg'),
+      H('digital-marketing.jpg'),
+      H('ppc-advertising.jpg'),
+      H('social-media.jpg'),
     ],
   },
   {
     images: [
-      U('1504384308090-c894fdcc538d'), // workspace
-      U('1522071820081-009f0129c71c'), // collaboration
-      U('1552664730-d307ca884978'),   // team meeting
-      U('1499951360447-b19be8af80c5'), // laptop
-      U('1516321318423-f06f85e504b3'), // creative workspace
+      H('mobile-3d.jpg'),
+      H('metaverse-business.jpg'),
+      H('seo-advertising.jpg'),
+      H('ads-optimization.jpg'),
+      H('software-dev.jpg'),
     ],
   },
 ]
 
-// Light theme: bright, clean, agency
 const COLUMNS_LIGHT: { images: string[] }[] = [
   {
     images: [
-      U('1497366811353-6870744d04b2'), // bright office
-      U('1523240795612-9a054b0db644'), // woman at laptop
-      U('1557804506-669a67965ba0'),   // business handshake
-      U('1542744173-8e7e53415bb0'),   // team meeting bright
-      U('1600880292203-757bb62b4baf'), // laptop workspace
+      H('digital-marketing.jpg'),
+      H('seo-research.jpg'),
+      H('web-development.jpg'),
+      H('analytics-dashboard.jpg'),
+      H('ppc-advertising.jpg'),
     ],
   },
   {
     images: [
-      U('1556761175-b413da4baf72'),   // team discussion
-      U('1553877522-43269d4ea984'),   // office bright
-      U('1517245386807-bb43f82c33c4'), // team planning
-      U('1552664730-d307ca884978'),   // meeting
-      U('1522071820081-009f0129c71c'), // collaboration light
+      H('digital-marketing-presentation.png'),
+      H('social-media.jpg'),
+      H('metaverse-business.jpg'),
+      H('software-dev.jpg'),
+      H('ads-optimization.jpg'),
     ],
   },
 ]

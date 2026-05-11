@@ -50,14 +50,51 @@
   }
 }
 
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  margin: 0 0 0.75rem;
+}
+
 .sectionHeading {
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.01em;
   text-align: center;
-  margin: 0 0 2.5rem;
-  color: var(--accent-bright);
+  margin: 0 0 0.875rem;
+  color: #fff;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.logoInitials {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
 
 .twoCol {

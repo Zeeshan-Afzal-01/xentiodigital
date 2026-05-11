@@ -8,7 +8,6 @@ import LanguageSwitcher from './LanguageSwitcher'
 import FullScreenMenu from './FullScreenMenu'
 import { isRTL } from '@/lib/translation'
 
-const SITE_LOGO_TEXT = 'XENTIO DIGITAL'
 const SHOW_LANGUAGE_SWITCHER = false
 
 export default function Navbar() {
@@ -33,9 +32,14 @@ export default function Navbar() {
         <div className={`site-header__row container-fluid flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 lg:px-8 ${rtl ? 'flex-row-reverse' : ''}`}>
           <div className="site-header__col -left flex items-center">
             <Link href={`/${locale}`} className="site-header__logo flex items-center" aria-label="Home">
-              <span className="text-white font-bold text-lg md:text-xl tracking-tight whitespace-nowrap">
-                {SITE_LOGO_TEXT}
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/hero/xentio_logo.svg"
+                alt="Xentio Digital"
+                className="h-9 w-auto object-contain"
+                fetchPriority="high"
+                decoding="async"
+              />
             </Link>
           </div>
 

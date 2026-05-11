@@ -8,7 +8,6 @@ import { servicesData } from '@/lib/services-data'
 import type { ServiceCategory } from '@/lib/services-data'
 import styles from './FullScreenMenu.module.scss'
 
-const SITE_LOGO_TEXT = 'XENTIO DIGITAL'
 
 const menuLinkVariants = {
   closed: { opacity: 0, y: 24 },
@@ -181,7 +180,13 @@ export default function FullScreenMenu({ isOpen, onClose }: FullScreenMenuProps)
             variants={{ open: { transition: { staggerChildren: 0.06 } } }}
           >
             <Link href={`/${locale}`} className={styles.logo} onClick={onClose}>
-              {SITE_LOGO_TEXT}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/hero/xentio_logo.svg"
+                alt="Xentio Digital"
+                className={styles.logoImg}
+                decoding="async"
+              />
             </Link>
 
             <nav className={styles.navMain} aria-label="Main navigation">

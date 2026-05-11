@@ -38,11 +38,20 @@ export const metadata: Metadata = {
     siteName: 'Xentio Digital',
     title: 'Xentio Digital - Premium Digital Services & Solutions',
     description: 'Leading digital services provider specializing in web development, mobile apps, SEO, eCommerce, and custom software solutions.',
+    images: [
+      {
+        url: 'https://www.xentiodigital.com/icon.svg',
+        width: 1600,
+        height: 1600,
+        alt: 'Xentio Digital',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Xentio Digital - Premium Digital Services & Solutions',
     description: 'Leading digital services provider specializing in web development, mobile apps, SEO, eCommerce, and custom software solutions.',
+    images: ['https://www.xentiodigital.com/icon.svg'],
   },
   robots: {
     index: true,

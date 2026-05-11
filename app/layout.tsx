@@ -5,7 +5,16 @@ import { inter, cairo } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
-  icons: { icon: '/favicon.png' },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/icon.svg',
+  },
 }
 
 // Root layout - must have <html> and <body> tags

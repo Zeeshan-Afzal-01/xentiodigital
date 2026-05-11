@@ -2,7 +2,7 @@ import Hero from '@/components/sections/Hero'
 import JourneyStatsSection from '@/components/sections/JourneyStatsSection'
 import WhyChooseUsSection from '@/components/sections/WhyChooseUsSection'
 import DigiStyleServicesSection from '@/components/sections/DigiStyleServicesSection'
-import PartnersSection from '@/components/sections/PartnersSection'
+import HowWeWorkSection from '@/components/sections/HowWeWorkSection'
 import ClientTestimonialsSection from '@/components/sections/ClientTestimonialsSection'
 import CaseStudiesNavSection from '@/components/sections/CaseStudiesNavSection'
 import CinematicIndustriesSection from '@/components/sections/CinematicIndustriesSection'
@@ -17,14 +17,10 @@ export default function HomeContent({ locale: _locale }: { locale: string }) {
       <ParticleBackground />
       <Hero />
       <ThemeSectionsWrapper>
-        {/* ia-what-who section (Bold Ideas heading) — commented out */}
-        {/* <WhatWhoSection /> */}
         <JourneyStatsSection />
         <WhyChooseUsSection />
         <DigiStyleServicesSection />
-        <PartnersSection />
-        {/* <ProfessionalServicesSection /> — "Why Businesses Trust Us" removed */}
-        {/* <OurProcessSection /> */}
+        <HowWeWorkSection />
         <ClientTestimonialsSection />
         <CaseStudiesNavSection />
         <CinematicIndustriesSection />
