@@ -125,7 +125,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p className="text-muted-enhanced">
                   Email: <a href="mailto:privacy@xentiodigital.com" className="text-primary-400 hover:underline">privacy@xentiodigital.com</a><br />
-                  Phone: <a href="tel:03338153173" className="text-primary-400 hover:underline">0333 8153173</a>
+                  Phone: <a href="tel:+923219486293" className="text-primary-400 hover:underline">+92 321 9486293</a>
                 </p>
               </section>
             </div>

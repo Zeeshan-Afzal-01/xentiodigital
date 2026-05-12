@@ -170,9 +170,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:03338153173" className="hover:text-high-contrast transition-colors">
-                  0333 8153173
+                <a href="tel:+923219486293" className="hover:text-high-contrast transition-colors">
+                  +92 321 9486293
                 </a>
+              </li>
+              <li>
+                124, Broadway Commercial, Park View City, Lahore, Pakistan.
               </li>
               <li className="pt-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

@@ -70,10 +70,10 @@ export default function ContactContent() {
                     <Icon name="Phone" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('phone')}
                   </h3>
                   <a
-                    href="tel:03338153173"
+                    href="tel:+923219486293"
                     className="text-primary-400 hover:text-primary-300 transition-colors animated-underline inline-block"
                   >
-                    0333 8153173
+                    +92 321 9486293
                   </a>
                 </div>
                 <div className="glass rounded-xl p-6 border border-white/10">

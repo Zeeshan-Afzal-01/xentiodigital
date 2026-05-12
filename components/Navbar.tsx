@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="site-header__main">
         <div className={`site-header__row container-fluid flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 lg:px-8 ${rtl ? 'flex-row-reverse' : ''}`}>
           <div className="site-header__col -left flex items-center">
-            <Link href={`/${locale}`} className="site-header__logo flex items-center gap-2 md:gap-3" aria-label="Home">
+            <Link href={`/${locale}`} className="site-header__logo flex items-center gap-0.5" aria-label="Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/hero/xentio_logo.svg"
