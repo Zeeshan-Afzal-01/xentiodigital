@@ -4,25 +4,24 @@ import { useTheme } from 'next-themes'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-const H = (name: string) => `/images/hero/${name}`
 
 const COLUMNS_DARK: { images: string[] }[] = [
   {
     images: [
-      H('seo-research.jpg'),
-      H('analytics-dashboard.jpg'),
-      H('digital-marketing.jpg'),
-      H('ppc-advertising.jpg'),
-      H('social-media.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/seo-research_jqhdj0.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/digital-marketing_mabjfi.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587906/ppc-advertising_mllq2e.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587900/social-media_dkh226.jpg'),
     ],
   },
   {
     images: [
-      H('mobile-3d.jpg'),
-      H('metaverse-business.jpg'),
-      H('seo-advertising.jpg'),
-      H('ads-optimization.jpg'),
-      H('software-dev.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587887/mobile-3d_k0wkze.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587906/metaverse-business_yes7br.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587896/ads-optimization_v8scj0.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
     ],
   },
 ]
@@ -30,20 +29,20 @@ const COLUMNS_DARK: { images: string[] }[] = [
 const COLUMNS_LIGHT: { images: string[] }[] = [
   {
     images: [
-      H('digital-marketing.jpg'),
-      H('seo-research.jpg'),
-      H('web-development.jpg'),
-      H('analytics-dashboard.jpg'),
-      H('ppc-advertising.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/digital-marketing_mabjfi.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/seo-research_jqhdj0.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587904/web-development_hgfumq.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587900/analytics-dashboard_nic5vv.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
     ],
   },
   {
     images: [
-      H('digital-marketing-presentation.png'),
-      H('social-media.jpg'),
-      H('metaverse-business.jpg'),
-      H('software-dev.jpg'),
-      H('ads-optimization.jpg'),
+      ('digital-marketing-presentation.png'),
+      ('social-media.jpg'),
+      ('metaverse-business.jpg'),
+      ('software-dev.jpg'),
+      ('ads-optimization.jpg'),
     ],
   },
 ]
