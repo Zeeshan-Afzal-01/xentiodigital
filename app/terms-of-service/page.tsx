@@ -132,7 +132,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <p className="text-gray-700">
                   Email: <a href="mailto:legal@xentiodigital.com" className="text-primary-600 hover:underline">legal@xentiodigital.com</a><br />
-                  Phone: <a href="tel:03338153173" className="text-primary-600 hover:underline">0333 8153173</a>
+                  Phone: <a href="tel:+923219486293" className="text-primary-600 hover:underline">+92 321 9486293</a>
                 </p>
               </section>
             </div>

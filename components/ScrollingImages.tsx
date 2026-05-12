@@ -37,12 +37,12 @@ const COLUMNS_LIGHT: { images: string[] }[] = [
     ],
   },
   {
-    images: [
-      ('digital-marketing-presentation.png'),
-      ('social-media.jpg'),
-      ('metaverse-business.jpg'),
-      ('software-dev.jpg'),
-      ('ads-optimization.jpg'),
+   images: [
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587887/mobile-3d_k0wkze.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587906/metaverse-business_yes7br.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587896/ads-optimization_v8scj0.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
     ],
   },
 ]
