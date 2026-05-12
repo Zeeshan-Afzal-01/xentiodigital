@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p className="text-gray-700">
                   Email: <a href="mailto:privacy@xentiodigital.com" className="text-primary-600 hover:underline">privacy@xentiodigital.com</a><br />
-                  Phone: <a href="tel:+1234567890" className="text-primary-600 hover:underline">+1 (234) 567-890</a>
+                  Phone: <a href="tel:03338153173" className="text-primary-600 hover:underline">0333 8153173</a>
                 </p>
               </section>
             </div>

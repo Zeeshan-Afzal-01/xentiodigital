@@ -190,8 +190,8 @@ export default function OfficeMapContent() {
                       <Icon name="Phone" className="mr-3 w-5 h-5" strokeWidth={2} /> {t('contact')}
                     </h3>
                     <p className="text-muted-enhanced">
-                      <a href="tel:+1234567890" className="hover:text-primary-400 transition-colors">
-                        +1 (234) 567-890
+                      <a href="tel:03338153173" className="hover:text-primary-400 transition-colors">
+                        0333 8153173
                       </a>
                       <br />
                       <a

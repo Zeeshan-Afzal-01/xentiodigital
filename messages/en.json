@@ -122,11 +122,10 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "webDevelopment": "Web Development",
-    "mobileApps": "Mobile Apps",
-    "seoMarketing": "SEO & Marketing",
-    "ecommerce": "eCommerce",
-    "uxUiDesign": "UX/UI Design",
-    "customSoftware": "Custom Software",
+    "seo": "Search Engine Optimization",
+    "googleAds": "Google Ads Management",
+    "metaAds": "Meta Ads (Facebook & Instagram)",
+    "tiktokAds": "TikTok Ads",
     "getQuote": "Get a Quote"
   },
   "cta": {
@@ -439,7 +438,7 @@
     "addressLine1": "123 Digital Street",
     "addressLine2": "Tech City, TC 12345",
     "addressLine3": "United States",
-    "phoneNumber": "(123) 456-7890",
+    "phoneNumber": "0333 8153173",
     "sendMessage": "Send Us a Message"
   },
   "portfolio": {

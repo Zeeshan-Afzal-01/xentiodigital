@@ -4,9 +4,8 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 
 const HEADLINE_PARTS = [
-  { text: 'A Journey of ', accent: false },
-  { text: '3 years', accent: true },
-  { text: ' with ', accent: false },
+  { text: '3+', accent: true },
+  { text: ' Years of Turning Ideas Into Growing Brands Across ', accent: false },
   { text: '50+', accent: true },
   { text: ' Projects', accent: false },
 ]
