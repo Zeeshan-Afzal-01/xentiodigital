@@ -381,6 +381,42 @@ body {
   }
 }
 
+/* ============================================
+   LIGHT MODE — Hero section overrides
+   ============================================ */
+.light .home-hero .hero-bg-gradient_overlay {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 45%, transparent 80%);
+}
+
+.light .home-hero .hero-bg-gradient_overlay::after {
+  background-color: rgba(109, 40, 217, 0.04);
+  box-shadow: 0 0 20em 20em rgba(109, 40, 217, 0.03);
+  opacity: 0.8;
+}
+
+.light .home-hero .c-heading__title,
+.light .home-hero .c-heading.-h1 .c-heading__title p,
+.light .home-hero .c-heading.-h1 .c-heading__title span,
+.light .home-hero .text-shadow-white {
+  color: #1e1b4b;
+  text-shadow: none;
+}
+
+.light .home-hero .c-heading__pre,
+.light .home-hero .hero-pre-label {
+  color: #6D28D9;
+}
+
+.light .home-hero .c-heading__sub {
+  color: #334155;
+}
+
+.light .home-hero .c-btn.-slideover {
+  box-shadow: 0 0 0 1px rgba(109, 40, 217, 0.25), 0 4px 20px rgba(109, 40, 217, 0.12);
+}
+
 /* Hero client logos bar — horizontal scrolling slider at bottom (DigitalSilk-style) */
 .-client-slides {
   display: flex;
