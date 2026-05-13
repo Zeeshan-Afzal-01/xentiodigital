@@ -29,15 +29,15 @@ const COLUMNS_DARK: { images: string[] }[] = [
 const COLUMNS_LIGHT: { images: string[] }[] = [
   {
     images: [
-      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/digital-marketing_mabjfi.jpg'),
       ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/seo-research_jqhdj0.jpg'),
-      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587904/web-development_hgfumq.jpg'),
-      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587900/analytics-dashboard_nic5vv.jpg'),
       ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587899/digital-marketing_mabjfi.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587906/ppc-advertising_mllq2e.jpg'),
+      ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587900/social-media_dkh226.jpg'),
     ],
   },
   {
-   images: [
+    images: [
       ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587887/mobile-3d_k0wkze.jpg'),
       ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778587906/metaverse-business_yes7br.jpg'),
       ('https://res.cloudinary.com/degbinbhz/image/upload/f_auto,q_auto,w_600/v1778589880/web-development_xzrjw9.jpg'),
