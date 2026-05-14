@@ -78,7 +78,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero/xentio_logo.svg"
+                src="/icon.svg"
                 alt="Xentio Digital"
                 className="h-10 w-auto object-contain"
               />

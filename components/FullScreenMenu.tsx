@@ -103,7 +103,7 @@ export default function FullScreenMenu({ isOpen, onClose }: FullScreenMenuProps)
               <Link href={`/${locale}`} className={styles.logo} onClick={onClose}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/hero/xentio_logo.svg"
+                  src="/icon.svg"
                   alt="Xentio Digital"
                   className={styles.logoImg}
                   decoding="async"

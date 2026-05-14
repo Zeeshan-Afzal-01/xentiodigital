@@ -142,7 +142,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className={`hero__trust-line text-xs md:text-sm mt-6 max-w-2xl leading-relaxed ${isDark ? 'text-white/85' : 'text-slate-500'}`}
+            className={`hero__trust-line text-xs md:text-sm mt-6 max-w-2xl leading-relaxed ${isDark ? 'text-white/85' : 'text-black'}`}
             initial={fadeUp.initial}
             animate={fadeUp.animate}
             transition={{ ...fadeUp.transition, delay: 0.28 }}

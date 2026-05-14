@@ -34,7 +34,7 @@ export default function Navbar() {
             <Link href={`/${locale}`} className="site-header__logo flex items-center gap-0.5" aria-label="Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero/xentio_logo.svg"
+                src="/icon.svg"
                 alt="Xentio Digital"
                 className="h-10 md:h-12 w-auto object-contain"
                 fetchPriority="high"
@@ -59,8 +59,7 @@ export default function Navbar() {
               type="button"
               className="nav-main__btn flex items-center justify-center w-10 h-10 rounded text-white hover:opacity-80 transition-opacity"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label={t('menu')}
-              aria-expanded={isOpen}
+              aria-label={isOpen ? 'Close menu' : t('menu')}
             >
               <span className="sr-only">{t('menu')}</span>
               {!isOpen ? (
