@@ -84,7 +84,7 @@ export default function BlogFilters({
                 onClick={() => onCategoryChange(isSelected ? null : category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   isSelected
-                    ? `bg-gradient-to-r ${categoryColor} text-white`
+                    ? `bg-gradient-to-r ${categoryColor} text-gray-900 dark:text-white`
                     : 'glass-premium border text-muted-enhanced hover:text-high-contrast'
                 }`}
                 style={{

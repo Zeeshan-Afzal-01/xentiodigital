@@ -54,29 +54,29 @@ export default function ContactContent() {
             >
               <h2 className="text-3xl font-bold text-high-contrast mb-8">{t('contactInfo')}</h2>
               <div className="space-y-8">
-                <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="glass rounded-xl p-6 border border-border-default">
                   <h3 className="text-xl font-semibold text-high-contrast mb-2 flex items-center">
                     <Icon name="Mail" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('email')}
                   </h3>
                   <a
                     href="mailto:info@xentiodigital.com"
-                    className="text-primary-400 hover:text-primary-300 transition-colors animated-underline inline-block"
+                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors animated-underline inline-block"
                   >
                     info@xentiodigital.com
                   </a>
                 </div>
-                <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="glass rounded-xl p-6 border border-border-default">
                   <h3 className="text-xl font-semibold text-high-contrast mb-2 flex items-center">
                     <Icon name="Phone" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('phone')}
                   </h3>
                   <a
                     href="tel:+923219486293"
-                    className="text-primary-400 hover:text-primary-300 transition-colors animated-underline inline-block"
+                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors animated-underline inline-block"
                   >
                     +92 321 9486293
                   </a>
                 </div>
-                <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="glass rounded-xl p-6 border border-border-default">
                   <h3 className="text-xl font-semibold text-high-contrast mb-2 flex items-center">
                     <Icon name="Clock" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('officeHours')}
                   </h3>
@@ -86,7 +86,7 @@ export default function ContactContent() {
                     {t('officeHoursSun')}
                   </p>
                 </div>
-                <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="glass rounded-xl p-6 border border-border-default">
                   <h3 className="text-xl font-semibold text-high-contrast mb-2 flex items-center">
                     <Icon name="Pin" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('address')}
                   </h3>

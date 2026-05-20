@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="site-header site-header--transparent fixed top-0 left-0 right-0 w-full z-[99] transition-all duration-300"
+      className="site-header site-header--transparent fixed top-0 left-0 right-0 w-full z-[99] transition-all duration-300 dark"
       role="banner"
       data-sticky="sticky"
     >

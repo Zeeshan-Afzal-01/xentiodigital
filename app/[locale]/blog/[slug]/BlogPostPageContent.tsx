@@ -42,8 +42,11 @@ export default async function BlogPostPageContent({
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        {post.coverImage && (
+      <section
+        className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center overflow-hidden"
+        style={!post.coverImage ? { background: 'var(--hero-gradient, linear-gradient(135deg, rgba(109,40,217,0.08) 0%, transparent 50%, rgba(8,145,178,0.08) 100%))' } : undefined}
+      >
+        {post.coverImage ? (
           <div className="absolute inset-0">
             <Image
               src={post.coverImage}
@@ -53,28 +56,45 @@ export default async function BlogPostPageContent({
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
+          </div>
+        ) : (
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="floating-shape bg-primary-500/20" />
+            <div className="floating-shape bg-secondary-500/20" style={{ animationDelay: '-5s' }} />
           </div>
         )}
 
-        <div className="container-custom relative z-10 text-center px-4 sm:px-6 lg:px-8">
+        <div className="container-custom relative z-10 text-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="max-w-4xl mx-auto">
             <Link
               href={getBlogCategoryUrl(post.category, locale)}
-              className={`inline-block px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r ${categoryColor} text-white mb-8 hover:scale-105 transition-transform shadow-lg`}
+              className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r ${categoryColor} text-gray-900 dark:text-white mb-5 sm:mb-8 hover:scale-105 transition-transform shadow-lg`}
             >
               {post.category}
             </Link>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1
+              className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight ${
+                post.coverImage ? 'text-white' : 'text-high-contrast'
+              }`}
+            >
               {post.title}
             </h1>
 
-            <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
+            <p
+              className={`text-sm sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-10 leading-relaxed ${
+                post.coverImage ? 'text-white/80' : 'text-muted-enhanced'
+              }`}
+            >
               {post.seoDescription || post.excerpt}
             </p>
 
-            <div className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm">
+            <div
+              className={`flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm ${
+                post.coverImage ? 'text-white/80' : 'text-muted-enhanced'
+              }`}
+            >
               <span className="inline-flex items-center gap-2">
                 <Icon name="Calendar" className="w-4 h-4" strokeWidth={2} />
                 {formatBlogDate(post.createdAt, locale)}
@@ -89,12 +109,12 @@ export default async function BlogPostPageContent({
       </section>
 
       {/* Content + Sidebar */}
-      <section className="section-padding bg-surface">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <article className="lg:col-span-8 blog-article">
+      <section className="py-8 sm:py-10 md:py-14 bg-surface">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+            <article className="lg:col-span-8 blog-article w-full">
               {/* Markdown content (server-rendered) */}
-              <div className="glass-premium rounded-2xl p-6 md:p-10 border" style={{ borderColor: 'var(--border-default)' }}>
+              <div className="glass-premium rounded-2xl p-4 sm:p-6 md:p-10 border" style={{ borderColor: 'var(--border-default)' }}>
                 <ReactMarkdown
                   components={{
                     h2: ({ children, ...props }) => {
@@ -166,7 +186,7 @@ export default async function BlogPostPageContent({
                   <div className="mt-6">
                     <Link
                       href={`/${locale}/blog`}
-                      className="text-primary-500 hover:text-primary-400 font-semibold text-sm transition-colors inline-flex items-center gap-2"
+                      className="text-primary-600 dark:text-primary-500 hover:text-primary-700 dark:hover:text-primary-400 font-semibold text-sm transition-colors inline-flex items-center gap-2"
                     >
                       {t('viewAllArticles')}
                       <Icon name="ChevronRight" rtlFlip rtl={rtl} className="w-4 h-4" strokeWidth={2} />

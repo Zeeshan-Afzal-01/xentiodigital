@@ -14,8 +14,8 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
+  const [filtersOpen, setFiltersOpen] = useState(false)
 
-  // Filter posts
   const filteredPosts = useMemo(() => {
     return allPosts.filter((post) => {
       const matchesCategory = !selectedCategory || post.category === selectedCategory
@@ -29,11 +29,12 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
     })
   }, [allPosts, selectedCategory, selectedTag, searchQuery])
 
+  const activeFilterCount = [selectedCategory, selectedTag, searchQuery].filter(Boolean).length
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative min-h-[45vh] sm:min-h-[55vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 blog-hero-animated-bg"
           style={{
@@ -43,7 +44,6 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
           }}
         />
 
-        {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
             className="w-full h-full"
@@ -57,13 +57,12 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
           />
         </div>
 
-        {/* Hero Content */}
-        <div className="container-custom relative z-10 text-center">
+        <div className="container-custom relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6"
           >
             <span className="gradient-text">{t('title')}</span>
           </motion.h1>
@@ -71,7 +70,7 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto"
+            className="text-base sm:text-xl md:text-2xl text-muted-enhanced max-w-3xl mx-auto px-2"
           >
             {t('subtitle')}
           </motion.p>
@@ -79,11 +78,61 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
       </section>
 
       {/* Blog Content */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Sidebar - Filters */}
-            <aside className="lg:col-span-1">
+      <section className="py-8 sm:py-10 md:py-14">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+
+          {/* Mobile Filter Toggle */}
+          <div className="lg:hidden mb-5">
+            <button
+              onClick={() => setFiltersOpen(!filtersOpen)}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl glass-premium border text-sm font-medium text-high-contrast w-full justify-between"
+              style={{ borderColor: 'var(--border-default)' }}
+            >
+              <span className="flex items-center gap-2">
+                <Icon name="Search" className="w-4 h-4" strokeWidth={2} />
+                {t('filters') || 'Filters'}
+                {activeFilterCount > 0 && (
+                  <span className="bg-primary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
+                    {activeFilterCount}
+                  </span>
+                )}
+              </span>
+              <motion.span
+                animate={{ rotate: filtersOpen ? 180 : 0 }}
+                transition={{ duration: 0.25 }}
+              >
+                <Icon name="ChevronDown" className="w-4 h-4" strokeWidth={2} />
+              </motion.span>
+            </button>
+
+            <AnimatePresence>
+              {filtersOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pt-4 pb-2">
+                    <BlogFilters
+                      posts={allPosts}
+                      selectedCategory={selectedCategory}
+                      selectedTag={selectedTag}
+                      searchQuery={searchQuery}
+                      onCategoryChange={setSelectedCategory}
+                      onTagChange={setSelectedTag}
+                      onSearchChange={setSearchQuery}
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* Sidebar - Filters (desktop only) */}
+            <aside className="hidden lg:block lg:col-span-1">
               <div className="sticky top-24">
                 <BlogFilters
                   posts={allPosts}
@@ -97,22 +146,20 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
               </div>
             </aside>
 
-            {/* Main Content - Blog Grid */}
+            {/* Main Content */}
             <div className="lg:col-span-3">
-              {/* Results Count */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="mb-8"
+                className="mb-5 sm:mb-8"
               >
-                <p className="text-muted-enhanced">
+                <p className="text-sm sm:text-base text-muted-enhanced">
                   {filteredPosts.length} {filteredPosts.length === 1 ? t('articleFound') : t('articlesFound')}
                 </p>
               </motion.div>
 
-              {/* Blog Posts Grid */}
               {filteredPosts.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <AnimatePresence mode="wait">
                     {filteredPosts.map((post, index) => (
                       <BlogCard key={post.slug} post={post} index={index} />
@@ -123,18 +170,16 @@ export default function BlogListContent({ posts }: { posts: Blog[] }) {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="glass-premium rounded-2xl p-12 text-center border"
-                  style={{
-                    borderColor: 'var(--border-default)',
-                  }}
+                  className="glass-premium rounded-2xl p-8 sm:p-12 text-center border"
+                  style={{ borderColor: 'var(--border-default)' }}
                 >
                   <div className="flex justify-center mb-4">
-                    <Icon name="Search" className="w-14 h-14 text-primary-500" strokeWidth={2} />
+                    <Icon name="Search" className="w-12 h-12 sm:w-14 sm:h-14 text-primary-500" strokeWidth={2} />
                   </div>
-                  <h3 className="text-2xl font-bold text-high-contrast mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-high-contrast mb-2">
                     {t('noPosts')}
                   </h3>
-                  <p className="text-muted-enhanced">
+                  <p className="text-sm sm:text-base text-muted-enhanced">
                     {t('noPostsSubtitle')}
                   </p>
                 </motion.div>

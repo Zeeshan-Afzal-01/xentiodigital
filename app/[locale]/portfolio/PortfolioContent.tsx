@@ -68,10 +68,10 @@ export default function PortfolioContent() {
                   <span className="text-white text-4xl font-bold">{project.title.charAt(0)}</span>
                 </div>
                 <div className="p-6 flex-1 flex flex-col min-w-0">
-                  <span className="text-sm text-primary-400 font-semibold flex-shrink-0">{project.category}</span>
+                  <span className="text-sm text-primary-600 dark:text-primary-400 font-semibold flex-shrink-0">{project.category}</span>
                   <h3 className="text-xl font-semibold text-high-contrast mt-2 mb-3 line-clamp-2 text-start">{project.title}</h3>
                   <p className="text-muted-enhanced mb-4 flex-1 line-clamp-3 text-start">{project.description}</p>
-                  <div className="border-t border-white/10 dark:border-white/10 pt-4 flex-shrink-0">
+                  <div className="border-t border-border-default pt-4 flex-shrink-0">
                     <p className="text-sm font-semibold text-high-contrast mb-1 text-start">{t('results')}</p>
                     <p className="text-sm text-muted-enhanced line-clamp-2 text-start">{project.results}</p>
                   </div>

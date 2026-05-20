@@ -65,7 +65,7 @@ export default function TeamContent() {
                 </div>
                 <div className="p-6 flex-1 flex flex-col min-w-0">
                   <h3 className="text-xl font-semibold text-high-contrast mb-1 line-clamp-1">{member.name}</h3>
-                  <p className="text-primary-400 font-medium mb-3 flex-shrink-0">{member.role}</p>
+                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-3 flex-shrink-0">{member.role}</p>
                   <p className="text-muted-enhanced flex-1 line-clamp-3">{member.bio}</p>
                 </div>
               </div>

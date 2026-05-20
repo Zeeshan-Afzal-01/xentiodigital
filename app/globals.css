@@ -229,6 +229,7 @@ body {
     transform: translateX(-50%) rotate(15deg);
     width: 110%;
   }
+
   /* Single column on mobile: centered, proper width for good visibility */
   .hero-bg_wrap-cols--single {
     left: 50%;
@@ -237,6 +238,7 @@ body {
     width: 90%;
     justify-content: center;
   }
+
   .hero-bg_wrap-cols--single .hero-bg_wrap-col {
     width: 100%;
     max-width: 340px;
@@ -318,9 +320,38 @@ body {
   will-change: transform;
 }
 
+/* Single-div seamless scroll — animates exactly 50% so the duplicate
+   set stays permanently below the viewport; no visible repeats, no gap. */
+.v-scroll-continuous {
+  will-change: transform;
+}
+
+.hero-bg_wrap-col:nth-child(odd) .v-scroll-continuous {
+  animation: seamless-scroll 75s linear infinite;
+}
+
+.hero-bg_wrap-col:nth-child(even) .v-scroll-continuous {
+  transform: translate3d(0, -50%, 0);
+  animation: seamless-scroll-reverse 75s linear infinite;
+}
+
+@keyframes seamless-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, -50%, 0); }
+}
+
+@keyframes seamless-scroll-reverse {
+  from { transform: translate3d(0, -50%, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .v-scroll {
     animation: none !important;
+  }
+  .v-scroll-continuous {
+    animation: none !important;
+    transform: none !important;
   }
 }
 
@@ -381,41 +412,7 @@ body {
   }
 }
 
-/* ============================================
-   LIGHT MODE — Hero section overrides
-   ============================================ */
-.light .home-hero .hero-bg-gradient_overlay {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 45%, transparent 80%);
-}
-
-.light .home-hero .hero-bg-gradient_overlay::after {
-  background-color: rgba(109, 40, 217, 0.04);
-  box-shadow: 0 0 20em 20em rgba(109, 40, 217, 0.03);
-  opacity: 0.8;
-}
-
-.light .home-hero .c-heading__title,
-.light .home-hero .c-heading.-h1 .c-heading__title p,
-.light .home-hero .c-heading.-h1 .c-heading__title span,
-.light .home-hero .text-shadow-white {
-  color: #1e1b4b;
-  text-shadow: none;
-}
-
-.light .home-hero .c-heading__pre,
-.light .home-hero .hero-pre-label {
-  color: #6D28D9;
-}
-
-.light .home-hero .c-heading__sub {
-  color: #334155;
-}
-
-.light .home-hero .c-btn.-slideover {
-  box-shadow: 0 0 0 1px rgba(109, 40, 217, 0.25), 0 4px 20px rgba(109, 40, 217, 0.12);
-}
+/* Hero section is always dark — no light mode overrides */
 
 /* Hero client logos bar — horizontal scrolling slider at bottom (DigitalSilk-style) */
 .-client-slides {
@@ -869,6 +866,33 @@ body {
 .site-header__logo img {
   filter: brightness(0) invert(1);
 }
+
+/* Navbar is always dark — no light mode overrides */
+
+/* Hero is always dark — force all dark-mode variables even in light mode */
+.light .home-hero {
+  --bg-primary: #020617;
+  --bg-secondary: #0F172A;
+  --bg-surface: rgba(255, 255, 255, 0.06);
+  --bg-elevated: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+  --brand-primary: #7C3AED;
+  --brand-secondary: #06B6D4;
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 0 40px rgba(124, 58, 237, 0.15);
+  --glow-primary: 0 0 20px rgba(124, 58, 237, 0.4), 0 0 40px rgba(124, 58, 237, 0.2);
+  --titles-color: #fff;
+  --subtitle-color: rgba(255, 255, 255, 0.95);
+  --pretitle-color: #fff;
+  color-scheme: dark;
+  color: #fff;
+}
+
 
 /* ============================================
    Hero: .hero base (reference)
@@ -1990,7 +2014,7 @@ body {
 
 /* Section Padding */
 .section-padding {
-  @apply py-14;
+  @apply py-10 md:py-14;
 }
 
 .section-padding-sm {
@@ -2627,12 +2651,15 @@ body {
   .case-studies-nav--cards .case-studies-nav__title {
     font-size: 1.5rem;
   }
+
   .case-studies-nav--cards .case-studies-nav__card-trigger {
     min-height: 240px;
   }
+
   .case-studies-nav__card-name {
     font-size: 1.25rem;
   }
+
   .case-studies-nav__card-cta {
     font-size: 0.7rem;
     letter-spacing: 0.08em;
@@ -2763,8 +2790,7 @@ body {
   flex-direction: column;
   height: 100%;
   min-height: 0;
-  padding: clamp(1.15rem, 2.5vw, 1.55rem) clamp(1.1rem, 2vw, 1.35rem)
-    clamp(1.25rem, 2.5vw, 1.55rem);
+  padding: clamp(1.15rem, 2.5vw, 1.55rem) clamp(1.1rem, 2vw, 1.35rem) clamp(1.25rem, 2.5vw, 1.55rem);
   background: color-mix(in oklab, var(--bg-surface) 88%, transparent);
   border: 1px solid var(--border-default);
   border-radius: 18px;
@@ -2872,6 +2898,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .why-choose-us__card-inner,
   .why-choose-us__card-inner::before,
   .why-choose-us__card-index,
@@ -3454,9 +3481,22 @@ body {
 }
 
 @keyframes industries-blob-float {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-  33% { transform: translate(20px, -15px) scale(1.05); opacity: 0.5; }
-  66% { transform: translate(-15px, 10px) scale(0.98); opacity: 0.35; }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+
+  33% {
+    transform: translate(20px, -15px) scale(1.05);
+    opacity: 0.5;
+  }
+
+  66% {
+    transform: translate(-15px, 10px) scale(0.98);
+    opacity: 0.35;
+  }
 }
 
 .industries-modern__container {
@@ -5390,6 +5430,7 @@ body {
     top: calc(var(--header-hight, 80px) + 2rem);
     align-self: start;
   }
+
   .digi-services__right-wrap--sticky-scroll .digi-services__right {
     max-height: none;
     overflow-y: visible;
@@ -5469,9 +5510,11 @@ body {
   touch-action: pan-y;
   scrollbar-width: none;
 }
+
 .digi-services__right-wrap.is-mobile .digi-services__right::-webkit-scrollbar {
   display: none;
 }
+
 .digi-services__right-wrap.is-mobile .digi-services__scroll-fade {
   display: none;
 }
@@ -5480,6 +5523,7 @@ body {
   .digi-services__accent-line {
     display: none;
   }
+
   .digi-services__right-wrap.is-mobile {
     overflow: visible;
   }
@@ -5551,6 +5595,7 @@ body {
     transition: background 0.35s ease, box-shadow 0.35s ease;
     overflow: hidden;
   }
+
   .digi-services--simple .digi-services__card::before {
     content: "";
     position: absolute;
@@ -5567,15 +5612,18 @@ body {
     transition: opacity 0.35s ease;
     pointer-events: none;
   }
+
   .digi-services--simple .digi-services__card:hover {
     transform: none;
     background: linear-gradient(135deg, rgba(79, 70, 229, 0.35), rgba(99, 102, 241, 0.25), rgba(139, 92, 246, 0.2));
     box-shadow: 0 0 50px rgba(99, 102, 241, 0.3), 0 8px 32px rgba(0, 0, 0, 0.25);
   }
+
   .digi-services--simple .digi-services__card:hover::before {
     opacity: 1;
     animation: digi-rainbow-border 4s ease infinite;
   }
+
   .digi-services--simple .digi-services__card:hover .digi-services__card-title,
   .digi-services--simple .digi-services__card:hover .digi-services__card-desc,
   .digi-services--simple .digi-services__card:hover .digi-services__card-link,
@@ -5586,21 +5634,31 @@ body {
     color: inherit;
     gap: 0.5rem;
   }
+
   .theme-sections-root[data-theme='light'] .digi-services--simple .digi-services__card:hover {
     background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.12));
     box-shadow: 0 0 35px rgba(99, 102, 241, 0.22), 0 8px 32px rgba(0, 0, 0, 0.06);
   }
+
   .theme-sections-root[data-theme='light'] .digi-services--simple .digi-services__card:hover::before {
     opacity: 0.9;
   }
 }
 
 @keyframes digi-rainbow-border {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (max-width: 768px) {
+
   .digi-services--simple .digi-services__card:hover,
   .digi-services--simple .digi-services__card:active {
     background: inherit;
@@ -5622,30 +5680,37 @@ body {
   .digi-services__card {
     transform: none;
   }
+
   .digi-services__card:hover {
     transform: none;
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
+
   .digi-services__card:hover .digi-services__card-spotlight,
   .digi-services__card:hover .digi-services__card-border,
   .digi-services__card:hover .digi-services__card-glow {
     opacity: 0;
   }
+
   .digi-services__card:hover .digi-services__card-title {
     transform: none;
   }
+
   .digi-services__card:hover .digi-services__card-icon {
     transform: scale(1);
     box-shadow: none;
     animation: none;
   }
+
   .digi-services__card:hover .digi-services__card-link {
     gap: 0.5rem;
   }
+
   .digi-services__card:hover .digi-services__card-arrow {
     transform: none;
   }
+
   .theme-sections-root[data-theme='light'] .digi-services__card:hover {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -7102,8 +7167,8 @@ select option {
 /* Responsive Typography */
 @media (max-width: 768px) {
   .blog-article {
+    max-width: 100%;
     font-size: 1rem;
-    /* 16px on mobile */
     line-height: 1.7;
   }
 
@@ -7807,4 +7872,58 @@ select option {
 .service-page__cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   LIGHT MODE — Service Pages
+   ============================================ */
+.light .service-page__section {
+  background: #f8fafc;
+}
+
+.light .service-page__section--alt {
+  background: #ffffff !important;
+}
+
+.light .service-page__section-kicker {
+  color: #0369a1;
+}
+
+.light .service-page__section-sub {
+  color: #334155;
+}
+
+.light .service-page__feature-item {
+  color: #334155;
+}
+
+.light .service-page__feature-check {
+  background: rgba(3, 105, 161, 0.12);
+  color: #0369a1;
+}
+
+.light .service-page__benefit-card {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light .service-page__benefit-title {
+  color: #0f172a;
+}
+
+.light .service-page__benefit-desc {
+  color: #475569;
+}
+
+.light .service-page__process-card {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light .service-page__process-title {
+  color: #0f172a;
+}
+
+.light .service-page__process-desc {
+  color: #475569;
 }
