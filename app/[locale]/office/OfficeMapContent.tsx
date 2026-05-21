@@ -195,10 +195,10 @@ export default function OfficeMapContent() {
                       </a>
                       <br />
                       <a
-                        href="mailto:info@xentiodigital.com"
+                        href="mailto:contact@xentiodigital.com"
                         className="hover:text-primary-400 transition-colors"
                       >
-                        info@xentiodigital.com
+                        contact@xentiodigital.com
                       </a>
                     </p>
                   </div>

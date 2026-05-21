@@ -160,10 +160,10 @@ export default function Footer() {
             <ul className="space-y-3 text-muted-enhanced">
               <li>
                 <a
-                  href="mailto:info@xentiodigital.com"
+                  href="mailto:contact@xentiodigital.com"
                   className="hover:text-high-contrast transition-colors"
                 >
-                  info@xentiodigital.com
+                  contact@xentiodigital.com
                 </a>
               </li>
               <li>

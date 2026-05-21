@@ -53,10 +53,10 @@ export default function ContactContent() {
                     <Icon name="Mail" className="mr-3 w-5 h-5" strokeWidth={2} /> Email
                   </h3>
                   <a
-                    href="mailto:info@xentiodigital.com"
+                    href="mailto:contact@xentiodigital.com"
                     className="text-primary-400 hover:text-primary-300 transition-colors animated-underline inline-block"
                   >
-                    info@xentiodigital.com
+                    contact@xentiodigital.com
                   </a>
                 </div>
                 <div className="glass rounded-xl p-6 border border-white/10">

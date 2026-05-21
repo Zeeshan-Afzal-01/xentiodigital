@@ -59,10 +59,10 @@ export default function ContactContent() {
                     <Icon name="Mail" className={`${rtl ? 'ml-3' : 'mr-3'} w-5 h-5`} strokeWidth={2} /> {t('email')}
                   </h3>
                   <a
-                    href="mailto:info@xentiodigital.com"
+                    href="mailto:contact@xentiodigital.com"
                     className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors animated-underline inline-block"
                   >
-                    info@xentiodigital.com
+                    contact@xentiodigital.com
                   </a>
                 </div>
                 <div className="glass rounded-xl p-6 border border-border-default">

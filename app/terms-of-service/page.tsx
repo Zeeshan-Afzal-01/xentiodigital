@@ -131,7 +131,7 @@ export default function TermsOfServicePage() {
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
                 <p className="text-gray-700">
-                  Email: <a href="mailto:legal@xentiodigital.com" className="text-primary-600 hover:underline">legal@xentiodigital.com</a><br />
+                  Email: <a href="mailto:contact@xentiodigital.com" className="text-primary-600 hover:underline">contact@xentiodigital.com</a><br />
                   Phone: <a href="tel:+923219486293" className="text-primary-600 hover:underline">+92 321 9486293</a>
                 </p>
               </section>

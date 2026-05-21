@@ -72,7 +72,7 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Servi
           '@type': 'ContactPoint',
           telephone: '+1-XXX-XXX-XXXX',
           contactType: 'Customer Service',
-          email: 'info@xentiodigital.com',
+          email: 'contact@xentiodigital.com',
         },
         sameAs: [
           'https://www.linkedin.com/company/xentio-digital',
